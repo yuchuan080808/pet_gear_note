@@ -1,0 +1,7 @@
+baseURL = 'https://yuchuan080808.github.io/pet_gear_note/'
+languageCode = 'zh-cn'
+title = '宠物装备笔记'
+theme = 'PaperMod'
+
+[params]
+defaultTheme = "auto"
