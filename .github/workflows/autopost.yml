@@ -1,0 +1,78 @@
+name: Auto Post Pet Content
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Monday 08:00 Asia/Shanghai == Monday 00:00 UTC.
+    - cron: "0 0 * * 1"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: autopost-pet-content
+  cancel-in-progress: false
+
+jobs:
+  autopost:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install autocli
+        run: |
+          set -euo pipefail
+          wget -O autocli.tar.gz "https://github.com/nashsu/autocli/releases/latest/download/autocli-x86_64-unknown-linux-musl.tar.gz"
+          tar -xzf autocli.tar.gz
+          chmod +x autocli
+          sudo mv autocli /usr/local/bin/autocli
+          autocli --help
+
+      - name: Configure autocli adapters
+        run: |
+          set -euo pipefail
+          mkdir -p "$HOME/.autocli/adapters"
+          if [ -d ".autocli/adapters" ]; then
+            cp -R .autocli/adapters/. "$HOME/.autocli/adapters/"
+          fi
+          find "$HOME/.autocli/adapters" -maxdepth 4 -type f -name "*.yaml" -print
+
+      - name: Run drip-feed pipeline
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+          AUTOCLI_BESTSELLERS_COMMAND: ${{ vars.AUTOCLI_BESTSELLERS_COMMAND }}
+          AUTOCLI_PRODUCT_COMMAND: ${{ vars.AUTOCLI_PRODUCT_COMMAND }}
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python main.py --batch-size 4 --reset-processing
+
+      - name: Commit generated content and tracking state
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/tracking.json
+          find output/content -type f -name "*.md" -print0 | xargs -0 -r git add
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: auto publish pet content"
+          git push origin HEAD:main

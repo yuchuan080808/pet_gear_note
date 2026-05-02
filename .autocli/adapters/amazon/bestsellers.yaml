@@ -1,0 +1,82 @@
+site: amazon
+name: bestsellers
+description: "获取 Amazon Best Sellers 畅销商品排行榜列表，包含排名、标题、图片、评分、评价数和价格"
+meta_title: "Amazon Best Sellers: Best Dog Automatic Feeders"
+meta_description: "Amazon Best Sellers in Dog Automatic Feeders"
+meta_keywords: "amazon best sellers, dog automatic feeders, pet supplies, rankings"
+tags: [amazon, bestsellers, shopping, pet-supplies, ecommerce]
+domain: www.amazon.com
+strategy: cookie
+browser: true
+
+args:
+  category_url:
+    positional: true
+    type: str
+    required: true
+    description: "Amazon Best Sellers 分类页面完整 URL，如 https://www.amazon.com/gp/bestsellers/pet-supplies/2975352011/"
+  limit:
+    type: int
+    required: false
+    default: 30
+    description: "最多返回商品数量，默认 30"
+
+columns: [rank, title, price, rating, review_count, image, url]
+
+pipeline:
+  - navigate:
+      url: ${{ args.category_url }}
+      settleMs: 3000
+
+  - evaluate: |
+      (() => {
+        const limit = ${{ args.limit }};
+
+        const items = document.querySelectorAll('li.zg-no-numbers');
+        return Array.from(items).slice(0, limit).map((el, i) => {
+
+          const rankEl = el.querySelector('.zg-bdg-text');
+          const rank = rankEl?.textContent?.trim() || String(i + 1);
+
+          const titleEl = el.querySelector('.p13n-sc-uncoverable-faceout div[class*="a-row"] a.a-link-normal span div, div.p13n-sc-line-clamp-1, ._cDEzb_p13n-sc-css-line-clamp-1_1Fn1y');
+          const titleFallback = el.querySelector('a.a-link-normal[title]')?.getAttribute('title')
+            || el.querySelector('div[class*="truncate"] span')?.textContent?.trim()
+            || el.querySelector('span._cDEzb_p13n-sc-css-line-clamp-3_g3dy1')?.textContent?.trim()
+            || el.querySelector('[class*="p13n-sc-truncate"]')?.textContent?.trim()
+            || el.querySelector('.zg-grid-general-faceout span div')?.textContent?.trim()
+            || '';
+          const title = titleEl?.textContent?.trim() || titleFallback;
+
+          const linkEl = el.querySelector('a.a-link-normal.aok-block[href]')
+            || el.querySelector('.zg-grid-general-faceout a[href]');
+          const href = linkEl?.href || '';
+          const url = href ? href.split('?')[0] : '';
+
+          const imgEl = el.querySelector('img.p13n-product-image, img.a-dynamic-image');
+          const image = imgEl?.src || '';
+
+          const ratingEl = el.querySelector('i.a-icon-star-small, i[class*="a-star-small"]');
+          const ratingClass = ratingEl?.className || '';
+          const ratingMatch = ratingClass.match(/a-star-small-([\d-]+)/);
+          const rating = ratingMatch ? ratingMatch[1].replace('-', '.') : (ratingEl?.textContent?.match(/[\d.]+/)?.[0] || '');
+
+          const reviewCntEl = el.querySelector('span.a-size-small');
+          const review_count = reviewCntEl?.textContent?.trim() || '0';
+
+          const priceEl = el.querySelector('span.a-size-base.a-color-price span, span.a-color-price');
+          const price = priceEl?.textContent?.trim() || '';
+
+          return { rank, title, price, rating, review_count, image, url };
+        });
+      })()
+
+  - map:
+      rank: ${{ item.rank }}
+      title: ${{ item.title | truncate(200) }}
+      price: ${{ item.price | default("N/A") }}
+      rating: ${{ item.rating | default("N/A") }}
+      review_count: ${{ item.review_count | default("0") }}
+      image: ${{ item.image }}
+      url: ${{ item.url }}
+
+  - limit: ${{ args.limit }}

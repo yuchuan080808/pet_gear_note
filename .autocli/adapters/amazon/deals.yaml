@@ -1,0 +1,151 @@
+site: amazon
+name: deals
+description: "获取 Amazon 今日特惠/折扣商品列表，包含商品名称、折扣信息、价格、评分、图片及链接"
+meta_title: "Amazon | Deals"
+meta_description: "Amazon 特惠商品页面"
+meta_keywords: "amazon, deals, discounts, sale, goldbox"
+tags: [amazon, deals, shopping, discount, ecommerce]
+domain: www.amazon.com
+strategy: cookie
+browser: true
+
+args:
+  department:
+    type: str
+    required: false
+    positional: false
+    default: ""
+    description: "筛选商品分类，如 electronics, kitchen, fashion 等，留空返回全部分类"
+  limit:
+    type: int
+    required: false
+    positional: false
+    default: 20
+    description: "返回商品数量上限，默认 20"
+
+columns: [rank, title, discount, current_price, original_price, rating, review_count, badge, image_url, url]
+
+pipeline:
+  - navigate:
+      url: https://www.amazon.com/-/en/gp/goldbox/
+      settleMs: 4000
+
+  - evaluate: |
+      (() => {
+        const limit = ${{ args.limit }};
+
+        // 尝试所有可能的商品卡片选择器
+        const selectors = [
+          '[data-testid="deal-card"]',
+          'div[id^="DealCard"]',
+          '#DealsGridScrollAnchor [data-testid]',
+          '#DealsGridScrollAnchor > div > div > div',
+          '.DealGridItem-module__dealItem',
+          '[class*="DealCard"]',
+          '[class*="dealCard"]',
+          '[class*="deal-card"]',
+          '#DealsGridScrollAnchor > div:nth-child(4) > div',
+        ];
+
+        let items = [];
+        for (const sel of selectors) {
+          const found = document.querySelectorAll(sel);
+          if (found.length > 2) {
+            items = Array.from(found);
+            break;
+          }
+        }
+
+        // 回退：取 DealsGridScrollAnchor 下有图片的直接子孙块
+        if (items.length <= 2) {
+          const anchor = document.querySelector('#DealsGridScrollAnchor');
+          if (anchor) {
+            const candidates = anchor.querySelectorAll('div');
+            items = Array.from(candidates).filter(el => {
+              const img = el.querySelector('img');
+              const link = el.querySelector('a[href*="/dp/"]');
+              const rect = el.getBoundingClientRect();
+              return img && link && rect.width > 100 && rect.height > 100
+                && el.children.length >= 1 && el.parentElement !== anchor;
+            });
+            // 去重：只保留最外层容器
+            const unique = [];
+            items.forEach(el => {
+              const isChild = unique.some(u => u.contains(el));
+              if (!isChild) unique.push(el);
+            });
+            items = unique;
+          }
+        }
+
+        return Array.from(items).slice(0, limit).map((el, i) => {
+          // 标题
+          const titleEl = el.querySelector('[class*="title" i], [class*="Title" i], h2, h3, span[aria-label]');
+          const title = titleEl?.textContent?.trim()
+            || el.querySelector('a[href*="/dp/"]')?.getAttribute('aria-label')?.trim()
+            || el.querySelector('img')?.alt?.trim()
+            || '';
+
+          // 链接
+          const linkEl = el.querySelector('a[href*="/dp/"]') || el.querySelector('a[href]');
+          const rawHref = linkEl?.href || linkEl?.getAttribute('href') || '';
+          const url = rawHref.startsWith('http') ? rawHref.split('?')[0] : (rawHref ? 'https://www.amazon.com' + rawHref.split('?')[0] : '');
+
+          // 折扣标签（如 "优惠 22%"、"限时优惠"）
+          const badgeEl = el.querySelector('[class*="badge" i], [class*="Badge" i], [class*="deal-badge" i], [class*="DealBadge" i]');
+          const badge = badgeEl?.textContent?.trim().substring(0, 50) || '';
+
+          // 折扣百分比
+          const discountEl = el.querySelector('[class*="discount" i], [class*="savings" i], [class*="percent" i]');
+          const discount = discountEl?.textContent?.trim().substring(0, 20) || '';
+
+          // 现价
+          const priceEl = el.querySelector('[class*="dealPrice" i], [class*="deal-price" i], .a-price .a-offscreen, [class*="currentPrice" i], [class*="current-price" i]');
+          const current_price = priceEl?.textContent?.trim().replace(/\s+/g, ' ').substring(0, 30) || '';
+
+          // 原价
+          const origPriceEl = el.querySelector('[class*="originalPrice" i], [class*="original-price" i], [class*="listPrice" i], .a-text-strike, s');
+          const original_price = origPriceEl?.textContent?.trim().replace(/\s+/g, ' ').substring(0, 30) || '';
+
+          // 评分
+          const ratingEl = el.querySelector('[aria-label*="星" i], [aria-label*="star" i], [class*="rating" i]');
+          const rating = ratingEl?.getAttribute('aria-label')?.match(/[\d.]+/)?.[0]
+            || ratingEl?.textContent?.match(/[\d.]+/)?.[0]
+            || '';
+
+          // 评论数
+          const reviewEl = el.querySelector('[class*="review" i], [aria-label*="评论" i], [aria-label*="rating" i]');
+          const review_count = reviewEl?.textContent?.replace(/[^0-9,]/g, '').replace(/,/g, '').trim() || '';
+
+          // 图片
+          const imgEl = el.querySelector('img');
+          const image_url = imgEl?.src || imgEl?.getAttribute('data-src') || '';
+
+          return {
+            rank: i + 1,
+            title,
+            discount,
+            current_price,
+            original_price,
+            rating,
+            review_count,
+            badge,
+            image_url,
+            url,
+          };
+        }).filter(item => item.title || item.url);
+      })()
+
+  - map:
+      rank: ${{ item.rank }}
+      title: ${{ item.title | truncate(200) }}
+      discount: ${{ item.discount | default("N/A") }}
+      current_price: ${{ item.current_price | default("N/A") }}
+      original_price: ${{ item.original_price | default("N/A") }}
+      rating: ${{ item.rating | default("N/A") }}
+      review_count: ${{ item.review_count | default("0") }}
+      badge: ${{ item.badge | default("") }}
+      image_url: ${{ item.image_url }}
+      url: ${{ item.url }}
+
+  - limit: ${{ args.limit }}

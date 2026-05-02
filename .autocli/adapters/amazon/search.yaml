@@ -1,0 +1,100 @@
+site: amazon
+name: search
+description: "获取 Amazon 商品搜索结果列表，包含标题、价格、评分、评论数、图片、链接等信息"
+meta_title: "Amazon.com : computer"
+meta_description: "Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more"
+meta_keywords: "amazon, shopping, electronics, computers"
+tags: [ecommerce, shopping, amazon, products, search]
+domain: www.amazon.com
+strategy: cookie
+browser: true
+
+args:
+  keyword:
+    positional: true
+    type: str
+    required: true
+    description: 搜索关键词，如 computer, laptop, phone
+  limit:
+    type: int
+    required: false
+    default: 20
+    description: 返回结果数量上限
+  page:
+    type: int
+    required: false
+    default: 1
+    description: 搜索结果页码
+
+columns: [rank, title, url, asin, price, original_price, rating, review_count, prime, image, sponsored]
+
+pipeline:
+  - navigate:
+      url: "https://www.amazon.com/s?k=${{ args.keyword }}&page=${{ args.page }}"
+      settleMs: 3000
+
+  - evaluate: |
+      (() => {
+        const limit = ${{ args.limit }};
+
+        // 选取所有搜索结果卡片，排除广告占位和非商品项
+        const items = document.querySelectorAll('div[data-component-type="s-search-result"]');
+
+        return Array.from(items).slice(0, limit).map((el, i) => {
+
+          // 商品标题
+          const titleEl = el.querySelector('h2 span, h2 a span');
+          const title = titleEl?.textContent?.trim() || '';
+
+          // 商品链接
+          const linkEl = el.querySelector('h2 a.a-link-normal, a.a-link-normal.s-no-outline');
+          const href = linkEl?.href || '';
+          const url = href ? (href.startsWith('http') ? href.split('?')[0] : 'https://www.amazon.com' + href.split('?')[0]) : '';
+
+          // ASIN
+          const asin = el.getAttribute('data-asin') || '';
+
+          // 当前价格（整数部分 + 小数部分）
+          const priceWhole = el.querySelector('.a-price .a-price-whole')?.textContent?.replace(/[^0-9]/g, '') || '';
+          const priceFraction = el.querySelector('.a-price .a-price-fraction')?.textContent?.replace(/[^0-9]/g, '') || '';
+          const price = priceWhole ? `$${priceWhole}.${priceFraction || '00'}` : '';
+
+          // 原价（划线价）
+          const originalPriceEl = el.querySelector('.a-price[data-a-strike="true"] .a-offscreen, .a-text-price .a-offscreen');
+          const original_price = originalPriceEl?.textContent?.trim() || '';
+
+          // 评分（如 4.5）
+          const ratingEl = el.querySelector('i.a-icon-star-small span.a-icon-alt, i[class*="a-star"] span.a-icon-alt');
+          const rating = ratingEl?.textContent?.match(/[\d.]+/)?.[0] || '';
+
+          // 评论数
+          const reviewEl = el.querySelector('span[aria-label*="stars"] + span, a[href*="customerReviews"] .a-size-base');
+          const review_count = reviewEl?.textContent?.replace(/[^0-9,]/g, '').replace(/,/g, '') || '0';
+
+          // 是否 Prime
+          const prime = el.querySelector('i.a-icon-prime, [aria-label="Amazon Prime"]') ? true : false;
+
+          // 商品主图
+          const image = el.querySelector('img.s-image')?.src || '';
+
+          // 是否广告/赞助
+          const sponsored = el.querySelector('.puis-sponsored-label-text, [aria-label*="Sponsored"], .s-sponsored-label-info-icon') ? true : false;
+
+          return { rank: i + 1, title, url, asin, price, original_price, rating, review_count, prime, image, sponsored };
+        });
+      })()
+
+  - map:
+      rank: ${{ item.rank }}
+      title: ${{ item.title | truncate(200) }}
+      url: ${{ item.url }}
+      asin: ${{ item.asin }}
+      price: ${{ item.price | default("N/A") }}
+      original_price: ${{ item.original_price | default("") }}
+      rating: ${{ item.rating | default("") }}
+      review_count: ${{ item.review_count | default("0") }}
+      prime: ${{ item.prime }}
+      image: ${{ item.image }}
+      sponsored: ${{ item.sponsored }}
+
+  - limit: ${{ args.limit }}

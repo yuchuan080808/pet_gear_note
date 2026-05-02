@@ -1,0 +1,98 @@
+site: amazon
+name: product
+description: "获取Amazon商品详情页信息，包括标题、评分、评价数量、用户评价摘要、评分分布及评价列表"
+meta_title: "Pet Supplies : Automatic Dog Feeder for Large Dogs, 14L Capacity, Remote Feeding, Anti-Blockage System, Timed Auto Dog Food Dispenser, 2.4G WiFi App Control，Dual Power Supply,Stainless Steel Bowl : Amazon.com"
+meta_description: "Amazon.com product detail page"
+meta_keywords: "amazon, product, pet supplies, dog feeder"
+tags: [ecommerce, amazon, product, pet-supplies, reviews]
+domain: www.amazon.com
+strategy: cookie
+browser: true
+
+args:
+  asin:
+    positional: true
+    type: str
+    required: true
+    description: "Amazon商品ASIN编号 (如 B0F53RZRZX)"
+
+columns: [title, price, rating, review_count, customers_say, rating_5star, rating_4star, rating_3star, rating_2star, rating_1star, reviews, image, url]
+
+pipeline:
+  - navigate:
+      url: "https://www.amazon.com/dp/${{ args.asin }}/"
+      settleMs: 3000
+
+  - evaluate: |
+      (() => {
+        const title = document.querySelector('#productTitle')?.textContent?.trim() || '';
+
+        const price = document.querySelector('.priceToPay .a-offscreen')?.textContent?.trim()
+          || document.querySelector('#apex-pricetopay-accessibility-label')?.textContent?.trim()
+          || document.querySelector('.a-price .a-offscreen')?.textContent?.trim()
+          || '';
+
+        const ratingEl = document.querySelector('#acrPopover');
+        const rating = ratingEl?.getAttribute('title')?.match(/[\d.]+/)?.[0]
+          || document.querySelector('#acrPopover span.a-icon-alt')?.textContent?.match(/[\d.]+/)?.[0]
+          || document.querySelector('#averageCustomerReviews .a-icon-alt')?.textContent?.match(/[\d.]+/)?.[0]
+          || '';
+
+        const reviewCountRaw = document.querySelector('#acrCustomerReviewText')?.textContent?.trim() || '0';
+        const review_count = reviewCountRaw.replace(/[^0-9,]/g, '').replace(/,/g, '') || '0';
+
+        const customers_say = document.querySelector('#reviewsMedley .cr-lighthouse-terms span')?.textContent?.trim()
+          || document.querySelector('[data-hook="cr-lighthouse-term-list"] span')?.textContent?.trim()
+          || '';
+
+        const ratingRows = document.querySelectorAll('#histogramTable li');
+        const getRatingPct = (idx) => {
+          const el = ratingRows[idx];
+          if (!el) return '';
+          const pct = el.querySelector('.a-text-right')?.textContent?.trim()
+            || el.querySelector('span[aria-label]')?.getAttribute('aria-label')?.match(/[\d]+%/)?.[0]
+            || el.textContent?.match(/\d+%/)?.[0]
+            || '';
+          return pct;
+        };
+        const rating_5star = getRatingPct(0);
+        const rating_4star = getRatingPct(1);
+        const rating_3star = getRatingPct(2);
+        const rating_2star = getRatingPct(3);
+        const rating_1star = getRatingPct(4);
+
+        const reviewEls = document.querySelectorAll('[data-hook="review"]');
+        const reviews = Array.from(reviewEls).slice(0, 10).map(r => {
+          const ratingText = r.querySelector('[data-hook="review-star-rating"] .a-icon-alt, [data-hook="cmps-review-star-rating"] .a-icon-alt')?.textContent?.trim() || '';
+          const reviewTitle = r.querySelector('[data-hook="review-title"] span:not(.a-icon-alt)')?.textContent?.trim()
+            || r.querySelector('[data-hook="review-title"]')?.textContent?.trim() || '';
+          const reviewDate = r.querySelector('[data-hook="review-date"]')?.textContent?.trim() || '';
+          const reviewBody = r.querySelector('[data-hook="review-body"] span')?.textContent?.trim()?.substring(0, 300) || '';
+          const helpful = r.querySelector('[data-hook="helpful-vote-statement"]')?.textContent?.trim() || '';
+          return `[${ratingText}] ${reviewTitle} | ${reviewDate} | ${reviewBody}${helpful ? ' | ' + helpful : ''}`;
+        }).join('\n---\n');
+
+        const image = document.querySelector('#landingImage')?.src
+          || document.querySelector('#imgTagWrapperId img')?.src
+          || document.querySelector('#main-image')?.src
+          || '';
+
+        const url = `https://www.amazon.com/dp/${window.location.pathname.match(/\/dp\/([A-Z0-9]+)/)?.[1] || ''}`;
+
+        return [{ title, price, rating, review_count, customers_say, rating_5star, rating_4star, rating_3star, rating_2star, rating_1star, reviews, image, url }];
+      })()
+
+  - map:
+      title: ${{ item.title | truncate(300) }}
+      price: ${{ item.price | default("N/A") }}
+      rating: ${{ item.rating | default("N/A") }}
+      review_count: ${{ item.review_count | default("0") }}
+      customers_say: ${{ item.customers_say | truncate(500) | default("N/A") }}
+      rating_5star: ${{ item.rating_5star | default("N/A") }}
+      rating_4star: ${{ item.rating_4star | default("N/A") }}
+      rating_3star: ${{ item.rating_3star | default("N/A") }}
+      rating_2star: ${{ item.rating_2star | default("N/A") }}
+      rating_1star: ${{ item.rating_1star | default("N/A") }}
+      reviews: ${{ item.reviews | default("") }}
+      image: ${{ item.image | default("") }}
+      url: ${{ item.url }}
