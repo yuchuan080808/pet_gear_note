@@ -15,7 +15,7 @@ This project implements a drip-feed content pipeline for a Hugo/Astro static sit
 ├── .autocli/adapters/        # Commit AutoCLI adapter YAML files here for GitHub Actions
 ├── .cache/bestsellers/       # Raw autocli bestseller JSON cache
 ├── .cache/products/          # Raw autocli product JSON cache
-└── output/content/
+└── content/
     ├── dogs/                 # Generated dog Markdown files
     └── cats/                 # Generated cat Markdown files
 ```

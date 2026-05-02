@@ -69,7 +69,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/tracking.json
-          find output/content -type f -name "*.md" -print0 | xargs -0 -r git add
+          find content -type f -name "*.md" -print0 | xargs -0 -r git add
           if git diff --cached --quiet; then
             echo "No generated changes to commit."
             exit 0

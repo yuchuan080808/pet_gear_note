@@ -56,4 +56,4 @@ After pushing to GitHub:
 3. Select `Auto Post Pet Content`.
 4. Click `Run workflow`.
 
-If it succeeds, the workflow will commit generated Markdown files under `output/content/` and update `data/tracking.json`.
+If it succeeds, the workflow will commit generated Markdown files under `content/` and update `data/tracking.json`.
