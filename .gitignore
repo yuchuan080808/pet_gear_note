@@ -7,3 +7,4 @@ __pycache__/
 logs/
 public/
 resources/
+auto_update.bat
