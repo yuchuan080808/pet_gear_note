@@ -550,8 +550,8 @@ Required Markdown structure:
 2. How We Read This List: short, transparent evidence note; no fake testing claims.
 3. Quick Picks: a compact bullet list naming the best product for 4-6 specific buyer needs.
 4. Buying Guide: practical criteria, red flags, safety notes, and 1-2 authority outbound links where relevant.
-5. Comparison Table: include product, best for, price tier, standout upside, buyer caution, skip-if.
-6. Deep Reviews: one section per product. Include:
+5. Comparison Table: include product, best for, standout upside, buyer caution, skip-if. (Do NOT include price).
+6. Deep Reviews: Provide detailed reviews for exactly 10 products (the top 10 most relevant). For each of these 10 products, include:
    - image under heading
    - short verdict
    - best for
@@ -583,7 +583,7 @@ Output Markdown body only. Do not output YAML frontmatter.
         products: list[dict[str, Any]],
         related_articles: list[PublishedArticle] | None = None,
     ) -> str:
-        prompt_products = self._prepare_products_for_prompt(products)
+        prompt_products = self._prepare_products_for_prompt(products)[:10]
         compact_json = json.dumps(prompt_products, ensure_ascii=False, separators=(",", ":"))
         user_prompt = (
             f"Category path: {task.category_path}\n"
