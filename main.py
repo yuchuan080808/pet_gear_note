@@ -215,6 +215,18 @@ class TaskManager:
     def mark_failed(self, node_id: str) -> None:
         self._set_status(node_id, "failed")
 
+    def reset_failed_to_pending(self) -> int:
+        reset_count = 0
+        now = utc_now()
+        for item in self.state["categories"]:
+            if item.get("status") == "failed":
+                item["status"] = "pending"
+                item["last_updated"] = now
+                reset_count += 1
+        if reset_count:
+            self.save()
+        return reset_count
+
     def reset_processing_to_pending(self) -> int:
         reset_count = 0
         now = utc_now()
@@ -337,15 +349,32 @@ class ScraperEngine:
             LOGGER.info("Cache hit: %s", cache_path)
             return cached
 
-        LOGGER.info("Cache miss; running: %s", " ".join(command[:-2]))
-        completed = subprocess.run(
-            command,
-            check=True,
-            capture_output=True,
-            text=True,
-            timeout=self.timeout_seconds,
-        )
-        payload = json.loads(completed.stdout)
+        LOGGER.info("Cache miss; running: %s", " ".join(command))
+        try:
+            completed = subprocess.run(
+                command,
+                check=True,
+                capture_output=True,
+                text=True,
+                timeout=self.timeout_seconds,
+            )
+        except subprocess.CalledProcessError as exc:
+            stdout = (exc.stdout or "").strip()
+            stderr = (exc.stderr or "").strip()
+            LOGGER.error("AutoCLI command failed with exit code %s", exc.returncode)
+            if stdout:
+                LOGGER.error("AutoCLI stdout:\n%s", stdout[-4000:])
+            if stderr:
+                LOGGER.error("AutoCLI stderr:\n%s", stderr[-4000:])
+            raise
+
+        try:
+            payload = json.loads(completed.stdout)
+        except json.JSONDecodeError:
+            LOGGER.error("AutoCLI returned non-JSON stdout:\n%s", completed.stdout[-4000:])
+            if completed.stderr.strip():
+                LOGGER.error("AutoCLI stderr:\n%s", completed.stderr[-4000:])
+            raise
         cache_path.parent.mkdir(parents=True, exist_ok=True)
         cache_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
         return payload
@@ -801,6 +830,9 @@ def run_pipeline(args: argparse.Namespace) -> int:
         if args.reset_processing:
             reset_count = task_manager.reset_processing_to_pending()
             LOGGER.info("Reset %s processing categories to pending", reset_count)
+        if args.retry_failed:
+            reset_count = task_manager.reset_failed_to_pending()
+            LOGGER.info("Reset %s failed categories to pending", reset_count)
 
         task_manager.sync_category_tree(args.category_json)
         batch = task_manager.get_next_batch(limit=args.batch_size)
@@ -850,6 +882,11 @@ def parse_args() -> argparse.Namespace:
         "--reset-processing",
         action="store_true",
         help="Reset stuck processing rows back to pending before claiming a new batch",
+    )
+    parser.add_argument(
+        "--retry-failed",
+        action="store_true",
+        help="Reset failed rows back to pending before claiming a new batch",
     )
     return parser.parse_args()
 

@@ -50,6 +50,37 @@ jobs:
             cp -R .autocli/adapters/. "$HOME/.autocli/adapters/"
           fi
           find "$HOME/.autocli/adapters" -maxdepth 4 -type f -name "*.yaml" -print
+          autocli amazon --help
+          autocli doctor || true
+
+      - name: Start Chrome for AutoCLI browser adapters
+        run: |
+          set -euo pipefail
+          google-chrome --version
+          google-chrome \
+            --headless=new \
+            --no-sandbox \
+            --disable-dev-shm-usage \
+            --disable-gpu \
+            --remote-debugging-address=127.0.0.1 \
+            --remote-debugging-port=9222 \
+            --user-data-dir=/tmp/autocli-chrome-profile \
+            about:blank > /tmp/autocli-chrome.log 2>&1 &
+          for i in $(seq 1 20); do
+            if curl -fsS http://127.0.0.1:9222/json/version > /tmp/autocli-cdp.json; then
+              cat /tmp/autocli-cdp.json
+              touch /tmp/autocli-cdp-ready
+              break
+            fi
+            sleep 1
+          done
+          if [ ! -f /tmp/autocli-cdp-ready ]; then
+            echo "Chrome CDP endpoint did not become ready."
+            cat /tmp/autocli-chrome.log || true
+            exit 1
+          fi
+          echo "OPENCLI_CDP_ENDPOINT=http://127.0.0.1:9222" >> "$GITHUB_ENV"
+          echo "OPENCLI_VERBOSE=1" >> "$GITHUB_ENV"
 
       - name: Run drip-feed pipeline
         env:
@@ -61,7 +92,7 @@ jobs:
           DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python main.py --batch-size 4 --reset-processing
+        run: python main.py --batch-size 4 --reset-processing --retry-failed
 
       - name: Commit generated content and tracking state
         run: |
