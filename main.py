@@ -30,7 +30,7 @@ LOCAL_CATEGORY_JSON = Path("/Users/yuchuanlong/ai/amazon_pet/my_output.json")
 TRACKING_JSON = ROOT / "data" / "tracking.json"
 BESTSELLER_CACHE = ROOT / ".cache" / "bestsellers"
 PRODUCT_CACHE = ROOT / ".cache" / "products"
-OUTPUT_DIR = ROOT / "output" / "content"
+OUTPUT_DIR = ROOT / "content"
 
 LOGGER = logging.getLogger("amazon_pet_pipeline")
 ASIN_RE = re.compile(r"(?:/dp/|/gp/product/|/product/|asin=)([A-Z0-9]{10})|(?:^|[^A-Z0-9])([A-Z0-9]{10})(?:[^A-Z0-9]|$)")
