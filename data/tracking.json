@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-05-02T08:51:35+00:00",
+  "last_synced": "2026-05-02T10:50:33+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -1310,8 +1310,11 @@
       "category_name": "Cameras & Monitors",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17440052011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-02T10:58:00+00:00",
+      "article_path": "content\\dogs\\best-cameras-monitors.md",
+      "article_url": "/dogs/best-cameras-monitors/",
+      "article_title": "Best Cameras & Monitors for Dogs"
     },
     {
       "node_id": "2975334011",
@@ -1580,8 +1583,11 @@
       "category_name": "Location Trackers",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17440053011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-02T11:04:41+00:00",
+      "article_path": "content\\dogs\\best-location-trackers.md",
+      "article_url": "/dogs/best-location-trackers/",
+      "article_title": "Best Location Trackers for Dogs"
     },
     {
       "node_id": "2975344011",
