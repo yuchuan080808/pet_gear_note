@@ -1,0 +1,2680 @@
+{
+  "metadata": {
+    "crawl_timestamp": "2026-04-29 03:12:19 UTC",
+    "total_bsr_pages": 381,
+    "dogs_bsr_pages": 235,
+    "cats_bsr_pages": 146,
+    "max_depth": 4
+  },
+  "dogs": [
+    {
+      "category_path": "Pet Supplies > Dogs",
+      "category_name": "Dogs",
+      "node_id": "2975312011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975312011",
+      "depth": 0
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Apparel & Accessories",
+      "category_name": "Apparel & Accessories",
+      "node_id": "2975313011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975313011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Apparel & Accessories > Backpacks",
+      "category_name": "Backpacks",
+      "node_id": "2975314011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975314011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Apparel & Accessories > Bandanas",
+      "category_name": "Bandanas",
+      "node_id": "2975315011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975315011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Apparel & Accessories > Boots & Paw Protectors",
+      "category_name": "Boots & Paw Protectors",
+      "node_id": "2975316011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975316011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Apparel & Accessories > Boots & Paw Protectors > Boots",
+      "category_name": "Boots",
+      "node_id": "3024169011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024169011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Apparel & Accessories > Boots & Paw Protectors > Paw Protectors",
+      "category_name": "Paw Protectors",
+      "node_id": "3024170011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024170011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Apparel & Accessories > Cold Weather Coats",
+      "category_name": "Cold Weather Coats",
+      "node_id": "3024171011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024171011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Apparel & Accessories > Costumes",
+      "category_name": "Costumes",
+      "node_id": "2975318011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975318011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Apparel & Accessories > Dresses",
+      "category_name": "Dresses",
+      "node_id": "2975319011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975319011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Apparel & Accessories > Hair Accessories",
+      "category_name": "Hair Accessories",
+      "node_id": "2975320011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975320011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Apparel & Accessories > Hats",
+      "category_name": "Hats",
+      "node_id": "2975321011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975321011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Apparel & Accessories > Hoodies",
+      "category_name": "Hoodies",
+      "node_id": "3024172011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024172011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Apparel & Accessories > Lifejackets",
+      "category_name": "Lifejackets",
+      "node_id": "3024173011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024173011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Apparel & Accessories > Necklaces & Pendants",
+      "category_name": "Necklaces & Pendants",
+      "node_id": "2975322011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975322011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Apparel & Accessories > Raincoats",
+      "category_name": "Raincoats",
+      "node_id": "3024174011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024174011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Apparel & Accessories > Shirts",
+      "category_name": "Shirts",
+      "node_id": "3024175011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024175011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Apparel & Accessories > Sunglasses",
+      "category_name": "Sunglasses",
+      "node_id": "2975325011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975325011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Apparel & Accessories > Sweaters",
+      "category_name": "Sweaters",
+      "node_id": "3024176011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024176011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Beds & Furniture",
+      "category_name": "Beds & Furniture",
+      "node_id": "2975326011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975326011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Beds & Furniture > Bed Blankets",
+      "category_name": "Bed Blankets",
+      "node_id": "3024177011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024177011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Beds & Furniture > Bed Covers",
+      "category_name": "Bed Covers",
+      "node_id": "2975327011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975327011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Beds & Furniture > Bed Liners",
+      "category_name": "Bed Liners",
+      "node_id": "2975328011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975328011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Beds & Furniture > Bed Mats",
+      "category_name": "Bed Mats",
+      "node_id": "3024178011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024178011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Beds & Furniture > Bed Pillows",
+      "category_name": "Bed Pillows",
+      "node_id": "2975329011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975329011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Beds & Furniture > Beds",
+      "category_name": "Beds",
+      "node_id": "2975330011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975330011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Beds & Furniture > Furniture-Style Crates",
+      "category_name": "Furniture-Style Crates",
+      "node_id": "17602453011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17602453011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Beds & Furniture > Sofas & Chairs",
+      "category_name": "Sofas & Chairs",
+      "node_id": "2975331011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975331011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Beds & Furniture > Stairs & Steps",
+      "category_name": "Stairs & Steps",
+      "node_id": "2975332011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975332011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Cameras & Monitors",
+      "category_name": "Cameras & Monitors",
+      "node_id": "17440052011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17440052011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Carriers & Travel Products",
+      "category_name": "Carriers & Travel Products",
+      "node_id": "2975333011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975333011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Carriers & Travel Products > Backpacks",
+      "category_name": "Backpacks",
+      "node_id": "2975334011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975334011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Carriers & Travel Products > Bicycle Carriers",
+      "category_name": "Bicycle Carriers",
+      "node_id": "2975335011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975335011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Carriers & Travel Products > Bicycle Trailers",
+      "category_name": "Bicycle Trailers",
+      "node_id": "3024181011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024181011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Carriers & Travel Products > Car Travel Accessories",
+      "category_name": "Car Travel Accessories",
+      "node_id": "2975336011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975336011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Carriers & Travel Products > Car Travel Accessories > Barriers",
+      "category_name": "Barriers",
+      "node_id": "3024182011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024182011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Carriers & Travel Products > Car Travel Accessories > Booster & Car Seats",
+      "category_name": "Booster & Car Seats",
+      "node_id": "3024183011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024183011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Carriers & Travel Products > Car Travel Accessories > Seat Covers",
+      "category_name": "Seat Covers",
+      "node_id": "3024184011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024184011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Carriers & Travel Products > Car Travel Accessories > Vehicle Harnesses",
+      "category_name": "Vehicle Harnesses",
+      "node_id": "3024191011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024191011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Carriers & Travel Products > Car Travel Accessories > Vehicle Ramps",
+      "category_name": "Vehicle Ramps",
+      "node_id": "3024186011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024186011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Carriers & Travel Products > Carriers",
+      "category_name": "Carriers",
+      "node_id": "2975337011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975337011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Carriers & Travel Products > Carriers > Hard-Sided Carriers",
+      "category_name": "Hard-Sided Carriers",
+      "node_id": "3024187011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024187011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Carriers & Travel Products > Carriers > Soft-Sided Carriers",
+      "category_name": "Soft-Sided Carriers",
+      "node_id": "3024188011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024188011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Carriers & Travel Products > Purses",
+      "category_name": "Purses",
+      "node_id": "12572592011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/12572592011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Carriers & Travel Products > Slings",
+      "category_name": "Slings",
+      "node_id": "3024189011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024189011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Carriers & Travel Products > Strollers",
+      "category_name": "Strollers",
+      "node_id": "2975338011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975338011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Collars, Harnesses & Leashes",
+      "category_name": "Collars, Harnesses & Leashes",
+      "node_id": "2975339011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975339011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Collars, Harnesses & Leashes > Activity Trackers",
+      "category_name": "Activity Trackers",
+      "node_id": "212610080011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/212610080011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Collars, Harnesses & Leashes > Collars",
+      "category_name": "Collars",
+      "node_id": "3052410011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3052410011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Collars, Harnesses & Leashes > Collars > Bark Collars",
+      "category_name": "Bark Collars",
+      "node_id": "2975429011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975429011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Collars, Harnesses & Leashes > Collars > Basic Collars",
+      "category_name": "Basic Collars",
+      "node_id": "3052411011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3052411011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Collars, Harnesses & Leashes > Collars > Electronic Training Collars",
+      "category_name": "Electronic Training Collars",
+      "node_id": "23592369011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23592369011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Collars, Harnesses & Leashes > Collars > Headcollars",
+      "category_name": "Headcollars",
+      "node_id": "2975431011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975431011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Collars, Harnesses & Leashes > Collars > Pinch Collars",
+      "category_name": "Pinch Collars",
+      "node_id": "3052412011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3052412011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Collars, Harnesses & Leashes > Collars > Slip & Martingale Collars",
+      "category_name": "Slip & Martingale Collars",
+      "node_id": "2975430011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975430011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Collars, Harnesses & Leashes > Harnesses",
+      "category_name": "Harnesses",
+      "node_id": "2975341011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975341011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Collars, Harnesses & Leashes > Harnesses > Basic Halter Harnesses",
+      "category_name": "Basic Halter Harnesses",
+      "node_id": "3024190011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024190011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Collars, Harnesses & Leashes > Harnesses > Vest Harnesses",
+      "category_name": "Vest Harnesses",
+      "node_id": "3024192011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024192011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Collars, Harnesses & Leashes > ID Tags & Collar Accessories",
+      "category_name": "ID Tags & Collar Accessories",
+      "node_id": "6602294011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/6602294011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Collars, Harnesses & Leashes > ID Tags & Collar Accessories > Collar Charms",
+      "category_name": "Collar Charms",
+      "node_id": "2975317011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975317011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Collars, Harnesses & Leashes > ID Tags & Collar Accessories > ID Tags",
+      "category_name": "ID Tags",
+      "node_id": "2975342011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975342011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Collars, Harnesses & Leashes > Leashes",
+      "category_name": "Leashes",
+      "node_id": "2975343011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975343011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Collars, Harnesses & Leashes > Leashes > Basic Leashes",
+      "category_name": "Basic Leashes",
+      "node_id": "3024193011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024193011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Collars, Harnesses & Leashes > Leashes > Double Leashes",
+      "category_name": "Double Leashes",
+      "node_id": "3024194011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024194011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Collars, Harnesses & Leashes > Leashes > Hands Free Leashes",
+      "category_name": "Hands Free Leashes",
+      "node_id": "3024195011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024195011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Collars, Harnesses & Leashes > Leashes > Retractable Leashes",
+      "category_name": "Retractable Leashes",
+      "node_id": "3024196011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024196011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Collars, Harnesses & Leashes > Leashes > Training Leashes",
+      "category_name": "Training Leashes",
+      "node_id": "2975433011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975433011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Collars, Harnesses & Leashes > Location Trackers",
+      "category_name": "Location Trackers",
+      "node_id": "17440053011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17440053011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Collars, Harnesses & Leashes > Muzzles",
+      "category_name": "Muzzles",
+      "node_id": "2975344011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975344011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Crates, Houses & Pens",
+      "category_name": "Crates, Houses & Pens",
+      "node_id": "2975400011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975400011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Crates, Houses & Pens > Accessories",
+      "category_name": "Accessories",
+      "node_id": "23763994011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23763994011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Crates, Houses & Pens > Accessories > Crate Pads",
+      "category_name": "Crate Pads",
+      "node_id": "23764006011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23764006011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Crates, Houses & Pens > Accessories > Crate Replacement Pans",
+      "category_name": "Crate Replacement Pans",
+      "node_id": "17467841011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17467841011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Crates, Houses & Pens > Accessories > Kennel Covers",
+      "category_name": "Kennel Covers",
+      "node_id": "2975403011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975403011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Crates, Houses & Pens > Accessories > Kennel Covers > Crate Covers",
+      "category_name": "Crate Covers",
+      "node_id": "23764008011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23764008011",
+      "depth": 4
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Crates, Houses & Pens > Accessories > Kennel Covers > Enclosure Covers",
+      "category_name": "Enclosure Covers",
+      "node_id": "23764007011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23764007011",
+      "depth": 4
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Crates, Houses & Pens > Crates",
+      "category_name": "Crates",
+      "node_id": "2975401011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975401011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Crates, Houses & Pens > Crates > Basic Crates",
+      "category_name": "Basic Crates",
+      "node_id": "3024223011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024223011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Crates, Houses & Pens > Dog Houses",
+      "category_name": "Dog Houses",
+      "node_id": "2975402011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975402011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Crates, Houses & Pens > Enclosures",
+      "category_name": "Enclosures",
+      "node_id": "23763995011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23763995011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Crates, Houses & Pens > Playpens",
+      "category_name": "Playpens",
+      "node_id": "3024198011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024198011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Doors, Gates & Ramps",
+      "category_name": "Doors, Gates & Ramps",
+      "node_id": "2975346011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975346011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Doors, Gates & Ramps > Doorbells",
+      "category_name": "Doorbells",
+      "node_id": "2975348011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975348011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Doors, Gates & Ramps > Doors",
+      "category_name": "Doors",
+      "node_id": "2975349011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975349011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Doors, Gates & Ramps > Electronic Doors",
+      "category_name": "Electronic Doors",
+      "node_id": "17440051011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17440051011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Doors, Gates & Ramps > Gates & Gate Extensions",
+      "category_name": "Gates & Gate Extensions",
+      "node_id": "166868011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/166868011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Doors, Gates & Ramps > Gates & Gate Extensions > Door & Stair Gates",
+      "category_name": "Door & Stair Gates",
+      "node_id": "23539678011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23539678011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Doors, Gates & Ramps > Gates & Gate Extensions > Gate Extensions",
+      "category_name": "Gate Extensions",
+      "node_id": "23539679011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23539679011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Doors, Gates & Ramps > Safety Ramps",
+      "category_name": "Safety Ramps",
+      "node_id": "2975350011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975350011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Feeding & Watering Supplies",
+      "category_name": "Feeding & Watering Supplies",
+      "node_id": "2975351011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975351011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Feeding & Watering Supplies > Automatic Feeders",
+      "category_name": "Automatic Feeders",
+      "node_id": "2975352011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975352011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Feeding & Watering Supplies > Bowls & Dishes",
+      "category_name": "Bowls & Dishes",
+      "node_id": "17592601011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17592601011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Feeding & Watering Supplies > Bowls & Dishes > Basic Bowls",
+      "category_name": "Basic Bowls",
+      "node_id": "2975353011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975353011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Feeding & Watering Supplies > Bowls & Dishes > Raised Bowls",
+      "category_name": "Raised Bowls",
+      "node_id": "3024200011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024200011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Feeding & Watering Supplies > Bowls & Dishes > Slow Feeders",
+      "category_name": "Slow Feeders",
+      "node_id": "17602455011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17602455011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Feeding & Watering Supplies > Bowls & Dishes > Travel Bowls",
+      "category_name": "Travel Bowls",
+      "node_id": "3024201011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024201011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Feeding & Watering Supplies > Feeding Mats",
+      "category_name": "Feeding Mats",
+      "node_id": "14828689011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/14828689011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Feeding & Watering Supplies > Food Storage",
+      "category_name": "Food Storage",
+      "node_id": "2975354011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975354011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Feeding & Watering Supplies > Fountains",
+      "category_name": "Fountains",
+      "node_id": "2975355011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975355011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Feeding & Watering Supplies > Lick Mats",
+      "category_name": "Lick Mats",
+      "node_id": "215542953011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/215542953011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Feeding & Watering Supplies > Nursing Supplies",
+      "category_name": "Nursing Supplies",
+      "node_id": "2975356011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975356011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Feeding & Watering Supplies > Water Bottles",
+      "category_name": "Water Bottles",
+      "node_id": "2975358011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975358011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Flea & Tick Control",
+      "category_name": "Flea & Tick Control",
+      "node_id": "2975384011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975384011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Flea & Tick Control > Flea & Tick Collars",
+      "category_name": "Flea & Tick Collars",
+      "node_id": "2975386011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975386011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Flea & Tick Control > Flea Combs",
+      "category_name": "Flea Combs",
+      "node_id": "2975387011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975387011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Flea & Tick Control > Flea Pills",
+      "category_name": "Flea Pills",
+      "node_id": "120957551011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/120957551011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Flea & Tick Control > Home Control Treatments",
+      "category_name": "Home Control Treatments",
+      "node_id": "120957553011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/120957553011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Flea & Tick Control > Tick Remover Tools",
+      "category_name": "Tick Remover Tools",
+      "node_id": "2975390011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975390011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Flea & Tick Control > Topical Treatments",
+      "category_name": "Topical Treatments",
+      "node_id": "120957552011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/120957552011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Flea & Tick Control > Topical Treatments > Flea Drops",
+      "category_name": "Flea Drops",
+      "node_id": "2975389011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975389011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Flea & Tick Control > Topical Treatments > Flea Powders",
+      "category_name": "Flea Powders",
+      "node_id": "2975388011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975388011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Flea & Tick Control > Topical Treatments > Flea Shampoos",
+      "category_name": "Flea Shampoos",
+      "node_id": "3024215011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024215011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Flea & Tick Control > Topical Treatments > Flea Sprays",
+      "category_name": "Flea Sprays",
+      "node_id": "3031965011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3031965011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Food",
+      "category_name": "Food",
+      "node_id": "2975359011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975359011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Food > Dry",
+      "category_name": "Dry",
+      "node_id": "2975360011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975360011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Food > Dry > Air-Dried",
+      "category_name": "Air-Dried",
+      "node_id": "215743402011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/215743402011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Food > Dry > Dehydrated",
+      "category_name": "Dehydrated",
+      "node_id": "6514321011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/6514321011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Food > Dry > Freeze-Dried",
+      "category_name": "Freeze-Dried",
+      "node_id": "6514322011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/6514322011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Food > Food Toppers",
+      "category_name": "Food Toppers",
+      "node_id": "6514323011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/6514323011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Food > Frozen",
+      "category_name": "Frozen",
+      "node_id": "7239525011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/7239525011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Food > Semi-Moist",
+      "category_name": "Semi-Moist",
+      "node_id": "116011806011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/116011806011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Food > Veterinary Diets",
+      "category_name": "Veterinary Diets",
+      "node_id": "17044954011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17044954011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Food > Wet",
+      "category_name": "Wet",
+      "node_id": "2975361011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975361011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Food > Wet > Canned",
+      "category_name": "Canned",
+      "node_id": "6514317011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/6514317011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Food > Wet > Pouches",
+      "category_name": "Pouches",
+      "node_id": "6514318011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/6514318011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Food > Wet > Rolls",
+      "category_name": "Rolls",
+      "node_id": "6514319011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/6514319011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Gift Sets",
+      "category_name": "Gift Sets",
+      "node_id": "211908761011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/211908761011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming",
+      "category_name": "Grooming",
+      "node_id": "2975362011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975362011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Brushes",
+      "category_name": "Brushes",
+      "node_id": "2975363011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975363011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Claw Care",
+      "category_name": "Claw Care",
+      "node_id": "2975364011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975364011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Colognes",
+      "category_name": "Colognes",
+      "node_id": "2975365011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975365011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Combs",
+      "category_name": "Combs",
+      "node_id": "2975366011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975366011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Dander Remover Sprays",
+      "category_name": "Dander Remover Sprays",
+      "node_id": "2975370011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975370011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Dematting Tools",
+      "category_name": "Dematting Tools",
+      "node_id": "2975367011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975367011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Dematting Tools > Combs",
+      "category_name": "Combs",
+      "node_id": "3024202011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024202011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Dematting Tools > Rakes",
+      "category_name": "Rakes",
+      "node_id": "3024203011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024203011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Deodorizers",
+      "category_name": "Deodorizers",
+      "node_id": "2975368011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975368011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Electric Clippers & Blades",
+      "category_name": "Electric Clippers & Blades",
+      "node_id": "3024204011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024204011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Electric Clippers & Blades > Electric Clipper Kits",
+      "category_name": "Electric Clipper Kits",
+      "node_id": "23711853011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23711853011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Electric Clippers & Blades > Electric Clippers",
+      "category_name": "Electric Clippers",
+      "node_id": "3024205011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024205011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Electric Clippers & Blades > Replacement Blades",
+      "category_name": "Replacement Blades",
+      "node_id": "3024206011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024206011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Grooming Wipes",
+      "category_name": "Grooming Wipes",
+      "node_id": "2975372011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975372011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Hair Removal Mitts & Rollers",
+      "category_name": "Hair Removal Mitts & Rollers",
+      "node_id": "3024207011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024207011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Scissors",
+      "category_name": "Scissors",
+      "node_id": "3024208011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024208011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Shampoos & Conditioners",
+      "category_name": "Shampoos & Conditioners",
+      "node_id": "2975371011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975371011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Shampoos & Conditioners > Conditioners",
+      "category_name": "Conditioners",
+      "node_id": "2975373011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975373011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Shampoos & Conditioners > Shampoos",
+      "category_name": "Shampoos",
+      "node_id": "2975374011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975374011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Shampoos & Conditioners > Shampoos Plus Conditioners",
+      "category_name": "Shampoos Plus Conditioners",
+      "node_id": "3024209011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024209011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Shedding Tools",
+      "category_name": "Shedding Tools",
+      "node_id": "2975369011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975369011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Shower & Bath Supplies",
+      "category_name": "Shower & Bath Supplies",
+      "node_id": "2975375011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975375011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Shower & Bath Supplies > Portable Bathtubs",
+      "category_name": "Portable Bathtubs",
+      "node_id": "23727018011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23727018011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Shower & Bath Supplies > Professional Bathtubs",
+      "category_name": "Professional Bathtubs",
+      "node_id": "23727017011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23727017011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Shower & Bath Supplies > Showerheads & Sprayers",
+      "category_name": "Showerheads & Sprayers",
+      "node_id": "23727019011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23727019011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Grooming > Styptic Gels & Powders",
+      "category_name": "Styptic Gels & Powders",
+      "node_id": "19163264011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/19163264011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies",
+      "category_name": "Health Supplies",
+      "node_id": "2975377011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975377011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > DNA Tests",
+      "category_name": "DNA Tests",
+      "node_id": "20946272011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/20946272011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > Dental Care",
+      "category_name": "Dental Care",
+      "node_id": "2975378011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975378011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > Dental Care > Dental Sticks",
+      "category_name": "Dental Sticks",
+      "node_id": "116011809011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/116011809011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > Dental Care > Toothbrushes",
+      "category_name": "Toothbrushes",
+      "node_id": "2975379011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975379011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > Dental Care > Toothpaste",
+      "category_name": "Toothpaste",
+      "node_id": "2975380011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975380011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > Digestive Remedies",
+      "category_name": "Digestive Remedies",
+      "node_id": "2975381011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975381011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > Ear Care",
+      "category_name": "Ear Care",
+      "node_id": "2975382011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975382011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > Eye Care",
+      "category_name": "Eye Care",
+      "node_id": "2975383011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975383011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > Hip & Joint Care",
+      "category_name": "Hip & Joint Care",
+      "node_id": "3024218011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024218011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > Itch Remedies",
+      "category_name": "Itch Remedies",
+      "node_id": "2975393011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975393011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > Milk Replacers",
+      "category_name": "Milk Replacers",
+      "node_id": "2975394011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975394011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > Non-Prescription Medications",
+      "category_name": "Non-Prescription Medications",
+      "node_id": "7214034011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/7214034011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > Prescription Medications",
+      "category_name": "Prescription Medications",
+      "node_id": "204337591011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/204337591011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > Recovery Collars & Cones",
+      "category_name": "Recovery Collars & Cones",
+      "node_id": "2975395011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975395011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > Relaxants",
+      "category_name": "Relaxants",
+      "node_id": "2975396011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975396011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > Supplements & Vitamins",
+      "category_name": "Supplements & Vitamins",
+      "node_id": "2975397011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975397011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > Supplements & Vitamins > Amino Acids",
+      "category_name": "Amino Acids",
+      "node_id": "3024216011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024216011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > Supplements & Vitamins > Antioxidants",
+      "category_name": "Antioxidants",
+      "node_id": "3024217011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024217011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > Supplements & Vitamins > Fish Oil Supplements",
+      "category_name": "Fish Oil Supplements",
+      "node_id": "3024219011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024219011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > Supplements & Vitamins > Herbal Supplements",
+      "category_name": "Herbal Supplements",
+      "node_id": "3024220011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024220011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > Supplements & Vitamins > Multivitamins",
+      "category_name": "Multivitamins",
+      "node_id": "3024221011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024221011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > Supplements & Vitamins > Probiotics",
+      "category_name": "Probiotics",
+      "node_id": "3024222011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024222011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > Surgery Recovery Suits",
+      "category_name": "Surgery Recovery Suits",
+      "node_id": "120779234011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/120779234011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > Thermometers",
+      "category_name": "Thermometers",
+      "node_id": "2975398011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975398011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Health Supplies > Wormers",
+      "category_name": "Wormers",
+      "node_id": "2975399011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975399011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Litter & Housebreaking",
+      "category_name": "Litter & Housebreaking",
+      "node_id": "2975405011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975405011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Litter & Housebreaking > Litter Boxes",
+      "category_name": "Litter Boxes",
+      "node_id": "2975407011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975407011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Litter & Housebreaking > Odor & Stain Removers",
+      "category_name": "Odor & Stain Removers",
+      "node_id": "2975409011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975409011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Litter & Housebreaking > Odor & Stain Removers > Odor Removers",
+      "category_name": "Odor Removers",
+      "node_id": "23701642011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23701642011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Litter & Housebreaking > Odor & Stain Removers > Stain Removers",
+      "category_name": "Stain Removers",
+      "node_id": "23701641011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23701641011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Litter & Housebreaking > Pooper Scoopers & Bags",
+      "category_name": "Pooper Scoopers & Bags",
+      "node_id": "2975411011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975411011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Litter & Housebreaking > Pooper Scoopers & Bags > Bags",
+      "category_name": "Bags",
+      "node_id": "3052413011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3052413011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Litter & Housebreaking > Pooper Scoopers & Bags > Pooper Scoopers",
+      "category_name": "Pooper Scoopers",
+      "node_id": "3052415011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3052415011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Litter & Housebreaking > Training Pads & Trays",
+      "category_name": "Training Pads & Trays",
+      "node_id": "23569989011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23569989011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Litter & Housebreaking > Training Pads & Trays > Belly Bands",
+      "category_name": "Belly Bands",
+      "node_id": "23729619011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23729619011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Litter & Housebreaking > Training Pads & Trays > Diapers",
+      "category_name": "Diapers",
+      "node_id": "2975408011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975408011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Litter & Housebreaking > Training Pads & Trays > Disposable Training Pads",
+      "category_name": "Disposable Training Pads",
+      "node_id": "23569991011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23569991011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Litter & Housebreaking > Training Pads & Trays > Reusable Training Pads",
+      "category_name": "Reusable Training Pads",
+      "node_id": "23569990011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23569990011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Litter & Housebreaking > Training Pads & Trays > Trays",
+      "category_name": "Trays",
+      "node_id": "3024227011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024227011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Litter & Housebreaking > Urine Detectors",
+      "category_name": "Urine Detectors",
+      "node_id": "14051749011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/14051749011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Memorials & Funerary",
+      "category_name": "Memorials & Funerary",
+      "node_id": "2975412011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975412011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Toys",
+      "category_name": "Toys",
+      "node_id": "2975413011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975413011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Toys > Automatic Ball Launchers",
+      "category_name": "Automatic Ball Launchers",
+      "node_id": "17440055011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17440055011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Toys > Ball Launchers",
+      "category_name": "Ball Launchers",
+      "node_id": "17440054011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17440054011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Toys > Balls",
+      "category_name": "Balls",
+      "node_id": "2975414011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975414011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Toys > Chew Toys",
+      "category_name": "Chew Toys",
+      "node_id": "2975415011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975415011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Toys > Flying Discs",
+      "category_name": "Flying Discs",
+      "node_id": "2975416011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975416011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Toys > Plush Toys",
+      "category_name": "Plush Toys",
+      "node_id": "17602456011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17602456011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Toys > Ropes",
+      "category_name": "Ropes",
+      "node_id": "2975418011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975418011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Toys > Squeak Toys",
+      "category_name": "Squeak Toys",
+      "node_id": "2975419011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975419011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Training & Behavior Aids",
+      "category_name": "Training & Behavior Aids",
+      "node_id": "2975420011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975420011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Training & Behavior Aids > Agility Equipment",
+      "category_name": "Agility Equipment",
+      "node_id": "2975421011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975421011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Training & Behavior Aids > Agility Equipment > Dog Treadmills",
+      "category_name": "Dog Treadmills",
+      "node_id": "8204829011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/8204829011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Training & Behavior Aids > Agility Equipment > Jumps",
+      "category_name": "Jumps",
+      "node_id": "8204833011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/8204833011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Training & Behavior Aids > Agility Equipment > Tunnels",
+      "category_name": "Tunnels",
+      "node_id": "8204831011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/8204831011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Training & Behavior Aids > Dog Treat Pouches",
+      "category_name": "Dog Treat Pouches",
+      "node_id": "20946271011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/20946271011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Training & Behavior Aids > Dog Whistles",
+      "category_name": "Dog Whistles",
+      "node_id": "2975423011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975423011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Training & Behavior Aids > Radio & Wireless Fences",
+      "category_name": "Radio & Wireless Fences",
+      "node_id": "2975424011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975424011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Training & Behavior Aids > Repellents",
+      "category_name": "Repellents",
+      "node_id": "2975425011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975425011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Training & Behavior Aids > Repellents > Repellent Mats",
+      "category_name": "Repellent Mats",
+      "node_id": "3024228011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024228011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Training & Behavior Aids > Repellents > Sonic Repellents",
+      "category_name": "Sonic Repellents",
+      "node_id": "3024229011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024229011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Training & Behavior Aids > Repellents > Spray Repellents",
+      "category_name": "Spray Repellents",
+      "node_id": "3024230011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024230011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Training & Behavior Aids > Sonic Bark Deterrents",
+      "category_name": "Sonic Bark Deterrents",
+      "node_id": "3024231011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024231011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Training & Behavior Aids > Tie-Outs & Stakes",
+      "category_name": "Tie-Outs & Stakes",
+      "node_id": "2975426011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975426011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Training & Behavior Aids > Training Clickers",
+      "category_name": "Training Clickers",
+      "node_id": "2975427011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975427011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Treats",
+      "category_name": "Treats",
+      "node_id": "2975434011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975434011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Treats > Animal Ears",
+      "category_name": "Animal Ears",
+      "node_id": "3024234011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024234011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Treats > Animal Ears > Cow Ears",
+      "category_name": "Cow Ears",
+      "node_id": "3024235011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024235011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Treats > Animal Ears > Lamb Ears",
+      "category_name": "Lamb Ears",
+      "node_id": "3024236011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024236011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Treats > Animal Ears > Pig Ears",
+      "category_name": "Pig Ears",
+      "node_id": "3024237011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024237011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Treats > Bones",
+      "category_name": "Bones",
+      "node_id": "2975435011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975435011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Treats > Bully Sticks",
+      "category_name": "Bully Sticks",
+      "node_id": "18198680011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/18198680011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Treats > Cookies, Biscuits & Snacks",
+      "category_name": "Cookies, Biscuits & Snacks",
+      "node_id": "2975436011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975436011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Treats > Hooves",
+      "category_name": "Hooves",
+      "node_id": "2975438011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975438011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Treats > Jerky",
+      "category_name": "Jerky",
+      "node_id": "2975439011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975439011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Treats > Rawhide",
+      "category_name": "Rawhide",
+      "node_id": "2975440011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975440011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Treats > Rawhide > Bones",
+      "category_name": "Bones",
+      "node_id": "3024241011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024241011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Treats > Rawhide > Chips",
+      "category_name": "Chips",
+      "node_id": "3024242011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024242011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Treats > Rawhide > Rolls",
+      "category_name": "Rolls",
+      "node_id": "3024243011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024243011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Dogs > Treats > Rawhide > Sticks & Twists",
+      "category_name": "Sticks & Twists",
+      "node_id": "3024244011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024244011",
+      "depth": 3
+    }
+  ],
+  "cats": [
+    {
+      "category_path": "Pet Supplies > Cats",
+      "category_name": "Cats",
+      "node_id": "2975241011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975241011",
+      "depth": 0
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Apparel",
+      "category_name": "Apparel",
+      "node_id": "2975242011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975242011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Beds & Furniture",
+      "category_name": "Beds & Furniture",
+      "node_id": "2975243011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975243011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Beds & Furniture > Bed Mats",
+      "category_name": "Bed Mats",
+      "node_id": "3024127011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024127011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Beds & Furniture > Bedding",
+      "category_name": "Bedding",
+      "node_id": "23764003011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23764003011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Beds & Furniture > Bedding > Bed Blankets",
+      "category_name": "Bed Blankets",
+      "node_id": "2975245011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975245011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Beds & Furniture > Bedding > Bed Liners",
+      "category_name": "Bed Liners",
+      "node_id": "3024126011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024126011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Beds & Furniture > Beds",
+      "category_name": "Beds",
+      "node_id": "3024128011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024128011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Beds & Furniture > Cat Houses & Condos",
+      "category_name": "Cat Houses & Condos",
+      "node_id": "2975246011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975246011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Beds & Furniture > Hammocks",
+      "category_name": "Hammocks",
+      "node_id": "17602457011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17602457011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Beds & Furniture > Scratcher Accessories & Parts",
+      "category_name": "Scratcher Accessories & Parts",
+      "node_id": "17602458011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17602458011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Beds & Furniture > Scratching Barrels",
+      "category_name": "Scratching Barrels",
+      "node_id": "23764004011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23764004011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Beds & Furniture > Scratching Pads",
+      "category_name": "Scratching Pads",
+      "node_id": "3024130011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024130011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Beds & Furniture > Scratching Posts",
+      "category_name": "Scratching Posts",
+      "node_id": "2975247011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975247011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Beds & Furniture > Sofas",
+      "category_name": "Sofas",
+      "node_id": "3024129011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024129011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Beds & Furniture > Stairs & Steps",
+      "category_name": "Stairs & Steps",
+      "node_id": "3024138011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024138011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Beds & Furniture > Trees",
+      "category_name": "Trees",
+      "node_id": "2975248011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975248011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Beds & Furniture > Window Perches",
+      "category_name": "Window Perches",
+      "node_id": "2975249011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975249011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Carriers & Strollers",
+      "category_name": "Carriers & Strollers",
+      "node_id": "2975250011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975250011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Carriers & Strollers > Carriers",
+      "category_name": "Carriers",
+      "node_id": "3024131011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024131011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Carriers & Strollers > Carriers > Hard-Sided Carriers",
+      "category_name": "Hard-Sided Carriers",
+      "node_id": "3024132011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024132011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Carriers & Strollers > Carriers > Soft-Sided Carriers",
+      "category_name": "Soft-Sided Carriers",
+      "node_id": "3024133011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024133011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Carriers & Strollers > Strollers",
+      "category_name": "Strollers",
+      "node_id": "3024134011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024134011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Cat Doors, Steps, Nets & Pens",
+      "category_name": "Cat Doors, Steps, Nets & Pens",
+      "node_id": "23763991011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23763991011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Cat Doors, Steps, Nets & Pens > Balcony Nets",
+      "category_name": "Balcony Nets",
+      "node_id": "3024136011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024136011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Cat Doors, Steps, Nets & Pens > Cat Doors",
+      "category_name": "Cat Doors",
+      "node_id": "3024137011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024137011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Cat Doors, Steps, Nets & Pens > Electronic Cat Doors",
+      "category_name": "Electronic Cat Doors",
+      "node_id": "17440056011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17440056011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Cat Doors, Steps, Nets & Pens > Enclosures",
+      "category_name": "Enclosures",
+      "node_id": "23764002011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23764002011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Cat Doors, Steps, Nets & Pens > Playpens",
+      "category_name": "Playpens",
+      "node_id": "23764001011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23764001011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Collars, Harnesses & Leashes",
+      "category_name": "Collars, Harnesses & Leashes",
+      "node_id": "2975252011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975252011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Collars, Harnesses & Leashes > Collar Bells",
+      "category_name": "Collar Bells",
+      "node_id": "7871525011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/7871525011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Collars, Harnesses & Leashes > Collar Charms",
+      "category_name": "Collar Charms",
+      "node_id": "3024141011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024141011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Collars, Harnesses & Leashes > Collars",
+      "category_name": "Collars",
+      "node_id": "2975253011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975253011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Collars, Harnesses & Leashes > Collars > Accessories",
+      "category_name": "Accessories",
+      "node_id": "6602295011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/6602295011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Collars, Harnesses & Leashes > Flea Collars",
+      "category_name": "Flea Collars",
+      "node_id": "2975281011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975281011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Collars, Harnesses & Leashes > Harnesses",
+      "category_name": "Harnesses",
+      "node_id": "2975254011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975254011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Collars, Harnesses & Leashes > ID Tags",
+      "category_name": "ID Tags",
+      "node_id": "2975255011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975255011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Collars, Harnesses & Leashes > Leashes",
+      "category_name": "Leashes",
+      "node_id": "2975256011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975256011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Educational Repellents",
+      "category_name": "Educational Repellents",
+      "node_id": "205727374011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/205727374011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Educational Repellents > Repellent Mats",
+      "category_name": "Repellent Mats",
+      "node_id": "3024142011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024142011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Educational Repellents > Sonic Repellents",
+      "category_name": "Sonic Repellents",
+      "node_id": "3024143011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024143011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Educational Repellents > Spray Repellents",
+      "category_name": "Spray Repellents",
+      "node_id": "3024144011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024144011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Feeding & Watering Supplies",
+      "category_name": "Feeding & Watering Supplies",
+      "node_id": "2975259011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975259011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Feeding & Watering Supplies > Automatic Feeders",
+      "category_name": "Automatic Feeders",
+      "node_id": "2975260011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975260011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Feeding & Watering Supplies > Bowls & Dishes",
+      "category_name": "Bowls & Dishes",
+      "node_id": "17592594011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17592594011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Feeding & Watering Supplies > Bowls & Dishes > Basic Bowls",
+      "category_name": "Basic Bowls",
+      "node_id": "2975261011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975261011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Feeding & Watering Supplies > Bowls & Dishes > Raised Bowls",
+      "category_name": "Raised Bowls",
+      "node_id": "17592595011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17592595011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Feeding & Watering Supplies > Bowls & Dishes > Slow Feeders",
+      "category_name": "Slow Feeders",
+      "node_id": "17602460011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17602460011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Feeding & Watering Supplies > Bowls & Dishes > Travel Bowls",
+      "category_name": "Travel Bowls",
+      "node_id": "17592596011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17592596011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Feeding & Watering Supplies > Feeding Mats",
+      "category_name": "Feeding Mats",
+      "node_id": "14828690011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/14828690011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Feeding & Watering Supplies > Food Storage",
+      "category_name": "Food Storage",
+      "node_id": "2975262011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975262011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Feeding & Watering Supplies > Fountains",
+      "category_name": "Fountains",
+      "node_id": "2975263011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975263011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Feeding & Watering Supplies > Lick Mats",
+      "category_name": "Lick Mats",
+      "node_id": "215542951011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/215542951011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Feeding & Watering Supplies > Nursing Supplies",
+      "category_name": "Nursing Supplies",
+      "node_id": "2975264011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975264011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Flea & Tick Control",
+      "category_name": "Flea & Tick Control",
+      "node_id": "2975280011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975280011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Flea & Tick Control > Flea Combs",
+      "category_name": "Flea Combs",
+      "node_id": "2975282011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975282011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Flea & Tick Control > Flea Pills",
+      "category_name": "Flea Pills",
+      "node_id": "120957556011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/120957556011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Flea & Tick Control > Home Control Treatments",
+      "category_name": "Home Control Treatments",
+      "node_id": "120957555011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/120957555011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Flea & Tick Control > Tick Remover Tools",
+      "category_name": "Tick Remover Tools",
+      "node_id": "2975286011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975286011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Flea & Tick Control > Topical Treatments",
+      "category_name": "Topical Treatments",
+      "node_id": "120957554011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/120957554011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Flea & Tick Control > Topical Treatments > Flea Drops",
+      "category_name": "Flea Drops",
+      "node_id": "3024160011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024160011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Flea & Tick Control > Topical Treatments > Flea Powders",
+      "category_name": "Flea Powders",
+      "node_id": "2975284011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975284011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Flea & Tick Control > Topical Treatments > Flea Shampoos",
+      "category_name": "Flea Shampoos",
+      "node_id": "2975283011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975283011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Flea & Tick Control > Topical Treatments > Flea Sprays",
+      "category_name": "Flea Sprays",
+      "node_id": "2975285011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975285011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Food",
+      "category_name": "Food",
+      "node_id": "2975265011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975265011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Food > Dry",
+      "category_name": "Dry",
+      "node_id": "2975266011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975266011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Food > Dry > Air-Dried",
+      "category_name": "Air-Dried",
+      "node_id": "215743400011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/215743400011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Food > Dry > Dehydrated",
+      "category_name": "Dehydrated",
+      "node_id": "6514361011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/6514361011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Food > Dry > Freeze-Dried",
+      "category_name": "Freeze-Dried",
+      "node_id": "6514362011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/6514362011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Food > Food Toppers",
+      "category_name": "Food Toppers",
+      "node_id": "6514363011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/6514363011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Food > Frozen",
+      "category_name": "Frozen",
+      "node_id": "7239526011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/7239526011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Food > Milk Replacers",
+      "category_name": "Milk Replacers",
+      "node_id": "2975291011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975291011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Food > Veterinary Diets",
+      "category_name": "Veterinary Diets",
+      "node_id": "17044955011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17044955011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Food > Wet",
+      "category_name": "Wet",
+      "node_id": "2975267011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975267011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Food > Wet > Canned",
+      "category_name": "Canned",
+      "node_id": "6514357011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/6514357011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Food > Wet > Pouches",
+      "category_name": "Pouches",
+      "node_id": "6514358011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/6514358011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Food > Wet > Rolls",
+      "category_name": "Rolls",
+      "node_id": "6514359011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/6514359011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Gift Sets",
+      "category_name": "Gift Sets",
+      "node_id": "211908759011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/211908759011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Grooming",
+      "category_name": "Grooming",
+      "node_id": "2975268011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975268011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Grooming > Brushes",
+      "category_name": "Brushes",
+      "node_id": "2975270011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975270011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Grooming > Claw Care",
+      "category_name": "Claw Care",
+      "node_id": "2975271011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975271011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Grooming > Combs",
+      "category_name": "Combs",
+      "node_id": "2975272011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975272011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Grooming > Dander Remover Sprays",
+      "category_name": "Dander Remover Sprays",
+      "node_id": "2975273011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975273011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Grooming > Electric Clippers & Blades",
+      "category_name": "Electric Clippers & Blades",
+      "node_id": "3024145011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024145011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Grooming > Electric Clippers & Blades > Electric Clipper Kits",
+      "category_name": "Electric Clipper Kits",
+      "node_id": "23711854011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23711854011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Grooming > Electric Clippers & Blades > Electric Clippers",
+      "category_name": "Electric Clippers",
+      "node_id": "3024146011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024146011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Grooming > Electric Clippers & Blades > Replacement Blades",
+      "category_name": "Replacement Blades",
+      "node_id": "3024147011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024147011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Grooming > Hair Removal Mitts & Rollers",
+      "category_name": "Hair Removal Mitts & Rollers",
+      "node_id": "3024148011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024148011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Grooming > Scissors",
+      "category_name": "Scissors",
+      "node_id": "3024149011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024149011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Grooming > Shampoos & Conditioners",
+      "category_name": "Shampoos & Conditioners",
+      "node_id": "2975274011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975274011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Grooming > Shampoos & Conditioners > Conditioners",
+      "category_name": "Conditioners",
+      "node_id": "3024150011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024150011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Grooming > Shampoos & Conditioners > Shampoos",
+      "category_name": "Shampoos",
+      "node_id": "3024151011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024151011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Grooming > Shampoos & Conditioners > Shampoos Plus Conditioners",
+      "category_name": "Shampoos Plus Conditioners",
+      "node_id": "3024152011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024152011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Grooming > Shedding Tools",
+      "category_name": "Shedding Tools",
+      "node_id": "2975269011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975269011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Health Supplies",
+      "category_name": "Health Supplies",
+      "node_id": "2975276011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975276011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Health Supplies > Dental Care",
+      "category_name": "Dental Care",
+      "node_id": "2975277011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975277011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Health Supplies > Digestive Remedies",
+      "category_name": "Digestive Remedies",
+      "node_id": "2975278011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975278011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Health Supplies > Ear Care",
+      "category_name": "Ear Care",
+      "node_id": "2975279011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975279011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Health Supplies > Eye Care",
+      "category_name": "Eye Care",
+      "node_id": "3024155011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024155011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Health Supplies > Hairball Remedy Pastes & Gels",
+      "category_name": "Hairball Remedy Pastes & Gels",
+      "node_id": "2975288011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975288011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Health Supplies > Hip & Joint Care",
+      "category_name": "Hip & Joint Care",
+      "node_id": "3024163011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024163011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Health Supplies > Itch Remedies",
+      "category_name": "Itch Remedies",
+      "node_id": "2975290011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975290011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Health Supplies > Non-Prescription Medications",
+      "category_name": "Non-Prescription Medications",
+      "node_id": "7214035011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/7214035011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Health Supplies > Prescription Medications",
+      "category_name": "Prescription Medications",
+      "node_id": "204337593011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/204337593011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Health Supplies > Recovery Collars & Cones",
+      "category_name": "Recovery Collars & Cones",
+      "node_id": "2975292011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975292011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Health Supplies > Relaxants",
+      "category_name": "Relaxants",
+      "node_id": "2975293011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975293011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Health Supplies > Supplements & Vitamins",
+      "category_name": "Supplements & Vitamins",
+      "node_id": "2975294011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975294011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Health Supplies > Supplements & Vitamins > Antioxidants",
+      "category_name": "Antioxidants",
+      "node_id": "3024162011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024162011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Health Supplies > Supplements & Vitamins > Fish Oil Supplements",
+      "category_name": "Fish Oil Supplements",
+      "node_id": "3024164011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024164011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Health Supplies > Supplements & Vitamins > Herbal Supplements",
+      "category_name": "Herbal Supplements",
+      "node_id": "3024165011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024165011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Health Supplies > Supplements & Vitamins > Multivitamins",
+      "category_name": "Multivitamins",
+      "node_id": "3024166011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024166011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Health Supplies > Supplements & Vitamins > Probiotics",
+      "category_name": "Probiotics",
+      "node_id": "3024167011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024167011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Health Supplies > Surgery Recovery Suits",
+      "category_name": "Surgery Recovery Suits",
+      "node_id": "120779235011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/120779235011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Health Supplies > Wormers",
+      "category_name": "Wormers",
+      "node_id": "2975295011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975295011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Litter & Housebreaking",
+      "category_name": "Litter & Housebreaking",
+      "node_id": "2975296011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975296011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Litter & Housebreaking > Litter",
+      "category_name": "Litter",
+      "node_id": "2975298011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975298011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Litter & Housebreaking > Litter Box Enclosures",
+      "category_name": "Litter Box Enclosures",
+      "node_id": "17592597011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17592597011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Litter & Housebreaking > Litter Box Liners",
+      "category_name": "Litter Box Liners",
+      "node_id": "3024168011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/3024168011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Litter & Housebreaking > Litter Boxes",
+      "category_name": "Litter Boxes",
+      "node_id": "2975299011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975299011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Litter & Housebreaking > Litter Boxes > Disposable Litter Boxes",
+      "category_name": "Disposable Litter Boxes",
+      "node_id": "17602463011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17602463011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Litter & Housebreaking > Litter Boxes > Self-Cleaning Litter Boxes",
+      "category_name": "Self-Cleaning Litter Boxes",
+      "node_id": "17602464011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17602464011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Litter & Housebreaking > Litter Boxes > Standard Litter Boxes",
+      "category_name": "Standard Litter Boxes",
+      "node_id": "17602462011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17602462011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Litter & Housebreaking > Litter Mats",
+      "category_name": "Litter Mats",
+      "node_id": "17295526011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17295526011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Litter & Housebreaking > Litter Scoops",
+      "category_name": "Litter Scoops",
+      "node_id": "2975300011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975300011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Litter & Housebreaking > Litter Waste Receptacle Refills",
+      "category_name": "Litter Waste Receptacle Refills",
+      "node_id": "21232549011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/21232549011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Litter & Housebreaking > Litter Waste Receptacles",
+      "category_name": "Litter Waste Receptacles",
+      "node_id": "17602461011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17602461011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Litter & Housebreaking > Odor & Stain Removers",
+      "category_name": "Odor & Stain Removers",
+      "node_id": "2975301011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975301011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Litter & Housebreaking > Odor & Stain Removers > Odor Removers",
+      "category_name": "Odor Removers",
+      "node_id": "23701644011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23701644011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Litter & Housebreaking > Odor & Stain Removers > Stain Removers",
+      "category_name": "Stain Removers",
+      "node_id": "23701643011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23701643011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Litter & Housebreaking > Replacement Filters",
+      "category_name": "Replacement Filters",
+      "node_id": "17602466011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17602466011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Litter & Housebreaking > Toilet Training Systems",
+      "category_name": "Toilet Training Systems",
+      "node_id": "17602465011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17602465011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Memorials & Funerary",
+      "category_name": "Memorials & Funerary",
+      "node_id": "2975302011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975302011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Toys",
+      "category_name": "Toys",
+      "node_id": "2975303011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975303011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Toys > Balls",
+      "category_name": "Balls",
+      "node_id": "2975304011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975304011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Toys > Catnip Toys",
+      "category_name": "Catnip Toys",
+      "node_id": "2975305011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975305011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Toys > Feather Toys",
+      "category_name": "Feather Toys",
+      "node_id": "2975306011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975306011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Toys > Interactive Toys",
+      "category_name": "Interactive Toys",
+      "node_id": "23690012011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23690012011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Toys > Mice & Animal Toys",
+      "category_name": "Mice & Animal Toys",
+      "node_id": "2975308011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975308011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Toys > Plush Toys",
+      "category_name": "Plush Toys",
+      "node_id": "23690011011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23690011011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Toys > Tunnels",
+      "category_name": "Tunnels",
+      "node_id": "17592598011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17592598011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Treats",
+      "category_name": "Treats",
+      "node_id": "2975309011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975309011",
+      "depth": 1
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Treats > Catnip",
+      "category_name": "Catnip",
+      "node_id": "2975310011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975310011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Treats > Pastes",
+      "category_name": "Pastes",
+      "node_id": "116011808011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/116011808011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Treats > Snacks",
+      "category_name": "Snacks",
+      "node_id": "2975311011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975311011",
+      "depth": 2
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Treats > Snacks > Crunchy Treats",
+      "category_name": "Crunchy Treats",
+      "node_id": "116011810011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/116011810011",
+      "depth": 3
+    },
+    {
+      "category_path": "Pet Supplies > Cats > Treats > Snacks > Soft Treats",
+      "category_name": "Soft Treats",
+      "node_id": "116011811011",
+      "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/116011811011",
+      "depth": 3
+    }
+  ]
+}
