@@ -356,6 +356,7 @@ class ScraperEngine:
                 check=True,
                 capture_output=True,
                 text=True,
+                encoding="utf-8",
                 timeout=self.timeout_seconds,
             )
         except subprocess.CalledProcessError as exc:
@@ -582,11 +583,6 @@ Output Markdown body only. Do not output YAML frontmatter.
         products: list[dict[str, Any]],
         related_articles: list[PublishedArticle] | None = None,
     ) -> str:
-        try:
-            from openai import OpenAI
-        except ImportError as exc:
-            raise RuntimeError("OpenAI SDK is not installed. Run: pip install openai") from exc
-
         prompt_products = self._prepare_products_for_prompt(products)
         compact_json = json.dumps(prompt_products, ensure_ascii=False, separators=(",", ":"))
         user_prompt = (
@@ -600,34 +596,105 @@ Output Markdown body only. Do not output YAML frontmatter.
         )
 
         LOGGER.info("Generating Markdown with model %s for %s", self.model, task.node_id)
+
+        if "claude" in self.model.lower():
+            body = self._generate_claude(self.SYSTEM_PROMPT, user_prompt)
+        else:
+            body = self._generate_openai(self.SYSTEM_PROMPT, user_prompt)
+
+        body = self._enforce_clean_amazon_links(body)
+        body = self._sanitize_external_links(body)
+        body = self._sanitize_exact_prices(body)
+        return self._sanitize_unsupported_vision_claims(body)
+
+    def _generate_claude(self, system_prompt: str, user_prompt: str) -> str:
+        """Call /v1/messages for Claude models using requests with streaming.
+
+        Streaming keeps the connection alive so the proxy won't 504 timeout
+        while Claude is generating a long article.
+        """
+        import requests as _requests
+
+        base = (self.base_url or "https://api.anthropic.com/v1").rstrip("/")
+        if not base.endswith("/v1"):
+            base += "/v1"
+        url = f"{base}/messages"
+
+        LOGGER.info("Calling %s via requests (streaming)", url)
+        resp = _requests.post(
+            url,
+            headers={
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {self.api_key}",
+            },
+            json={
+                "model": self.model,
+                "max_tokens": 16000,
+                "stream": True,
+                "system": system_prompt,
+                "messages": [{"role": "user", "content": user_prompt}],
+            },
+            timeout=600,
+            stream=True,
+        )
+        if resp.status_code != 200:
+            LOGGER.error("API error %s: %s", resp.status_code, resp.text[:2000])
+            resp.raise_for_status()
+
+        # Parse SSE stream to assemble full text.
+        chunks: list[str] = []
+        for line in resp.iter_lines(decode_unicode=True):
+            if not line or not line.startswith("data: "):
+                continue
+            data_str = line[len("data: "):]
+            if data_str.strip() == "[DONE]":
+                break
+            try:
+                event = json.loads(data_str)
+            except json.JSONDecodeError:
+                continue
+            # Anthropic stream: content_block_delta events carry text
+            if event.get("type") == "content_block_delta":
+                delta = event.get("delta", {})
+                if delta.get("type") == "text_delta":
+                    chunks.append(delta.get("text", ""))
+            # OpenAI-compatible stream format fallback
+            elif "choices" in event:
+                for choice in event["choices"]:
+                    delta = choice.get("delta", {})
+                    if "content" in delta and delta["content"]:
+                        chunks.append(delta["content"])
+
+        if not chunks:
+            raise RuntimeError("Claude streaming returned no content")
+
+        LOGGER.info("Received %d stream chunks, total ~%d chars", len(chunks), sum(len(c) for c in chunks))
+        return "".join(chunks).strip()
+
+    def _generate_openai(self, system_prompt: str, user_prompt: str) -> str:
+        """Call /v1/chat/completions using the OpenAI SDK (for non-Claude models)."""
+        try:
+            from openai import OpenAI
+        except ImportError as exc:
+            raise RuntimeError("OpenAI SDK is not installed. Run: pip install openai") from exc
+
         client_kwargs: dict[str, str] = {}
         if self.api_key:
             client_kwargs["api_key"] = self.api_key
         if self.base_url:
             client_kwargs["base_url"] = self.base_url
         client = OpenAI(**client_kwargs)
+
+        messages = [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt},
+        ]
         if not self.base_url and hasattr(client, "responses"):
-            response = client.responses.create(
-                model=self.model,
-                input=[
-                    {"role": "system", "content": self.SYSTEM_PROMPT},
-                    {"role": "user", "content": user_prompt},
-                ],
-            )
-            body = response.output_text.strip()
+            response = client.responses.create(model=self.model, input=messages)
+            return response.output_text.strip()
         else:
-            response = client.chat.completions.create(
-                model=self.model,
-                messages=[
-                    {"role": "system", "content": self.SYSTEM_PROMPT},
-                    {"role": "user", "content": user_prompt},
-                ],
-            )
-            body = response.choices[0].message.content.strip()
-        body = self._enforce_clean_amazon_links(body)
-        body = self._sanitize_external_links(body)
-        body = self._sanitize_exact_prices(body)
-        return self._sanitize_unsupported_vision_claims(body)
+            response = client.chat.completions.create(model=self.model, messages=messages)
+            return response.choices[0].message.content.strip()
 
     @staticmethod
     def _related_articles_json(related_articles: list[PublishedArticle]) -> str:
