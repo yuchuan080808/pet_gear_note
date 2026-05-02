@@ -1,12 +1,12 @@
 baseURL = 'https://yuchuan080808.github.io/pet_gear_note/'
 languageCode = 'en-us'
 title = 'Pet Gear Note'
-description = 'Comprehensive reviews, buying guides, and expert recommendations for dog and cat supplies. Find the best pet gear and avoid buyer regret.'
-keywords = ['pet supplies', 'dog gear', 'cat accessories', 'pet product reviews', 'best pet products']
-author = 'Pet Gear Note'
 theme = 'PaperMod'
 
 [params]
+description = 'Comprehensive reviews, buying guides, and expert recommendations for dog and cat supplies. Find the best pet gear and avoid buyer regret.'
+keywords = ['pet supplies', 'dog gear', 'cat accessories', 'pet product reviews', 'best pet products']
+author = 'Pet Gear Note'
 defaultTheme = "auto"
 mainSections = ["cats", "dogs"]
 disableSpecial1stPost = true
