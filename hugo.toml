@@ -6,3 +6,4 @@ theme = 'PaperMod'
 [params]
 defaultTheme = "auto"
 mainSections = ["cats", "dogs"]
+disableSpecial1stPost = true
