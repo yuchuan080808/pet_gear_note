@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-05-02T10:50:33+00:00",
+  "last_synced": "2026-05-02T13:05:08+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -2534,8 +2534,11 @@
       "category_name": "Ball Launchers",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17440054011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-02T13:11:52+00:00",
+      "article_path": "content\\dogs\\best-ball-launchers.md",
+      "article_url": "/dogs/best-ball-launchers/",
+      "article_title": "Best Ball Launchers for Dogs"
     },
     {
       "node_id": "2975414011",
