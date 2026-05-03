@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-05-02T13:05:08+00:00",
+  "last_synced": "2026-05-03T13:26:04+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -63,7 +63,7 @@
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17602457011",
       "pet_type": "cats",
       "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "last_updated": "2026-05-03T13:26:04+00:00"
     },
     {
       "node_id": "17602458011",
@@ -72,7 +72,7 @@
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17602458011",
       "pet_type": "cats",
       "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "last_updated": "2026-05-03T13:26:04+00:00"
     },
     {
       "node_id": "23764004011",
@@ -189,7 +189,7 @@
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17440056011",
       "pet_type": "cats",
       "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "last_updated": "2026-05-03T00:54:20+00:00"
     },
     {
       "node_id": "23764002011",
@@ -324,7 +324,7 @@
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17592595011",
       "pet_type": "cats",
       "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "last_updated": "2026-05-03T00:54:20+00:00"
     },
     {
       "node_id": "17602460011",
@@ -333,7 +333,7 @@
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17602460011",
       "pet_type": "cats",
       "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "last_updated": "2026-05-03T13:26:04+00:00"
     },
     {
       "node_id": "17592596011",
@@ -342,7 +342,7 @@
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17592596011",
       "pet_type": "cats",
       "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "last_updated": "2026-05-03T13:15:25+00:00"
     },
     {
       "node_id": "14828690011",
@@ -855,7 +855,7 @@
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17592597011",
       "pet_type": "cats",
       "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "last_updated": "2026-05-03T13:15:25+00:00"
     },
     {
       "node_id": "3024168011",
@@ -872,8 +872,11 @@
       "category_name": "Disposable Litter Boxes",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17602463011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-03T13:50:45+00:00",
+      "article_path": "content\\cats\\best-disposable-litter-boxes.md",
+      "article_url": "/cats/best-disposable-litter-boxes/",
+      "article_title": "Best Disposable Litter Boxes for Cats"
     },
     {
       "node_id": "17602464011",
@@ -881,8 +884,11 @@
       "category_name": "Self-Cleaning Litter Boxes",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17602464011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-03T13:58:37+00:00",
+      "article_path": "content\\cats\\best-self-cleaning-litter-boxes.md",
+      "article_url": "/cats/best-self-cleaning-litter-boxes/",
+      "article_title": "Best Self-Cleaning Litter Boxes for Cats"
     },
     {
       "node_id": "17602462011",
@@ -890,8 +896,11 @@
       "category_name": "Standard Litter Boxes",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17602462011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-03T13:42:30+00:00",
+      "article_path": "content\\cats\\best-standard-litter-boxes.md",
+      "article_url": "/cats/best-standard-litter-boxes/",
+      "article_title": "Best Standard Litter Boxes for Cats"
     },
     {
       "node_id": "17295526011",
@@ -929,8 +938,11 @@
       "category_name": "Litter Waste Receptacles",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17602461011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-03T13:35:38+00:00",
+      "article_path": "content\\cats\\best-litter-waste-receptacles.md",
+      "article_url": "/cats/best-litter-waste-receptacles/",
+      "article_title": "Best Litter Waste Receptacles for Cats"
     },
     {
       "node_id": "23701644011",
@@ -1038,7 +1050,7 @@
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17592598011",
       "pet_type": "cats",
       "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "last_updated": "2026-05-03T13:15:25+00:00"
     },
     {
       "node_id": "2975310011",
@@ -1284,7 +1296,7 @@
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17602453011",
       "pet_type": "dogs",
       "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "last_updated": "2026-05-03T13:15:25+00:00"
     },
     {
       "node_id": "2975331011",
@@ -1614,7 +1626,7 @@
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17467841011",
       "pet_type": "dogs",
       "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "last_updated": "2026-05-03T00:54:20+00:00"
     },
     {
       "node_id": "23764008011",
@@ -1761,7 +1773,7 @@
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17602455011",
       "pet_type": "dogs",
       "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "last_updated": "2026-05-03T13:26:04+00:00"
     },
     {
       "node_id": "3024201011",
@@ -2526,7 +2538,7 @@
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17440055011",
       "pet_type": "dogs",
       "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "last_updated": "2026-05-03T00:54:20+00:00"
     },
     {
       "node_id": "17440054011",
@@ -2574,7 +2586,7 @@
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17602456011",
       "pet_type": "dogs",
       "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "last_updated": "2026-05-03T13:26:04+00:00"
     },
     {
       "node_id": "2975418011",
