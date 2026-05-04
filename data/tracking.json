@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-05-03T13:26:04+00:00",
+  "last_synced": "2026-05-04T12:00:49+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -968,8 +968,11 @@
       "category_name": "Replacement Filters",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17602466011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-04T12:09:36+00:00",
+      "article_path": "content\\cats\\best-replacement-filters.md",
+      "article_url": "/cats/best-replacement-filters/",
+      "article_title": "Best Replacement Filters for Cats"
     },
     {
       "node_id": "17602465011",
@@ -977,8 +980,8 @@
       "category_name": "Toilet Training Systems",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/17602465011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-05-04T12:01:08+00:00"
     },
     {
       "node_id": "2975302011",
@@ -2213,8 +2216,11 @@
       "category_name": "Styptic Gels & Powders",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/19163264011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-04T12:27:21+00:00",
+      "article_path": "content\\dogs\\best-styptic-gels-powders.md",
+      "article_url": "/dogs/best-styptic-gels-powders/",
+      "article_title": "Best Styptic Gels & Powders for Dogs"
     },
     {
       "node_id": "20946272011",
@@ -2756,8 +2762,11 @@
       "category_name": "Bully Sticks",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/18198680011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-04T12:18:52+00:00",
+      "article_path": "content\\dogs\\best-bully-sticks.md",
+      "article_url": "/dogs/best-bully-sticks/",
+      "article_title": "Best Bully Sticks for Dogs"
     },
     {
       "node_id": "2975436011",
