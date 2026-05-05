@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-05-04T12:00:49+00:00",
+  "last_synced": "2026-05-05T13:53:21+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -755,8 +755,8 @@
       "category_name": "Prescription Medications",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/204337593011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-05-05T14:10:26+00:00"
     },
     {
       "node_id": "2975292011",
@@ -2228,8 +2228,11 @@
       "category_name": "DNA Tests",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/20946272011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-05T14:20:34+00:00",
+      "article_path": "content\\dogs\\best-dna-tests.md",
+      "article_url": "/dogs/best-dna-tests/",
+      "article_title": "Best DNA Tests for Dogs"
     },
     {
       "node_id": "116011809011",
@@ -2327,8 +2330,11 @@
       "category_name": "Prescription Medications",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/204337591011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-05T14:03:57+00:00",
+      "article_path": "content\\dogs\\best-prescription-medications.md",
+      "article_url": "/dogs/best-prescription-medications/",
+      "article_title": "Best Prescription Medications for Dogs"
     },
     {
       "node_id": "2975395011",
@@ -2645,8 +2651,8 @@
       "category_name": "Dog Treat Pouches",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/20946271011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-05-05T14:10:45+00:00"
     },
     {
       "node_id": "2975423011",
