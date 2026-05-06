@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-05-05T13:53:21+00:00",
+  "last_synced": "2026-05-06T14:05:57+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -557,8 +557,8 @@
       "category_name": "Gift Sets",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/211908759011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-05-06T14:06:25+00:00"
     },
     {
       "node_id": "2975270011",
@@ -929,8 +929,11 @@
       "category_name": "Litter Waste Receptacle Refills",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/21232549011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-06T14:18:41+00:00",
+      "article_path": "content\\cats\\best-litter-waste-receptacle-refills.md",
+      "article_url": "/cats/best-litter-waste-receptacle-refills/",
+      "article_title": "Best Litter Waste Receptacle Refills for Cats"
     },
     {
       "node_id": "17602461011",
@@ -1454,8 +1457,8 @@
       "category_name": "Activity Trackers",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/212610080011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-05-06T14:20:46+00:00"
     },
     {
       "node_id": "2975429011",
@@ -2018,8 +2021,8 @@
       "category_name": "Gift Sets",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/211908761011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-05-06T14:08:52+00:00"
     },
     {
       "node_id": "2975363011",
