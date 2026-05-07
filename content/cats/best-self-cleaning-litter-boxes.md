@@ -78,6 +78,13 @@ Self-cleaning mechanisms are moving parts. Any cat that likes to investigate or 
 
 ---
 
+
+### Related Resources
+
+- **Related Review:** [Best Standard Litter Boxes for Cats](/cats/best-standard-litter-boxes/)
+- **Related Review:** [Best Litter Waste Receptacle Refills for Cats](/cats/best-litter-waste-receptacle-refills/)
+- **Veterinary Reference:** [Cornell Feline Health Center](https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center) — Authoritative research on feline medicine.
+
 ## Comparison Table
 
 | Product | Best For | Standout Upside | Buyer Caution | Skip If |
