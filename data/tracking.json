@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-05-06T14:05:57+00:00",
+  "last_synced": "2026-05-08T13:04:15+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -377,8 +377,8 @@
       "category_name": "Lick Mats",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/215542951011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-05-08T13:04:52+00:00"
     },
     {
       "node_id": "2975264011",
@@ -467,8 +467,8 @@
       "category_name": "Air-Dried",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/215743400011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-05-08T13:06:57+00:00"
     },
     {
       "node_id": "6514361011",
@@ -1823,8 +1823,8 @@
       "category_name": "Lick Mats",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/215542953011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-05-08T13:05:49+00:00"
     },
     {
       "node_id": "2975356011",
@@ -1931,8 +1931,11 @@
       "category_name": "Air-Dried",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/215743402011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-08T13:16:35+00:00",
+      "article_path": "content\\dogs\\best-air-dried.md",
+      "article_url": "/dogs/best-air-dried/",
+      "article_title": "Best Air-Dried for Dogs"
     },
     {
       "node_id": "6514321011",
