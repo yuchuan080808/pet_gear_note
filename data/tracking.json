@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-05-08T13:04:15+00:00",
+  "last_synced": "2026-05-09T13:04:28+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -1724,8 +1724,8 @@
       "category_name": "Door & Stair Gates",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23539678011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-05-09T13:11:18+00:00"
     },
     {
       "node_id": "23539679011",
@@ -1733,8 +1733,8 @@
       "category_name": "Gate Extensions",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23539679011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-05-09T13:17:23+00:00"
     },
     {
       "node_id": "2975350011",
@@ -2510,8 +2510,8 @@
       "category_name": "Disposable Training Pads",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23569991011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-05-09T13:31:47+00:00"
     },
     {
       "node_id": "23569990011",
@@ -2519,8 +2519,8 @@
       "category_name": "Reusable Training Pads",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23569990011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-05-09T13:24:15+00:00"
     },
     {
       "node_id": "3024227011",
