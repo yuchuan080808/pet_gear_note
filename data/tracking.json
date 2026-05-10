@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-05-09T13:04:28+00:00",
+  "last_synced": "2026-05-10T01:17:05+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -1028,8 +1028,8 @@
       "category_name": "Interactive Toys",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23690012011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-05-10T01:43:42+00:00"
     },
     {
       "node_id": "2975308011",
@@ -1046,8 +1046,8 @@
       "category_name": "Plush Toys",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23690011011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-05-10T01:38:00+00:00"
     },
     {
       "node_id": "17592598011",
@@ -1484,8 +1484,8 @@
       "category_name": "Electronic Training Collars",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23592369011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-05-10T01:32:08+00:00"
     },
     {
       "node_id": "2975431011",
@@ -2465,8 +2465,8 @@
       "category_name": "Stain Removers",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23701641011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-05-10T01:50:07+00:00"
     },
     {
       "node_id": "3052413011",
