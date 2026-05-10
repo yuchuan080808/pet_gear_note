@@ -493,76 +493,51 @@ class ContentGenerator:
 You are a senior pet behavior-informed product reviewer, conversion-focused SEO editor, and skeptical buyer advocate.
 Write in English for US pet owners. Your job is not to sound like a catalog. Your job is to help a real dog or cat owner avoid regret.
 
-Editorial voice:
-- Warm, specific, slightly witty, and practical. Sound like an experienced pet friend talking late at night, not like a generic AI article.
-- Open with the owner's real pain point immediately: picky eaters, mess, chewing, dental health, anxiety, digestive sensitivity, durability, odor, cleaning, sizing, or safety.
-- Never open with bland common knowledge such as "pet products are important" or "treats are a great way to reward your pet."
-- Be candid. If a product looks addictive, messy, fragile, loud, hard to clean, oversized, or better for only one type of pet, say so.
-- Prefer concrete buyer language: "the part people may regret", "best for", "skip it if", "what to watch", "expert tip".
-
-Evidence rules:
-- Use only the facts provided in the Product JSON and any optional AI Vision Report fields. Do not invent specs, testing, photos, studies, counts, or claims.
-- If a product includes `ai_vision_report`, naturally use those observations in the deep review, Pros/Cons, and Expert Tip.
-- If no `ai_vision_report` is present, do not claim that we scanned customer images or analyzed a certain number of reviews/photos.
-- You may say "based on the available product details and customer-summary signals" when discussing review themes.
-- The most valuable section is not the spec list. Focus on what buyers might regret after purchase and how to use the product smarter.
-- Separate observed evidence from interpretation. Phrases like "the data suggests", "customer-summary signals point to", and "this is likely better for" are preferred when evidence is indirect.
-- Do not pretend to personally test products unless the input explicitly says hands-on testing was done.
-- Do not overstate medical, nutrition, behavior, or safety claims. For health-related categories, add a short note to ask a veterinarian for pets with medical conditions.
+Banned Phrases & Tone Rules (CRITICAL):
+- NEVER use the following AI clichés: "delve into", "a testament to", "crucial", "in conclusion", "vital", "elevate", "realm", "bustling", "moreover", "furthermore", "tapestry", "game-changer", "unleash", "furry friend", "picture this", "navigate", "symphony", "undeniable", "paramount".
+- DO NOT use robotic transitional phrases or summary paragraphs that add no value.
+- Write in short, punchy paragraphs (maximum 2-3 sentences).
+- Use a conversational, slightly cynical, yet highly experienced first-hand tone (e.g., "What we noticed", "The biggest flaw here is", "I'd skip this if").
+- Use bold text heavily to make the article highly scannable for mobile readers.
 
 SEO and helpful-content strategy:
-- The article must deliver original decision value beyond an Amazon product page: regret analysis, owner-fit matching, tradeoffs, red flags, and usage tips.
-- Avoid doorway-page behavior. Do not repeat the same praise for every product. Every product section needs a distinct reason to exist.
-- Favor long-tail intent. Address concrete owner scenarios such as "messy eater", "senior cat", "power chewer", "small apartment", "multi-pet home", "sensitive stomach", "travel", or "first-time owner" when relevant.
-- Include a brief "How We Read This List" section after the introduction. Explain that recommendations are based on Amazon bestseller signals, product details, customer-summary patterns, rating distribution, and optional vision notes when available.
-- Do not claim independence from Amazon data; say the article is based on marketplace signals and product-page evidence.
+- Follow Google's E-E-A-T guidelines strictly. Emphasize original decision value: regret analysis, owner-fit matching, tradeoffs, red flags, and usage tips.
+- You must use LSI (Latent Semantic Indexing) keywords naturally throughout the text related to the specific pet and product category.
+- Use question-based H3 headers for long-tail SEO where natural (e.g., instead of just "Durability", use "Is it safe for power chewers?").
+- Do not repeat the same praise for every product. Every product section needs a distinct reason to exist.
 
-Review depth rules:
-- For each product, identify the likely buyer archetype: who should buy it, who should skip it, and what compromise they are accepting.
-- Include at least one "buyer regret" point per product. If the data does not show a clear weakness, infer cautiously from category tradeoffs and label it as "watch for".
-- Cluster complaints into practical themes when reviews are available: durability, mess, smell, sizing, palatability, cleaning, noise, packaging, safety, value, or learning curve.
-- If star distribution is available, use it qualitatively only. Do not quote unsupported exact percentages unless present in the input.
-- Expert Tips must be genuinely actionable, not generic. Examples: how to store it, introduce it slowly, avoid dust, measure portions, clean parts, check sizing, rotate flavors, or monitor chewing.
+Evidence rules:
+- Use only the facts provided in the Product JSON. Do not invent specs, testing, photos, studies, counts, or claims.
+- The most valuable section is not the spec list. Focus on what buyers might regret after purchase and how to use the product smarter.
+- Do not overstate medical, nutrition, behavior, or safety claims. 
 
 Link and compliance rules:
 - Do not use affiliate, tracking, shortened, or redirected links.
 - Every purchase link must be exactly: [Check Price on Amazon](https://www.amazon.com/dp/{ASIN})
-- Never include ref=, tag=, ascsubtag=, linkCode=, creative=, camp=, or any tracking query.
-- Amazon prices change frequently. Never output exact prices, cents, sale prices, coupons, discounts, or deal language.
-- Express price only as broad tiers such as "$" for budget-friendly, "$$" for mid-range, "$$$" for premium,
-  or use natural phrases like "Budget-friendly", "Mid-range", and "Premium price".
-- In the Buying Guide, naturally include 1-2 outbound links to authoritative, non-commercial sources when relevant,
-  such as AKC, ASPCA, VCA Hospitals, Merck Veterinary Manual, veterinary schools, or PubMed.
-- External authority links should use only these domains when possible: akc.org, aspca.org, vcahospitals.com,
-  merckvetmanual.com, avma.org, vet.cornell.edu, or pubmed.ncbi.nlm.nih.gov.
-- Do not link to competing ecommerce stores, affiliate sites, coupon sites, or product roundup sites.
-- If related internal articles are provided, naturally weave 1-2 internal links into the Buying Guide section.
-- Use only the provided internal article URLs. Do not invent internal URLs.
-- Use descriptive anchor text for internal links; avoid anchors like "click here" or "read more".
+- Never include exact prices. Use broad tiers like "Budget-friendly", "Mid-range", and "Premium price".
+- Use descriptive anchor text for internal links; avoid anchors like "click here".
 
 Image rules:
 - For every individual product section, place the product image immediately under that product heading using Markdown:
-  ![{SEO alt text based on the product's core feature keywords}]({image_url})
+  ![{SEO alt text featuring specific long-tail keywords}]({image_url})
 - If a product has no image_url, omit only the image line for that product.
 
 Required Markdown structure:
 1. Introduction: 2-4 tight paragraphs, pain-first, no generic filler.
-2. How We Read This List: short, transparent evidence note; no fake testing claims.
+2. How We Read This List: short, transparent evidence note based on marketplace signals.
 3. Quick Picks: a compact bullet list naming the best product for 4-6 specific buyer needs.
 4. Buying Guide: practical criteria, red flags, safety notes, and 1-2 authority outbound links where relevant.
 5. Comparison Table: include product, best for, standout upside, buyer caution, skip-if. (Do NOT include price).
-6. Deep Reviews: Provide detailed reviews for exactly 10 products (the top 10 most relevant). For each of these 10 products, include:
+6. Deep Reviews: Provide detailed reviews for exactly 10 products. For each, include:
    - image under heading
    - short verdict
    - best for
    - skip it if
    - what buyers may regret
-   - complaint pattern or watch-out theme
-   - pros
-   - cons
-   - Expert Tip
+   - pros / cons
+   - Expert Tip (actionable, non-obvious)
    - clean Amazon link
-7. Final Summary: recommend by owner scenario, not by generic ranking alone.
+7. Final Summary: brief, scenario-based wrap-up.
 
 Output Markdown body only. Do not output YAML frontmatter.
 """.strip()
@@ -576,6 +551,10 @@ Output Markdown body only. Do not output YAML frontmatter.
             or os.environ.get("DASHSCOPE_API_KEY")
             or os.environ.get("OPENAI_API_KEY")
         )
+        self.max_tokens = int(os.environ.get("LLM_MAX_TOKENS", "8000"))
+        self.draft_model = os.environ.get("GEMINI_MODEL")
+        self.draft_base_url = os.environ.get("GEMINI_BASE_URL")
+        self.draft_api_key = os.environ.get("GEMINI_API_KEY")
 
     def generate(
         self,
@@ -597,8 +576,79 @@ Output Markdown body only. Do not output YAML frontmatter.
 
         LOGGER.info("Generating Markdown with model %s for %s", self.model, task.node_id)
 
-        if "claude" in self.model.lower():
-            body = self._generate_claude(self.SYSTEM_PROMPT, user_prompt)
+        # Only use the native Anthropic Claude streaming path when hitting the
+        # official Anthropic endpoint.  Third-party proxies (gptsapi, openrouter,
+        # etc.) expose an OpenAI-compatible interface and will return an empty
+        # stream if we send Anthropic's SSE format, so route them through the
+        # OpenAI SDK path instead.
+        has_draft_model = bool(self.draft_model and self.draft_api_key)
+        is_proxy_claude = "claude" in self.model.lower() and self.base_url
+        is_native_anthropic = "claude" in self.model.lower() and not self.base_url
+
+        if has_draft_model:
+            LOGGER.info("Using %s to generate the initial article draft.", self.draft_model)
+            draft_prompt = user_prompt + "\n\nCRITICAL DIRECTIVE: Generate the entire Markdown article (all 7 sections) based on the JSON above. Ensure facts are absolutely accurate."
+            
+            old_model, old_base_url, old_api_key = self.model, self.base_url, self.api_key
+            self.model, self.base_url, self.api_key = self.draft_model, self.draft_base_url, self.draft_api_key
+            try:
+                draft_markdown = self._generate_openai(self.SYSTEM_PROMPT, draft_prompt)
+            finally:
+                self.model, self.base_url, self.api_key = old_model, old_base_url, old_api_key
+                
+            skip_refinement = os.environ.get("SKIP_CLAUDE_REFINEMENT", "").lower() == "true"
+            if skip_refinement:
+                LOGGER.info("SKIP_CLAUDE_REFINEMENT is true. Bypassing Claude refinement and using Gemini draft directly.")
+                body = draft_markdown
+            else:
+                LOGGER.info("Draft generated successfully. Now using %s to refine the draft.", self.model)
+                refinement_prompt = (
+                    "Here is a drafted article. Your task is to rewrite and polish it to match the required "
+                    "editorial voice, professional tone, and SEO logic. Do not change the underlying facts, product names, "
+                    "or prices. Maintain the exact same 7 sections.\n\n"
+                    f"=== DRAFT ARTICLE ===\n{draft_markdown}\n=== END DRAFT ==="
+                )
+                
+                if is_proxy_claude:
+                    LOGGER.info("Using chunked generation for proxy Claude to bypass timeout limit.")
+                    p1 = refinement_prompt + "\n\nCRITICAL DIRECTIVE: You must ONLY refine Sections 1, 2, 3, 4, and 5 (Introduction, How We Read This List, Quick Picks, Buying Guide, Comparison Table). You MUST STOP after Section 5. Do NOT output Section 6 (Deep Reviews) or Section 7. Start your response directly with Section 1."
+                    LOGGER.info("Generating Chunk 1/3 (Intro -> Comparison Table)")
+                    body1 = self._generate_openai(self.SYSTEM_PROMPT, p1)
+                    
+                    p2 = refinement_prompt + "\n\nCRITICAL DIRECTIVE: You must ONLY refine Section 6 (Deep Reviews) for the FIRST 5 products in the draft (or all products if there are fewer than 5). Do NOT generate Sections 1-5. Do NOT generate reviews for products 6-10. Do NOT generate Section 7. Start your response directly with the '## 6. Deep Reviews' header, then write the reviews."
+                    LOGGER.info("Generating Chunk 2/3 (Deep Reviews 1-5)")
+                    body2 = self._generate_openai(self.SYSTEM_PROMPT, p2)
+                    
+                    p3 = refinement_prompt + "\n\nCRITICAL DIRECTIVE: You must ONLY refine Section 6 (Deep Reviews) for the REMAINING products in the draft (products 6+, if any), followed by Section 7 (Final Summary). Do NOT generate Sections 1-5. Do NOT generate reviews for the first 5 products. Do NOT output the '## 6. Deep Reviews' header again. Start your response directly with the review for the next product, or Section 7 if there are no remaining products."
+                    LOGGER.info("Generating Chunk 3/3 (Deep Reviews 6-10 + Final Summary)")
+                    body3 = self._generate_openai(self.SYSTEM_PROMPT, p3)
+                    body = f"{body1}\n\n{body2}\n\n{body3}"
+                else:
+                    body = self._generate_openai(self.SYSTEM_PROMPT, refinement_prompt)
+
+        elif is_proxy_claude:
+            LOGGER.info("Using chunked generation for proxy Claude to bypass timeout limit.")
+            
+            p1 = user_prompt + "\n\nCRITICAL DIRECTIVE: You must ONLY generate Sections 1, 2, 3, 4, and 5 (Introduction, How We Read This List, Quick Picks, Buying Guide, Comparison Table). You MUST STOP after Section 5. Do NOT output Section 6 (Deep Reviews) or Section 7. Start your response directly with Section 1."
+            LOGGER.info("Generating Chunk 1/3 (Intro -> Comparison Table)")
+            body1 = self._generate_openai(self.SYSTEM_PROMPT, p1)
+            
+            p2 = user_prompt + "\n\nCRITICAL DIRECTIVE: You must ONLY generate Section 6 (Deep Reviews) for the FIRST 5 products in the JSON list (or all products if there are fewer than 5). Do NOT generate Sections 1-5. Do NOT generate reviews for products 6-10. Do NOT generate Section 7. Start your response directly with the '## 6. Deep Reviews' header, then write the reviews."
+            LOGGER.info("Generating Chunk 2/3 (Deep Reviews 1-5)")
+            body2 = self._generate_openai(self.SYSTEM_PROMPT, p2)
+            
+            p3 = user_prompt + "\n\nCRITICAL DIRECTIVE: You must ONLY generate Section 6 (Deep Reviews) for the REMAINING products in the JSON list (products 6+, if any), followed by Section 7 (Final Summary). Do NOT generate Sections 1-5. Do NOT generate reviews for the first 5 products. Do NOT output the '## 6. Deep Reviews' header again. Start your response directly with the review for the next product, or Section 7 if there are no remaining products."
+            LOGGER.info("Generating Chunk 3/3 (Deep Reviews 6-10 + Final Summary)")
+            body3 = self._generate_openai(self.SYSTEM_PROMPT, p3)
+            
+            body = f"{body1}\n\n{body2}\n\n{body3}"
+
+        elif is_native_anthropic:
+            try:
+                body = self._generate_claude(self.SYSTEM_PROMPT, user_prompt)
+            except Exception as exc:
+                LOGGER.warning("Claude messages streaming failed: %s; falling back to chat/completions", exc)
+                body = self._generate_openai(self.SYSTEM_PROMPT, user_prompt)
         else:
             body = self._generate_openai(self.SYSTEM_PROMPT, user_prompt)
 
@@ -621,21 +671,22 @@ Output Markdown body only. Do not output YAML frontmatter.
         url = f"{base}/messages"
 
         LOGGER.info("Calling %s via requests (streaming)", url)
-        resp = _requests.post(
+        payload = {
+            "model": self.model,
+            "max_tokens": self.max_tokens,
+            "stream": True,
+            "system": system_prompt,
+            "messages": [{"role": "user", "content": user_prompt}],
+        }
+        resp = self._post_with_retries(
+            _requests,
             url,
             headers={
                 "Content-Type": "application/json",
                 "Authorization": f"Bearer {self.api_key}",
+                "anthropic-version": "2023-06-01",
             },
-            json={
-                "model": self.model,
-                "max_tokens": 16000,
-                "stream": True,
-                "system": system_prompt,
-                "messages": [{"role": "user", "content": user_prompt}],
-            },
-            timeout=600,
-            stream=True,
+            payload=payload,
         )
         if resp.status_code != 200:
             LOGGER.error("API error %s: %s", resp.status_code, resp.text[:2000])
@@ -643,29 +694,45 @@ Output Markdown body only. Do not output YAML frontmatter.
 
         # Parse SSE stream to assemble full text.
         chunks: list[str] = []
+        event_types: list[str] = []
+        sample_events: list[str] = []
         for line in resp.iter_lines(decode_unicode=True):
             if not line or not line.startswith("data: "):
                 continue
             data_str = line[len("data: "):]
             if data_str.strip() == "[DONE]":
                 break
+            if len(sample_events) < 8:
+                sample_events.append(data_str[:1000])
             try:
                 event = json.loads(data_str)
             except json.JSONDecodeError:
                 continue
+            if event.get("type"):
+                event_types.append(event["type"])
             # Anthropic stream: content_block_delta events carry text
             if event.get("type") == "content_block_delta":
                 delta = event.get("delta", {})
                 if delta.get("type") == "text_delta":
                     chunks.append(delta.get("text", ""))
+            elif event.get("type") == "error":
+                raise RuntimeError(f"Claude stream error event: {event}")
             # OpenAI-compatible stream format fallback
             elif "choices" in event:
                 for choice in event["choices"]:
                     delta = choice.get("delta", {})
                     if "content" in delta and delta["content"]:
                         chunks.append(delta["content"])
+            elif isinstance(event.get("content"), list):
+                for part in event["content"]:
+                    if isinstance(part, dict) and part.get("type") == "text" and part.get("text"):
+                        chunks.append(part["text"])
+            elif isinstance(event.get("content"), str) and event["content"]:
+                chunks.append(event["content"])
 
         if not chunks:
+            LOGGER.error("Claude streaming returned no content. Event types: %s", event_types[:50])
+            LOGGER.error("Claude streaming sample events: %s", sample_events)
             raise RuntimeError("Claude streaming returned no content")
 
         LOGGER.info("Received %d stream chunks, total ~%d chars", len(chunks), sum(len(c) for c in chunks))
@@ -673,6 +740,9 @@ Output Markdown body only. Do not output YAML frontmatter.
 
     def _generate_openai(self, system_prompt: str, user_prompt: str) -> str:
         """Call /v1/chat/completions using the OpenAI SDK (for non-Claude models)."""
+        if self.base_url:
+            return self._generate_openai_streaming(system_prompt, user_prompt)
+
         try:
             from openai import OpenAI
         except ImportError as exc:
@@ -696,6 +766,106 @@ Output Markdown body only. Do not output YAML frontmatter.
             response = client.chat.completions.create(model=self.model, messages=messages)
             return response.choices[0].message.content.strip()
 
+    def _generate_openai_streaming(self, system_prompt: str, user_prompt: str) -> str:
+        """Call OpenAI-compatible /v1/chat/completions with stream=True.
+
+        Third-party gateways often time out long non-streaming article requests
+        at 60-120 seconds. Streaming keeps the connection active while the model
+        writes the article.
+        """
+        import requests as _requests
+
+        base = (self.base_url or "").rstrip("/")
+        if not base.endswith("/v1") and "openai" not in base.lower():
+            base += "/v1"
+        url = f"{base}/chat/completions"
+
+        LOGGER.info("Calling %s via requests (streaming chat/completions)", url)
+        payload = {
+            "model": self.model,
+            "stream": True,
+            "max_tokens": self.max_tokens,
+            "messages": [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt},
+            ],
+        }
+        resp = self._post_with_retries(
+            _requests,
+            url,
+            headers={
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {self.api_key}",
+            },
+            payload=payload,
+        )
+        if resp.status_code != 200:
+            LOGGER.error("API error %s: %s", resp.status_code, resp.text[:2000])
+            resp.raise_for_status()
+
+        resp.encoding = "utf-8"
+
+        chunks: list[str] = []
+        tool_call_chunks: list[str] = []
+        sample_events: list[str] = []
+        for line in resp.iter_lines(decode_unicode=True):
+            if not line or not line.startswith("data: "):
+                continue
+            data_str = line[len("data: "):].strip()
+            if data_str == "[DONE]":
+                break
+            if len(sample_events) < 8:
+                sample_events.append(data_str[:1000])
+            try:
+                event = json.loads(data_str)
+            except json.JSONDecodeError:
+                continue
+            if "choices" in event:
+                for choice in event["choices"]:
+                    delta = choice.get("delta", {})
+                    message = choice.get("message", {})
+                    if delta.get("tool_calls"):
+                        tool_call_chunks.append(json.dumps(delta["tool_calls"], ensure_ascii=False)[:1000])
+                    if delta.get("content"):
+                        chunks.append(delta["content"])
+                    elif message.get("content"):
+                        chunks.append(message["content"])
+            elif isinstance(event.get("content"), str) and event["content"]:
+                chunks.append(event["content"])
+
+        if not chunks:
+            if tool_call_chunks:
+                LOGGER.error("Model returned tool_calls instead of article text. Tool-call chunks: %s", tool_call_chunks[:8])
+                raise RuntimeError("Model returned tool_calls instead of article text; tool_choice=none may not be honored by this provider")
+            LOGGER.error("Streaming chat/completions returned no content. Sample events: %s", sample_events)
+            raise RuntimeError("Streaming chat/completions returned no content")
+
+        LOGGER.info("Received %d chat stream chunks, total ~%d chars", len(chunks), sum(len(c) for c in chunks))
+        return "".join(chunks).strip()
+
+    @staticmethod
+    def _post_with_retries(_requests, url: str, headers: dict[str, str], payload: dict[str, Any]):
+        last_resp = None
+        for attempt in range(1, 4):
+            resp = _requests.post(
+                url,
+                headers=headers,
+                json=payload,
+                timeout=600,
+                stream=True,
+            )
+            last_resp = resp
+            if resp.status_code < 500:
+                return resp
+            LOGGER.warning("API returned %s on attempt %s/3; retrying", resp.status_code, attempt)
+            try:
+                resp.close()
+            except Exception:
+                pass
+            import time as _time
+            _time.sleep(10 * attempt)
+        return last_resp
+
     @staticmethod
     def _related_articles_json(related_articles: list[PublishedArticle]) -> str:
         payload = [
@@ -717,8 +887,59 @@ Output Markdown body only. Do not output YAML frontmatter.
             item = dict(product)
             raw_price = item.pop("price", None)
             item["price_tier"] = cls._price_to_tier(raw_price)
-            prompt_products.append(item)
+            prompt_products.append(cls._compact_prompt_product(item))
         return prompt_products
+
+    @classmethod
+    def _compact_prompt_product(cls, item: dict[str, Any]) -> dict[str, Any]:
+        limits = {
+            "title": 220,
+            "customers_say": 700,
+            "reviews": 1000,
+            "features": 900,
+            "star_distribution": 500,
+            "ai_vision_report": 900,
+        }
+        keep_keys = (
+            "asin",
+            "title",
+            "rating",
+            "review_count",
+            "image_url",
+            "customers_say",
+            "star_distribution",
+            "reviews",
+            "features",
+            "ai_vision_report",
+            "price_tier",
+        )
+        compact = {}
+        for key in keep_keys:
+            value = item.get(key)
+            if value in (None, "", [], {}):
+                continue
+            compact[key] = cls._clip_jsonish(value, limits.get(key, 600))
+        return compact
+
+    @classmethod
+    def _clip_jsonish(cls, value: Any, limit: int) -> Any:
+        if isinstance(value, str):
+            return cls._clip_text(value, limit)
+        if isinstance(value, list):
+            return [cls._clip_jsonish(item, max(160, limit // 4)) for item in value[:6]]
+        if isinstance(value, dict):
+            clipped = {}
+            for key, subvalue in list(value.items())[:12]:
+                clipped[key] = cls._clip_jsonish(subvalue, max(160, limit // 4))
+            return clipped
+        return value
+
+    @staticmethod
+    def _clip_text(value: str, limit: int) -> str:
+        value = re.sub(r"\s+", " ", value).strip()
+        if len(value) <= limit:
+            return value
+        return value[:limit].rsplit(" ", 1)[0] + "..."
 
     @staticmethod
     def _price_to_tier(raw_price: Any) -> str:
@@ -965,3 +1186,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
