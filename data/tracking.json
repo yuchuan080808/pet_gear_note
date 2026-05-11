@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-05-10T13:33:20+00:00",
+  "last_synced": "2026-05-11T13:42:26+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -8,8 +8,11 @@
       "category_name": "Apparel",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975242011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-11T14:06:32+00:00",
+      "article_path": "content\\cats\\best-apparel.md",
+      "article_url": "/cats/best-apparel/",
+      "article_title": "Best Apparel for Cats"
     },
     {
       "node_id": "3024127011",
@@ -1646,8 +1649,11 @@
       "category_name": "Crate Covers",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23764008011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-11T13:58:05+00:00",
+      "article_path": "content\\dogs\\best-crate-covers.md",
+      "article_url": "/dogs/best-crate-covers/",
+      "article_title": "Best Crate Covers for Dogs"
     },
     {
       "node_id": "23764007011",
@@ -1655,8 +1661,11 @@
       "category_name": "Enclosure Covers",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/23764007011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-11T13:49:54+00:00",
+      "article_path": "content\\dogs\\best-enclosure-covers.md",
+      "article_url": "/dogs/best-enclosure-covers/",
+      "article_title": "Best Enclosure Covers for Dogs"
     },
     {
       "node_id": "3024223011",
