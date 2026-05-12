@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-05-11T13:42:26+00:00",
+  "last_synced": "2026-05-12T14:10:07+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -29,8 +29,11 @@
       "category_name": "Bed Blankets",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975245011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-12T14:19:47+00:00",
+      "article_path": "content\\cats\\best-bed-blankets.md",
+      "article_url": "/cats/best-bed-blankets/",
+      "article_title": "Best Bed Blankets for Cats"
     },
     {
       "node_id": "3024126011",
@@ -56,8 +59,8 @@
       "category_name": "Cat Houses & Condos",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975246011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-05-12T14:26:26+00:00"
     },
     {
       "node_id": "17602457011",
