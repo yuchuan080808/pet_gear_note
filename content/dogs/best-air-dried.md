@@ -3,7 +3,7 @@ title: "Best Air-Dried for Dogs"
 description: "Compare popular air-dried for dogs, with buyer cautions, best-fit scenarios, and practical tips before you buy."
 slug: "best-air-dried"
 date: "2026-05-08T13:16:35+00:00"
-lastmod: "2026-05-08T13:16:35+00:00"
+lastmod: "2026-05-13T14:24:58+00:00"
 draft: false
 categories:
   - "dogs"
@@ -74,6 +74,11 @@ High-protein air-dried diets may not be appropriate for dogs with kidney disease
 If you're building out your overall dog care routine, our guide to the [best bully sticks for dogs](/dogs/best-bully-sticks/) covers another high-protein, minimally processed snack category worth considering alongside air-dried feeding.
 
 ---
+
+### Related Resources
+
+- **Related Review:** [Best Bully Sticks for Dogs](/dogs/best-bully-sticks/) - Compare nearby dog feeding tradeoffs before you buy.
+- **Authority Reference:** [Merck Veterinary Manual on dog and cat foods](https://www.merckvetmanual.com/management-and-nutrition/nutrition-small-animals/dog-and-cat-foods) - Veterinary detail on pet food labels, feeding guidelines, and diet types.
 
 ## Comparison Table
 

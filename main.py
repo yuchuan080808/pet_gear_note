@@ -52,6 +52,16 @@ class PublishedArticle:
     pet_type: str
     category_name: str
     category_path: str
+    source_path: Path | None = None
+
+
+@dataclass(frozen=True)
+class AuthorityResource:
+    title: str
+    url: str
+    note: str
+    pet_type: str
+    keywords: tuple[str, ...]
 
 
 def configure_logging() -> None:
@@ -288,6 +298,427 @@ class TaskManager:
         raise KeyError(f"Unknown node_id: {node_id}")
 
 
+class SEOResourceLinker:
+    """Adds crawlable, contextual article links after LLM generation."""
+
+    INTERNAL_LINK_LIMIT = 3
+    RELATED_SECTION_RE = re.compile(
+        r"\n*### Related Resources\n.*?(?=\n#{2,3}\s+(?:Comparison Table|Deep Reviews|Final Summary)\b|\Z)",
+        re.DOTALL,
+    )
+    INSERT_TARGETS = (
+        re.compile(r"(?m)^#{2,3}\s+Comparison Table\b"),
+        re.compile(r"(?m)^#{2,3}\s+Deep Reviews\b"),
+        re.compile(r"(?m)^#{2,3}\s+Final Summary\b"),
+    )
+    MARKDOWN_LINK_RE = re.compile(r"(?<!!)\[[^\]]+\]\((https?://[^)]+|/[^)]+)\)")
+    FRONTMATTER_RE = re.compile(r"\A(---\s*\n.*?\n---\s*\n?)(.*)\Z", re.DOTALL)
+
+    AUTHORITY_RESOURCES = (
+        AuthorityResource(
+            title="ASPCA dog nutrition tips",
+            url="https://www.aspca.org/pet-care/dog-care/dog-nutrition-tips",
+            note="Feeding and transition guidance for diet changes.",
+            pet_type="dogs",
+            keywords=("food", "dry", "air-dried", "nutrition", "diet", "treat"),
+        ),
+        AuthorityResource(
+            title="Merck Veterinary Manual on dog and cat foods",
+            url="https://www.merckvetmanual.com/management-and-nutrition/nutrition-small-animals/dog-and-cat-foods",
+            note="Veterinary detail on pet food labels, feeding guidelines, and diet types.",
+            pet_type="dogs",
+            keywords=("food", "dry", "air-dried", "nutrition", "diet", "feeding"),
+        ),
+        AuthorityResource(
+            title="VCA Hospitals guide to chew toys and bones",
+            url="https://vcahospitals.com/know-your-pet/bones-and-chew-toys",
+            note="Veterinary context for chew safety and supervision.",
+            pet_type="dogs",
+            keywords=("bully", "stick", "chew", "toy", "ball", "launcher"),
+        ),
+        AuthorityResource(
+            title="AKC crate training guide",
+            url="https://www.akc.org/expert-advice/training/why-crate-training-is-great-for-your-dog/",
+            note="Training context for crate and kennel setups.",
+            pet_type="dogs",
+            keywords=("crate", "kennel", "enclosure", "cover", "pen", "house"),
+        ),
+        AuthorityResource(
+            title="VCA Hospitals pet first aid basics",
+            url="https://vcahospitals.com/know-your-pet/first-aid-general-information",
+            note="Veterinary first-aid context for home grooming and minor bleeding prep.",
+            pet_type="dogs",
+            keywords=("styptic", "grooming", "health", "medication", "prescription", "dna"),
+        ),
+        AuthorityResource(
+            title="AKC dog health guide",
+            url="https://www.akc.org/expert-advice/health/",
+            note="General health background for monitoring and care decisions.",
+            pet_type="dogs",
+            keywords=("camera", "monitor", "tracker", "location", "health", "default"),
+        ),
+        AuthorityResource(
+            title="ASPCA dog care basics",
+            url="https://www.aspca.org/pet-care/dog-care",
+            note="Practical care and behavior guidance for dog owners.",
+            pet_type="dogs",
+            keywords=("default",),
+        ),
+        AuthorityResource(
+            title="VCA Hospitals litter box problems in cats",
+            url="https://vcahospitals.com/know-your-pet/litter-box-problems-in-cats",
+            note="Veterinary context for litter box placement, avoidance, and health flags.",
+            pet_type="cats",
+            keywords=("litter", "box", "waste", "receptacle", "refill", "filter"),
+        ),
+        AuthorityResource(
+            title="Merck Veterinary Manual on cat nutrition",
+            url="https://www.merckvetmanual.com/cat-owners/selecting-and-providing-a-home-for-a-cat/proper-nutrition-for-cats",
+            note="Veterinary guidance on feeding standards, life stages, and balanced diets.",
+            pet_type="cats",
+            keywords=("food", "nutrition", "diet", "feeding", "treat"),
+        ),
+        AuthorityResource(
+            title="Cornell Feline Health Center on destructive behavior",
+            url="https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/feline-behavior-problems-destructive-behavior",
+            note="Feline behavior context for scratching, kneading, bedding, and enrichment.",
+            pet_type="cats",
+            keywords=("bed", "blanket", "furniture", "scratch", "tree", "sofa", "perch"),
+        ),
+        AuthorityResource(
+            title="ASPCA Halloween safety tips for pets",
+            url="https://www.aspca.org/pet-care/general-pet-care/halloween-safety-tips",
+            note="Safety context for costumes, props, and supervised wear.",
+            pet_type="cats",
+            keywords=("apparel", "costume", "clothing", "bandana"),
+        ),
+        AuthorityResource(
+            title="ASPCA cat care basics",
+            url="https://www.aspca.org/pet-care/cat-care",
+            note="General health and behavior guidance for cat owners.",
+            pet_type="cats",
+            keywords=("enclosure", "playpen", "carrier", "stroller", "door", "default"),
+        ),
+        AuthorityResource(
+            title="Cornell Feline Health Center",
+            url="https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center",
+            note="Authoritative feline health information from a veterinary college.",
+            pet_type="cats",
+            keywords=("default",),
+        ),
+    )
+    RELATED_TOPIC_GROUPS = (
+        ("dogs", "dog feeding", frozenset(("air", "dried", "dry", "food", "nutrition", "diet", "treat", "bully", "stick"))),
+        ("dogs", "dog activity", frozenset(("toy", "ball", "launcher", "chew", "bully", "stick"))),
+        ("dogs", "dog crates and covers", frozenset(("crate", "kennel", "enclosure", "cover", "pen", "house"))),
+        ("dogs", "dog health", frozenset(("health", "dna", "prescription", "medication", "styptic", "grooming", "tracker", "location", "camera", "monitor"))),
+        ("cats", "cat litter setup", frozenset(("litter", "box", "waste", "receptacle", "refill", "filter"))),
+        ("cats", "cat containment", frozenset(("enclosure", "playpen", "door", "net", "pen", "carrier", "stroller"))),
+        ("cats", "cat comfort", frozenset(("bed", "blanket", "furniture", "bedding", "apparel", "clothing", "costume"))),
+        ("cats", "cat scratching and enrichment", frozenset(("scratch", "scratcher", "tree", "perch", "hammock", "sofa"))),
+    )
+
+    @classmethod
+    def enrich(
+        cls,
+        markdown_body: str,
+        task: CategoryTask,
+        related_articles: list[PublishedArticle] | None = None,
+        current_url: str | None = None,
+    ) -> str:
+        body = cls._remove_related_resources(markdown_body)
+        resource_section = cls._build_resource_section(
+            task=task,
+            related_articles=related_articles or [],
+            body=body,
+            current_url=current_url or cls._url_for(task),
+        )
+        return cls._insert_resource_section(body, resource_section)
+
+    @classmethod
+    def refresh_existing_content(cls, content_dir: Path = OUTPUT_DIR) -> int:
+        articles = cls.collect_published_articles(content_dir)
+        changed_count = 0
+        for article in articles:
+            if not article.source_path:
+                continue
+            original = article.source_path.read_text(encoding="utf-8")
+            updated = cls.enrich_document(original, article, articles)
+            if updated != original:
+                article.source_path.write_text(updated, encoding="utf-8")
+                changed_count += 1
+        return changed_count
+
+    @classmethod
+    def collect_published_articles(cls, content_dir: Path = OUTPUT_DIR) -> list[PublishedArticle]:
+        articles: list[PublishedArticle] = []
+        for path in sorted(content_dir.rglob("*.md")):
+            document = path.read_text(encoding="utf-8")
+            fields = cls._parse_frontmatter(document)
+            if str(fields.get("draft", "")).lower() == "true":
+                continue
+            pet_type = str(fields.get("pet_type") or path.parent.name).strip().lower()
+            if pet_type not in {"dogs", "cats"}:
+                continue
+            title = str(fields.get("title") or cls._title_from_filename(path.stem, pet_type))
+            category_path = str(fields.get("category_path") or "")
+            category_name = cls._category_name(title, category_path)
+            slug = str(fields.get("slug") or path.stem).strip("/")
+            articles.append(
+                PublishedArticle(
+                    title=title,
+                    url=f"/{pet_type}/{slug}/",
+                    pet_type=pet_type,
+                    category_name=category_name,
+                    category_path=category_path,
+                    source_path=path,
+                )
+            )
+        return articles
+
+    @classmethod
+    def enrich_document(cls, document: str, article: PublishedArticle, all_articles: list[PublishedArticle]) -> str:
+        frontmatter, body = cls._split_frontmatter(document)
+        task = CategoryTask(
+            node_id="",
+            category_path=article.category_path,
+            category_name=article.category_name,
+            bsr_url="",
+            pet_type=article.pet_type,
+        )
+        body_without_resource_section = cls._remove_related_resources(body)
+        related_articles = cls._rank_related_articles(task, all_articles, article.url, body_without_resource_section)
+        updated_body = cls.enrich(body, task, related_articles=related_articles, current_url=article.url).strip()
+        if not frontmatter:
+            return updated_body + "\n"
+        if updated_body == body.strip():
+            return document
+        return cls._touch_lastmod(frontmatter) + "\n\n" + updated_body + "\n"
+
+    @classmethod
+    def _build_resource_section(
+        cls,
+        task: CategoryTask,
+        related_articles: list[PublishedArticle],
+        body: str,
+        current_url: str,
+    ) -> str:
+        internal_links = cls._rank_related_articles(task, related_articles, current_url, body)
+        lines = []
+        for article in internal_links[: cls.INTERNAL_LINK_LIMIT]:
+            lines.append(
+                f"- **Related Review:** [{article.title}]({article.url}) - "
+                f"{cls._internal_link_note(task, article)}"
+            )
+
+        authority = cls._select_authority_resource(task, body)
+        lines.append(
+            f"- **Authority Reference:** [{authority.title}]({authority.url}) - {authority.note}"
+        )
+        return "### Related Resources\n\n" + "\n".join(lines)
+
+    @classmethod
+    def _rank_related_articles(
+        cls,
+        task: CategoryTask,
+        related_articles: list[PublishedArticle],
+        current_url: str,
+        body: str,
+    ) -> list[PublishedArticle]:
+        existing_urls = cls._extract_link_urls(body)
+        task_terms = cls._link_terms(f"{task.category_name} {task.category_path}")
+        task_groups = cls._topic_groups(task.pet_type, task_terms)
+        scored: list[tuple[int, str, PublishedArticle]] = []
+        for article in related_articles:
+            if article.url == current_url or article.pet_type != task.pet_type:
+                continue
+            article_terms = cls._link_terms(f"{article.title} {article.category_name} {article.category_path}")
+            article_groups = cls._topic_groups(article.pet_type, article_terms)
+            overlap = len(task_terms & article_terms)
+            common_path_depth = cls._common_path_depth(task.category_path, article.category_path)
+            topic_overlap = len(task_groups & article_groups)
+            score = (overlap * 10) + (topic_overlap * 8) + (common_path_depth * 4)
+            if article.url in existing_urls:
+                score -= 3
+            scored.append((score, article.title, article))
+
+        scored = [item for item in scored if item[0] > 0]
+        scored.sort(key=lambda item: (-item[0], item[1]))
+        return [article for _, _, article in scored[: cls.INTERNAL_LINK_LIMIT]]
+
+    @classmethod
+    def _select_authority_resource(cls, task: CategoryTask, body: str) -> AuthorityResource:
+        haystack = f"{task.category_name} {task.category_path}".lower()
+        existing_urls = cls._extract_link_urls(body)
+        candidates = [resource for resource in cls.AUTHORITY_RESOURCES if resource.pet_type == task.pet_type]
+
+        def score(resource: AuthorityResource) -> int:
+            return sum(1 for keyword in resource.keywords if keyword != "default" and keyword in haystack)
+
+        ordered = sorted(candidates, key=lambda resource: (-score(resource), "default" in resource.keywords))
+        matched = [resource for resource in ordered if score(resource) > 0]
+        for resource in matched:
+            if resource.url not in existing_urls:
+                return resource
+        if matched:
+            return matched[0]
+
+        for resource in ordered:
+            if "default" in resource.keywords and resource.url not in existing_urls:
+                return resource
+
+        defaults = [resource for resource in candidates if "default" in resource.keywords]
+        return defaults[0] if defaults else candidates[0]
+
+    @classmethod
+    def _remove_related_resources(cls, markdown_body: str) -> str:
+        return cls._collapse_blank_lines(cls.RELATED_SECTION_RE.sub("\n\n", markdown_body))
+
+    @classmethod
+    def _insert_resource_section(cls, markdown_body: str, resource_section: str) -> str:
+        body = markdown_body.strip()
+        for pattern in cls.INSERT_TARGETS:
+            match = pattern.search(body)
+            if match:
+                prefix = body[: match.start()].rstrip()
+                suffix = body[match.start() :].lstrip()
+                return f"{prefix}\n\n{resource_section}\n\n{suffix}".strip()
+        return f"{body}\n\n{resource_section}".strip()
+
+    @classmethod
+    def _parse_frontmatter(cls, document: str) -> dict[str, str]:
+        match = cls.FRONTMATTER_RE.match(document)
+        if not match:
+            return {}
+        frontmatter = match.group(1)
+        fields: dict[str, str] = {}
+        for line in frontmatter.splitlines():
+            if not line or line == "---" or line.startswith(" ") or ":" not in line:
+                continue
+            key, value = line.split(":", 1)
+            fields[key.strip()] = cls._frontmatter_value(value.strip())
+        return fields
+
+    @classmethod
+    def _split_frontmatter(cls, document: str) -> tuple[str, str]:
+        match = cls.FRONTMATTER_RE.match(document)
+        if not match:
+            return "", document
+        return match.group(1).strip(), match.group(2)
+
+    @staticmethod
+    def _frontmatter_value(value: str) -> str:
+        if not value:
+            return ""
+        try:
+            decoded = json.loads(value)
+        except json.JSONDecodeError:
+            return value.strip('"').strip("'")
+        return str(decoded)
+
+    @staticmethod
+    def _touch_lastmod(frontmatter: str) -> str:
+        now = utc_now()
+        if re.search(r"(?m)^lastmod:\s*.*$", frontmatter):
+            return re.sub(r"(?m)^lastmod:\s*.*$", f'lastmod: "{now}"', frontmatter, count=1)
+        return frontmatter.replace("\n---", f'\nlastmod: "{now}"\n---', 1)
+
+    @staticmethod
+    def _extract_link_urls(markdown_body: str) -> set[str]:
+        return {match.group(1).strip() for match in SEOResourceLinker.MARKDOWN_LINK_RE.finditer(markdown_body)}
+
+    @staticmethod
+    def _link_terms(value: str) -> set[str]:
+        stopwords = {
+            "and",
+            "best",
+            "cat",
+            "cats",
+            "dog",
+            "dogs",
+            "for",
+            "pet",
+            "review",
+            "reviews",
+            "supplies",
+            "the",
+        }
+        normalized_terms = set()
+        for term in re.findall(r"[a-z0-9]+", value.lower()):
+            if term in stopwords or len(term) <= 2:
+                continue
+            if term.endswith("ies") and len(term) > 4:
+                term = term[:-3] + "y"
+            elif term.endswith("s") and len(term) > 3:
+                term = term[:-1]
+            normalized_terms.add(term)
+        return normalized_terms
+
+    @classmethod
+    def _topic_groups(cls, pet_type: str, terms: set[str]) -> set[str]:
+        return {
+            group_name
+            for group_pet_type, group_name, group_terms in cls.RELATED_TOPIC_GROUPS
+            if group_pet_type == pet_type and terms & group_terms
+        }
+
+    @staticmethod
+    def _common_path_depth(left: str, right: str) -> int:
+        ignored = {"pet supplies", "dogs", "cats"}
+        left_parts = [part.strip().lower() for part in left.split(">") if part.strip() and part.strip().lower() not in ignored]
+        right_parts = [part.strip().lower() for part in right.split(">") if part.strip() and part.strip().lower() not in ignored]
+        depth = 0
+        for left_part, right_part in zip(left_parts, right_parts):
+            if left_part != right_part:
+                break
+            depth += 1
+        return depth
+
+    @staticmethod
+    def _category_name(title: str, category_path: str) -> str:
+        if category_path:
+            return category_path.split(">")[-1].strip()
+        match = re.match(r"Best\s+(.+?)\s+for\s+(?:Dogs|Cats)$", title, re.IGNORECASE)
+        if match:
+            return match.group(1).strip()
+        return title.removeprefix("Best ").strip()
+
+    @staticmethod
+    def _title_from_filename(stem: str, pet_type: str) -> str:
+        words = stem.removeprefix("best-").replace("-", " ").title()
+        return f"Best {words} for {pet_type.title()}"
+
+    @staticmethod
+    def _url_for(task: CategoryTask) -> str:
+        return f"/{task.pet_type}/best-{slugify(task.category_name)}/"
+
+    @classmethod
+    def _internal_link_note(cls, task: CategoryTask, article: PublishedArticle) -> str:
+        shared_context = cls._shared_context(task.category_path, article.category_path)
+        if shared_context == "pet gear":
+            task_groups = cls._topic_groups(task.pet_type, cls._link_terms(f"{task.category_name} {task.category_path}"))
+            article_groups = cls._topic_groups(
+                article.pet_type,
+                cls._link_terms(f"{article.title} {article.category_name} {article.category_path}"),
+            )
+            shared_groups = sorted(task_groups & article_groups)
+            if shared_groups:
+                shared_context = shared_groups[0]
+        return f"Compare nearby {shared_context} tradeoffs before you buy."
+
+    @staticmethod
+    def _shared_context(left: str, right: str) -> str:
+        ignored = {"pet supplies", "dogs", "cats"}
+        left_parts = [part.strip().lower() for part in left.split(">") if part.strip()]
+        right_parts = [part.strip().lower() for part in right.split(">") if part.strip()]
+        shared = [part for part in left_parts if part in right_parts and part not in ignored]
+        return shared[-1] if shared else "pet gear"
+
+    @staticmethod
+    def _collapse_blank_lines(value: str) -> str:
+        return re.sub(r"\n{3,}", "\n\n", value).strip()
+
+
 class ScraperEngine:
     def __init__(
         self,
@@ -516,6 +947,7 @@ Link and compliance rules:
 - Every purchase link must be exactly: [Check Price on Amazon](https://www.amazon.com/dp/{ASIN})
 - Never include exact prices. Use broad tiers like "Budget-friendly", "Mid-range", and "Premium price".
 - Use descriptive anchor text for internal links; avoid anchors like "click here".
+- Do not create a standalone "Related Resources" section; the publishing pipeline adds that section with contextual internal links and authority references after generation.
 
 Image rules:
 - For every individual product section, place the product image immediately under that product heading using Markdown:
@@ -655,7 +1087,9 @@ Output Markdown body only. Do not output YAML frontmatter.
         body = self._enforce_clean_amazon_links(body)
         body = self._sanitize_external_links(body)
         body = self._sanitize_exact_prices(body)
-        return self._sanitize_unsupported_vision_claims(body)
+        body = self._sanitize_unsupported_vision_claims(body)
+        body = SEOResourceLinker.enrich(body, task, related_articles=related_articles)
+        return self._sanitize_external_links(body)
 
     def _generate_claude(self, system_prompt: str, user_prompt: str) -> str:
         """Call /v1/messages for Claude models using requests with streaming.
@@ -1105,6 +1539,11 @@ class MarkdownExporter:
 
 def run_pipeline(args: argparse.Namespace) -> int:
     load_dotenv()
+    if args.refresh_links_only:
+        changed_count = SEOResourceLinker.refresh_existing_content(OUTPUT_DIR)
+        LOGGER.info("Refreshed SEO resource links in %s article files", changed_count)
+        return 0
+
     task_manager = TaskManager(args.tracking_json)
     scraper = ScraperEngine(
         timeout_seconds=args.timeout,
@@ -1175,6 +1614,11 @@ def parse_args() -> argparse.Namespace:
         "--retry-failed",
         action="store_true",
         help="Reset failed rows back to pending before claiming a new batch",
+    )
+    parser.add_argument(
+        "--refresh-links-only",
+        action="store_true",
+        help="Rebuild SEO Related Resources sections for existing content and exit",
     )
     return parser.parse_args()
 

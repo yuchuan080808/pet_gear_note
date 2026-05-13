@@ -3,7 +3,7 @@ title: "Best Enclosures for Cats"
 description: "Compare popular enclosures for cats, with buyer cautions, best-fit scenarios, and practical tips before you buy."
 slug: "best-enclosures"
 date: "2026-05-10T13:41:52+00:00"
-lastmod: "2026-05-10T13:41:52+00:00"
+lastmod: "2026-05-13T14:24:58+00:00"
 draft: false
 categories:
   - "cats"
@@ -46,6 +46,11 @@ If you are buying an enclosure for kittens, gap width is a non-negotiable safety
 
 **Think about the litter box.**
 If you are locking a cat up for more than an hour, they need facilities. Measure the bottom footprint to ensure it fits a standard pan. If you hate scooping indoor setups, consider pairing your crate with one of the [Best Self-Cleaning Litter Boxes for Cats](/cats/best-self-cleaning-litter-boxes/).
+
+### Related Resources
+
+- **Related Review:** [Best Playpens for Cats](/cats/best-playpens/) - Compare nearby cat doors, steps, nets & pens tradeoffs before you buy.
+- **Authority Reference:** [ASPCA cat care basics](https://www.aspca.org/pet-care/cat-care) - General health and behavior guidance for cat owners.
 
 ### Comparison Table
 

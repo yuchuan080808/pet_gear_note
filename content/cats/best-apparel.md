@@ -3,7 +3,7 @@ title: "Best Apparel for Cats"
 description: "Compare popular apparel for cats, with buyer cautions, best-fit scenarios, and practical tips before you buy."
 slug: "best-apparel"
 date: "2026-05-11T14:06:32+00:00"
-lastmod: "2026-05-11T14:06:32+00:00"
+lastmod: "2026-05-13T14:24:58+00:00"
 draft: false
 categories:
   - "cats"
@@ -44,6 +44,11 @@ Absolutely not. **Never leave a cat alone in a decorative costume, hat, or birth
 
 #### Why does sizing seem completely random?
 Because it usually is. **Most pet apparel is patterned for small dogs, not cats.** Cats have longer, more flexible spines and deeper chests. Always measure your cat's chest girth directly behind the front legs. If they are between sizes, size up for costumes but size down for recovery suits to prevent them from slipping out.
+
+### Related Resources
+
+- **Related Review:** [Best Bed Blankets for Cats](/cats/best-bed-blankets/) - Compare nearby cat comfort tradeoffs before you buy.
+- **Authority Reference:** [ASPCA Halloween safety tips for pets](https://www.aspca.org/pet-care/general-pet-care/halloween-safety-tips) - Safety context for costumes, props, and supervised wear.
 
 ### Comparison Table
 

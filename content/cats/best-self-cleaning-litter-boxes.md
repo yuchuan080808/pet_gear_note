@@ -3,7 +3,7 @@ title: "Best Self-Cleaning Litter Boxes for Cats"
 description: "Compare popular self-cleaning litter boxes for cats, with buyer cautions, best-fit scenarios, and practical tips before you buy."
 slug: "best-self-cleaning-litter-boxes"
 date: "2026-05-03T13:58:37+00:00"
-lastmod: "2026-05-03T13:58:37+00:00"
+lastmod: "2026-05-13T14:25:16+00:00"
 draft: false
 categories:
   - "cats"
@@ -78,12 +78,12 @@ Self-cleaning mechanisms are moving parts. Any cat that likes to investigate or 
 
 ---
 
-
 ### Related Resources
 
-- **Related Review:** [Best Standard Litter Boxes for Cats](/cats/best-standard-litter-boxes/)
-- **Related Review:** [Best Litter Waste Receptacle Refills for Cats](/cats/best-litter-waste-receptacle-refills/)
-- **Veterinary Reference:** [Cornell Feline Health Center](https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center) — Authoritative research on feline medicine.
+- **Related Review:** [Best Disposable Litter Boxes for Cats](/cats/best-disposable-litter-boxes/) - Compare nearby litter boxes tradeoffs before you buy.
+- **Related Review:** [Best Standard Litter Boxes for Cats](/cats/best-standard-litter-boxes/) - Compare nearby litter boxes tradeoffs before you buy.
+- **Related Review:** [Best Litter Waste Receptacle Refills for Cats](/cats/best-litter-waste-receptacle-refills/) - Compare nearby litter & housebreaking tradeoffs before you buy.
+- **Authority Reference:** [VCA Hospitals litter box problems in cats](https://vcahospitals.com/know-your-pet/litter-box-problems-in-cats) - Veterinary context for litter box placement, avoidance, and health flags.
 
 ## Comparison Table
 

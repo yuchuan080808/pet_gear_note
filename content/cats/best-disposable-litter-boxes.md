@@ -3,7 +3,7 @@ title: "Best Disposable Litter Boxes for Cats"
 description: "Compare popular disposable litter boxes for cats, with buyer cautions, best-fit scenarios, and practical tips before you buy."
 slug: "best-disposable-litter-boxes"
 date: "2026-05-03T13:50:45+00:00"
-lastmod: "2026-05-03T13:50:45+00:00"
+lastmod: "2026-05-13T14:25:45+00:00"
 draft: false
 categories:
   - "cats"
@@ -83,12 +83,12 @@ Disposable cardboard litter boxes are generally considered safe for cats. Howeve
 
 ---
 
-
 ### Related Resources
 
-- **Related Review:** [Best Standard Litter Boxes for Cats](/cats/best-standard-litter-boxes/)
-- **Related Review:** [Best Self-Cleaning Litter Boxes for Cats](/cats/best-self-cleaning-litter-boxes/)
-- **Veterinary Reference:** [ASPCA Cat Care Basics](https://www.aspca.org/pet-care/cat-care) — General guidance on feline health and behavior.
+- **Related Review:** [Best Self-Cleaning Litter Boxes for Cats](/cats/best-self-cleaning-litter-boxes/) - Compare nearby litter boxes tradeoffs before you buy.
+- **Related Review:** [Best Standard Litter Boxes for Cats](/cats/best-standard-litter-boxes/) - Compare nearby litter boxes tradeoffs before you buy.
+- **Related Review:** [Best Litter Waste Receptacle Refills for Cats](/cats/best-litter-waste-receptacle-refills/) - Compare nearby litter & housebreaking tradeoffs before you buy.
+- **Authority Reference:** [VCA Hospitals litter box problems in cats](https://vcahospitals.com/know-your-pet/litter-box-problems-in-cats) - Veterinary context for litter box placement, avoidance, and health flags.
 
 ## Comparison Table
 

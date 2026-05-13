@@ -3,7 +3,7 @@ title: "Best Cameras & Monitors for Dogs"
 description: "Compare popular cameras & monitors for dogs, with buyer cautions, best-fit scenarios, and practical tips before you buy."
 slug: "best-cameras-monitors"
 date: "2026-05-02T10:58:00+00:00"
-lastmod: "2026-05-02T10:58:00+00:00"
+lastmod: "2026-05-13T14:25:16+00:00"
 draft: false
 categories:
   - "dogs"
@@ -71,12 +71,12 @@ If your dog has a known anxiety disorder or medical condition that you're monito
 
 ---
 
-
 ### Related Resources
 
-- **Related Review:** [Best Ball Launchers for Dogs](/dogs/best-ball-launchers/)
-- **Related Review:** [Best Location Trackers for Dogs](/dogs/best-location-trackers/)
-- **Veterinary Reference:** [ASPCA Dog Care Basics](https://www.aspca.org/pet-care/dog-care) — Practical care and behavior guidelines for dog owners.
+- **Related Review:** [Best DNA Tests for Dogs](/dogs/best-dna-tests/) - Compare nearby dog health tradeoffs before you buy.
+- **Related Review:** [Best Location Trackers for Dogs](/dogs/best-location-trackers/) - Compare nearby dog health tradeoffs before you buy.
+- **Related Review:** [Best Prescription Medications for Dogs](/dogs/best-prescription-medications/) - Compare nearby dog health tradeoffs before you buy.
+- **Authority Reference:** [AKC dog health guide](https://www.akc.org/expert-advice/health/) - General health background for monitoring and care decisions.
 
 ## Comparison Table
 

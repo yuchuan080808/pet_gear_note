@@ -3,7 +3,7 @@ title: "Best Bed Blankets for Cats"
 description: "Compare popular bed blankets for cats, with buyer cautions, best-fit scenarios, and practical tips before you buy."
 slug: "best-bed-blankets"
 date: "2026-05-12T14:19:47+00:00"
-lastmod: "2026-05-12T14:19:47+00:00"
+lastmod: "2026-05-13T14:24:58+00:00"
 draft: false
 categories:
   - "cats"
@@ -57,6 +57,11 @@ Cats love to "make biscuits" on plush surfaces. Blankets with loose, stringy wea
 A "small" pet blanket is usually only 24x32 inches. **That is the size of a standard bath mat.** It might fit inside [secure playpens for cats](/cats/best-playpens/), but it won't cover a recliner. Always measure the exact space you want to protect before ordering. 
 
 ***
+
+### Related Resources
+
+- **Related Review:** [Best Apparel for Cats](/cats/best-apparel/) - Compare nearby cat comfort tradeoffs before you buy.
+- **Authority Reference:** [Cornell Feline Health Center on destructive behavior](https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/feline-behavior-problems-destructive-behavior) - Feline behavior context for scratching, kneading, bedding, and enrichment.
 
 ### Comparison Table
 

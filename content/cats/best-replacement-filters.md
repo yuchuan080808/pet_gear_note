@@ -3,7 +3,7 @@ title: "Best Replacement Filters for Cats"
 description: "Compare popular replacement filters for cats, with buyer cautions, best-fit scenarios, and practical tips before you buy."
 slug: "best-replacement-filters"
 date: "2026-05-04T12:09:36+00:00"
-lastmod: "2026-05-04T12:09:36+00:00"
+lastmod: "2026-05-13T14:24:11+00:00"
 draft: false
 categories:
   - "cats"
@@ -75,12 +75,12 @@ For a broader look at managing litter box odor systems, the [ASPCA's cat care re
 
 ---
 
-
 ### Related Resources
 
-- **Related Review:** [Best Self-Cleaning Litter Boxes for Cats](/cats/best-self-cleaning-litter-boxes/)
-- **Related Review:** [Best Standard Litter Boxes for Cats](/cats/best-standard-litter-boxes/)
-- **Veterinary Reference:** [VCA Hospitals Feline Library](https://vcahospitals.com/know-your-pet/cat-care) — Veterinary insights on common cat conditions.
+- **Related Review:** [Best Disposable Litter Boxes for Cats](/cats/best-disposable-litter-boxes/) - Compare nearby litter & housebreaking tradeoffs before you buy.
+- **Related Review:** [Best Litter Waste Receptacle Refills for Cats](/cats/best-litter-waste-receptacle-refills/) - Compare nearby litter & housebreaking tradeoffs before you buy.
+- **Related Review:** [Best Litter Waste Receptacles for Cats](/cats/best-litter-waste-receptacles/) - Compare nearby litter & housebreaking tradeoffs before you buy.
+- **Authority Reference:** [VCA Hospitals litter box problems in cats](https://vcahospitals.com/know-your-pet/litter-box-problems-in-cats) - Veterinary context for litter box placement, avoidance, and health flags.
 
 ## Comparison Table
 
