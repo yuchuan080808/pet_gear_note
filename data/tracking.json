@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-05-13T14:28:45+00:00",
+  "last_synced": "2026-05-14T14:06:35+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -146,8 +146,11 @@
       "category_name": "Window Perches",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975249011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-14T14:14:26+00:00",
+      "article_path": "content\\cats\\best-window-perches.md",
+      "article_url": "/cats/best-window-perches/",
+      "article_title": "Best Window Perches for Cats"
     },
     {
       "node_id": "3024132011",
@@ -269,8 +272,8 @@
       "category_name": "Harnesses",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975254011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-05-14T14:14:45+00:00"
     },
     {
       "node_id": "2975255011",
