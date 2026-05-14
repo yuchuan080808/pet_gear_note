@@ -3,7 +3,7 @@ title: "Best Scratching Posts for Cats"
 description: "Compare popular scratching posts for cats, with buyer cautions, best-fit scenarios, and practical tips before you buy."
 slug: "best-scratching-posts"
 date: "2026-05-13T14:37:20+00:00"
-lastmod: "2026-05-13T14:37:20+00:00"
+lastmod: "2026-05-14T00:38:46+00:00"
 draft: false
 categories:
   - "cats"
@@ -51,6 +51,7 @@ A tall post is useless if the base is too light. When a cat hooks their claws in
 ### Related Resources
 
 - **Related Review:** [Best Bed Blankets for Cats](/cats/best-bed-blankets/) - Compare nearby beds & furniture tradeoffs before you buy.
+- **Related Review:** [Best Trees for Cats](/cats/best-trees/) - Compare nearby beds & furniture tradeoffs before you buy.
 - **Related Review:** [Best Apparel for Cats](/cats/best-apparel/) - Compare nearby cat comfort tradeoffs before you buy.
 - **Authority Reference:** [Cornell Feline Health Center on destructive behavior](https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/feline-behavior-problems-destructive-behavior) - Feline behavior context for scratching, kneading, bedding, and enrichment.
 
