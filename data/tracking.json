@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-05-14T14:06:35+00:00",
+  "last_synced": "2026-05-16T06:26:48+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -281,8 +281,11 @@
       "category_name": "ID Tags",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975255011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-16T06:34:21+00:00",
+      "article_path": "content\\cats\\best-id-tags.md",
+      "article_url": "/cats/best-id-tags/",
+      "article_title": "Best Id Tags for Cats: Buyer Fit, Safety, and Regret Checks"
     },
     {
       "node_id": "2975256011",
@@ -290,8 +293,11 @@
       "category_name": "Leashes",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975256011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-16T06:42:05+00:00",
+      "article_path": "content\\cats\\best-leashes.md",
+      "article_url": "/cats/best-leashes/",
+      "article_title": "Best Leashes for Cats: Buyer Fit, Safety, and Regret Checks"
     },
     {
       "node_id": "3024142011",
