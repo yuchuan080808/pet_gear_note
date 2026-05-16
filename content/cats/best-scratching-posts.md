@@ -1,9 +1,15 @@
 ---
-title: "Best Scratching Posts for Cats"
-description: "Compare popular scratching posts for cats, with buyer cautions, best-fit scenarios, and practical tips before you buy."
+title: "Best Cat Scratching Posts That Do Not Tip Over"
+description: "Compare tall cat scratching posts for large cats, kittens, couch protection, sisal durability, and stable bases."
+keywords:
+  - "cat scratching post that does not tip"
+  - "tall scratching post"
+  - "sisal cat scratching post"
+  - "scratching post for large cats"
+  - "save couch from cat scratching"
 slug: "best-scratching-posts"
 date: "2026-05-13T14:37:20+00:00"
-lastmod: "2026-05-14T00:38:46+00:00"
+lastmod: "2026-05-16T03:40:19+00:00"
 draft: false
 categories:
   - "cats"
@@ -48,11 +54,25 @@ Cats need to extend their bodies completely to properly stretch their spine. If 
 **Base Stability is Non-Negotiable**
 A tall post is useless if the base is too light. When a cat hooks their claws into the material and pulls, **the post must not tip toward them**. Look for wide, heavy bases. If you buy a post that turns out to be slightly wobbly, you can sometimes slide the base under the edge of a heavy sofa to stabilize it.
 
-### Related Resources
+## Common Questions Before Buying
 
-- **Related Review:** [Best Bed Blankets for Cats](/cats/best-bed-blankets/) - Compare nearby beds & furniture tradeoffs before you buy.
-- **Related Review:** [Best Trees for Cats](/cats/best-trees/) - Compare nearby beds & furniture tradeoffs before you buy.
-- **Related Review:** [Best Apparel for Cats](/cats/best-apparel/) - Compare nearby cat comfort tradeoffs before you buy.
+### How tall should a cat scratching post be?
+
+Most adult cats need a post around 30 inches or taller so they can fully stretch. Short posts are usually better for kittens or horizontal scratching preferences.
+
+### Is sisal rope or sisal fabric better?
+
+Woven sisal fabric often lasts longer and gives steady resistance, while sisal rope is common and cheaper but can unravel under heavy daily scratching.
+
+### Why does my cat ignore the scratching post?
+
+The post may be too short, too wobbly, or placed away from the furniture your cat already targets. Move it near the problem spot and stabilize the base.
+
+## Related Resources
+
+- **Related Review:** [Best Cat Blankets for Waterproof Couch Protection and Cozy Beds](/cats/best-bed-blankets/) - Compare nearby beds & furniture tradeoffs before you buy.
+- **Related Review:** [Best Cat Trees for Large Cats, Maine Coons, and Small Apartments](/cats/best-trees/) - Compare nearby beds & furniture tradeoffs before you buy.
+- **Related Review:** [Best Cat Window Perches for Heavy Cats and Narrow Windows](/cats/best-window-perches/) - Compare nearby beds & furniture tradeoffs before you buy.
 - **Authority Reference:** [Cornell Feline Health Center on destructive behavior](https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/feline-behavior-problems-destructive-behavior) - Feline behavior context for scratching, kneading, bedding, and enrichment.
 
 ## Comparison Table

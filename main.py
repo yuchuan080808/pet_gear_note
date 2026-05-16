@@ -64,6 +64,14 @@ class AuthorityResource:
     keywords: tuple[str, ...]
 
 
+@dataclass(frozen=True)
+class SEOTopic:
+    title: str
+    description: str
+    keywords: tuple[str, ...]
+    faqs: tuple[tuple[str, str], ...]
+
+
 def configure_logging() -> None:
     logging.basicConfig(
         level=logging.INFO,
@@ -298,12 +306,282 @@ class TaskManager:
         raise KeyError(f"Unknown node_id: {node_id}")
 
 
+class SEOTopicCatalog:
+    TOPICS: dict[tuple[str, str], SEOTopic] = {
+        ("cats", "apparel"): SEOTopic(
+            title="Best Cat Recovery Suits and Costumes for Safe Short-Term Wear",
+            description="Compare cat recovery suits, sweaters, costumes, and photo props by fit, escape risk, fabric comfort, and safety for supervised wear.",
+            keywords=("cat recovery suit", "cat costume safety", "cat sweater", "post spay cat suit", "cat apparel sizing"),
+            faqs=(
+                ("What cat apparel is safest after spay surgery?", "A soft recovery suit with stretch fabric, secure closures, and enough room for normal movement is usually safer than a decorative costume. Measure chest girth and body length before buying."),
+                ("Can cats wear costumes all day?", "No. Costumes, hats, wings, and birthday props should be supervised, short-session items because strings, elastic, sequins, and tight necklines can become safety hazards."),
+                ("Why do so many cat clothes fit badly?", "Many pet outfits are patterned around small dogs, while cats have longer spines and more flexible shoulders. Size charts based only on weight are a red flag."),
+            ),
+        ),
+        ("cats", "bed-blankets"): SEOTopic(
+            title="Best Cat Blankets for Waterproof Couch Protection and Cozy Beds",
+            description="Find washable cat blankets for urine protection, hairballs, kneading, carriers, and senior cats, with fabric and drying cautions.",
+            keywords=("waterproof cat blanket", "cat blanket for couch", "washable pet blanket", "cat urine blanket", "blanket for senior cats"),
+            faqs=(
+                ("What is the best cat blanket for urine accidents?", "Look for a true waterproof inner layer such as TPU, not just fleece marketed as water resistant. For repeat accidents, buy two so one can dry while the other protects the sofa or bed."),
+                ("Are sherpa cat blankets safe for kneading?", "Short-pile fleece and tightly woven sherpa are safer than loose loops that can catch claws. If your cat kneads aggressively, inspect seams and backing after each wash."),
+                ("Why do waterproof cat blankets take so long to dry?", "The waterproof membrane traps water during the spin cycle. Use cold wash, run an extra spin cycle, and air dry when the care label warns against dryer heat."),
+            ),
+        ),
+        ("cats", "disposable-litter-boxes"): SEOTopic(
+            title="Best Disposable Litter Boxes for Travel, Kittens, and Easy Cleanup",
+            description="Compare disposable cat litter boxes for travel, foster kittens, odor control, jumbo sizing, and short-term backup use.",
+            keywords=("disposable litter box", "travel litter box for cats", "cardboard litter box", "jumbo disposable litter box", "kitten litter box"),
+            faqs=(
+                ("Are disposable litter boxes good for travel?", "Yes, for short trips, hotels, foster setups, and emergency backups. Check the folded size, wall height, and leak resistance before relying on one for multi-day travel."),
+                ("Can a large cat use a disposable litter box?", "Only if the listed dimensions are genuinely large enough. Many disposable boxes labeled large are too short for Maine Coons, Ragdolls, or big domestic shorthairs."),
+                ("How long does a disposable litter box last?", "It depends on urine volume, litter type, and coating quality. For healthy adult cats, many are short-term tools, not month-long replacements for a sturdy plastic or steel box."),
+            ),
+        ),
+        ("cats", "enclosures"): SEOTopic(
+            title="Best Cat Enclosures for Indoor Safety, Catios, and Apartment Balconies",
+            description="Compare indoor cat enclosures, outdoor catios, balcony-safe pens, and portable habitats by escape risk, weathering, and space.",
+            keywords=("cat enclosure", "outdoor catio", "cat balcony enclosure", "indoor cat pen", "escape proof cat enclosure"),
+            faqs=(
+                ("What type of cat enclosure is best for an apartment balcony?", "A balcony setup needs secure mesh, no climb-out gaps, weather-safe anchoring, and enough clearance from railings. Never rely on decorative netting without testing tension and attachment points."),
+                ("Can a cat enclosure replace supervised outdoor time?", "It can reduce risk, but it still needs shade, water, escape checks, and temperature monitoring. Outdoor time is safest when the enclosure is inspected before each use."),
+                ("What should I avoid in a cheap cat enclosure?", "Avoid weak zippers, flexible frames that collapse when leaned on, untreated wood for outdoor use, and mesh panels large enough for paws or heads to push through."),
+            ),
+        ),
+        ("cats", "litter-waste-receptacle-refills"): SEOTopic(
+            title="Best Cat Litter Waste Receptacle Refills for Odor Control",
+            description="Compare cat litter disposal refill bags and cartridges by odor sealing, fit compatibility, scent, thickness, and cost per change.",
+            keywords=("litter waste receptacle refills", "cat litter disposal bags", "litter genie refill alternative", "odor control litter bags", "cat waste refill bags"),
+            faqs=(
+                ("Do generic litter receptacle refills fit brand-name pails?", "Some do, but fit depends on ring shape, bag width, and cartridge style. Match the exact model name before buying a value pack."),
+                ("Are scented litter waste refills better for odor?", "Not always. Scent can mask odor briefly, but thick film, tight seals, and frequent emptying matter more. Sensitive cats may dislike strong fragrance near the litter area."),
+                ("How do I reduce litter pail refill costs?", "Compare bag length, number of changes per roll, and whether the refill wastes extra plastic at each knot. The cheapest pack is not always cheapest per use."),
+            ),
+        ),
+        ("cats", "litter-waste-receptacles"): SEOTopic(
+            title="Best Cat Litter Waste Receptacles for Odor Control and Small Spaces",
+            description="Find cat litter waste pails for odor control, multi-cat homes, apartments, and easy scooping, with refill and sealing cautions.",
+            keywords=("cat litter waste receptacle", "litter disposal system", "cat litter pail odor control", "litter genie alternative", "small apartment litter pail"),
+            faqs=(
+                ("What makes a litter waste receptacle control odor better?", "A tight lid, sealed bag path, durable refill film, and frequent emptying matter more than marketing claims. Thin bags and loose trap doors leak smell quickly."),
+                ("Is a litter pail worth it for one cat?", "It can be worth it in small apartments, bathrooms, or bedrooms where daily trash trips are annoying. If the box is near an outdoor trash can, a pail may be less necessary."),
+                ("What should multi-cat homes look for?", "Prioritize capacity, refill cost, and one-handed scooping. A tiny pail can fill too fast and become smellier than a regular covered trash can."),
+            ),
+        ),
+        ("cats", "playpens"): SEOTopic(
+            title="Best Cat Playpens for Kittens, Travel, and Recovery",
+            description="Compare portable cat playpens for kittens, travel, recovery, introductions, and temporary containment by size and escape risk.",
+            keywords=("cat playpen", "portable cat playpen", "kitten playpen", "cat recovery pen", "travel playpen for cats"),
+            faqs=(
+                ("What size cat playpen do I need for a kitten?", "Choose enough floor space for food, water, a small litter box, and a resting spot. A tiny tent works for short supervision but not all-day confinement."),
+                ("Can a playpen help after cat surgery?", "Yes, a stable playpen can limit jumping during recovery, but ask your vet about activity limits and make sure the cat cannot climb the mesh or snag stitches."),
+                ("Why are pop-up cat playpens hard to fold?", "Most use a twisted wire-frame design. If daily setup matters, choose a model with clearer folding instructions, a larger storage bag, or a framed design instead."),
+            ),
+        ),
+        ("cats", "replacement-filters"): SEOTopic(
+            title="Best Cat Litter Box Replacement Filters for Odor Control",
+            description="Compare cat litter box carbon filters by compatibility, odor control, cut-to-fit design, thickness, and refill value.",
+            keywords=("cat litter box replacement filters", "activated carbon litter filter", "litter box odor filter", "hooded litter box filter", "cat litter filter refill"),
+            faqs=(
+                ("How often should cat litter box filters be replaced?", "Most carbon filters need replacement when odor returns, often every few weeks to a month depending on humidity, box type, and the number of cats."),
+                ("Are cut-to-fit carbon filters worth it?", "They can be good value if the sheet is thick enough and easy to trim. Measure the filter slot first so the cut piece does not sag or block ventilation."),
+                ("Do litter filters fix a dirty litter box smell?", "No. Filters help with airborne odor, but they cannot replace scooping, washing the box, or changing litter when ammonia builds up."),
+            ),
+        ),
+        ("cats", "scratching-posts"): SEOTopic(
+            title="Best Cat Scratching Posts That Do Not Tip Over",
+            description="Compare tall cat scratching posts for large cats, kittens, couch protection, sisal durability, and stable bases.",
+            keywords=("cat scratching post that does not tip", "tall scratching post", "sisal cat scratching post", "scratching post for large cats", "save couch from cat scratching"),
+            faqs=(
+                ("How tall should a cat scratching post be?", "Most adult cats need a post around 30 inches or taller so they can fully stretch. Short posts are usually better for kittens or horizontal scratching preferences."),
+                ("Is sisal rope or sisal fabric better?", "Woven sisal fabric often lasts longer and gives steady resistance, while sisal rope is common and cheaper but can unravel under heavy daily scratching."),
+                ("Why does my cat ignore the scratching post?", "The post may be too short, too wobbly, or placed away from the furniture your cat already targets. Move it near the problem spot and stabilize the base."),
+            ),
+        ),
+        ("cats", "self-cleaning-litter-boxes"): SEOTopic(
+            title="Best Self-Cleaning Litter Boxes for Large Cats and Multi-Cat Homes",
+            description="Compare automatic litter boxes for large cats, multi-cat homes, odor control, safety sensors, app features, and maintenance.",
+            keywords=("self cleaning litter box", "automatic litter box for large cats", "multi cat automatic litter box", "safe self cleaning litter box", "litter robot alternative"),
+            faqs=(
+                ("Are self-cleaning litter boxes safe for kittens?", "Use caution. Many automatic boxes have minimum weight limits or kitten modes because tiny cats may not trigger sensors reliably."),
+                ("What matters most for large cats?", "Interior space, entry height, drum opening, and waste drawer capacity matter more than the outside dimensions. A big shell can still have a cramped usable area."),
+                ("Do automatic litter boxes eliminate odor?", "They reduce waste exposure time, but odor still depends on drawer sealing, litter type, filter design, and how often the waste drawer is emptied."),
+            ),
+        ),
+        ("cats", "standard-litter-boxes"): SEOTopic(
+            title="Best Standard Litter Boxes for Large Cats, Seniors, and High Sprayers",
+            description="Compare open, hooded, high-sided, and stainless steel litter boxes for large cats, senior access, odor, and scatter control.",
+            keywords=("standard litter box", "litter box for large cats", "high sided litter box", "stainless steel cat litter box", "senior cat litter box"),
+            faqs=(
+                ("What size litter box is best for a large cat?", "A practical rule is at least 1.5 times the cat's body length from nose to tail base. Marketing labels like XL are less useful than actual dimensions."),
+                ("Are stainless steel litter boxes better than plastic?", "Stainless steel resists odor absorption and scratching better than plastic, but it costs more and may still include plastic lids or shields that can crack."),
+                ("Should senior cats use high-sided boxes?", "Senior cats often need a low front entry, even if the back and sides are high. Arthritis or mobility changes can make tall entry walls a problem."),
+            ),
+        ),
+        ("cats", "trees"): SEOTopic(
+            title="Best Cat Trees for Large Cats, Maine Coons, and Small Apartments",
+            description="Compare sturdy cat trees for large cats, Maine Coons, multi-cat homes, small spaces, sisal durability, and stable bases.",
+            keywords=("cat tree for large cats", "Maine Coon cat tree", "sturdy cat tree", "cat tree for small apartment", "multi cat tree"),
+            faqs=(
+                ("What cat tree is best for a Maine Coon?", "Look for a wide base, large platforms, thick posts, and weight capacity that makes sense for jumping force, not just resting weight."),
+                ("How do I know if a cat tree will wobble?", "Check the base footprint, post thickness, total height, and whether reviews mention tipping during jumps. Tall towers with narrow bases are risky."),
+                ("Are small cat trees worth buying?", "Small trees can work for kittens, seniors, or compact rooms, but active adult cats usually need taller vertical territory and a full-stretch scratching surface."),
+            ),
+        ),
+        ("cats", "window-perches"): SEOTopic(
+            title="Best Cat Window Perches for Heavy Cats and Narrow Windows",
+            description="Compare cat window perches for heavy cats, suction-free setups, narrow sills, washable covers, winter glass, and bird watching.",
+            keywords=("cat window perch", "window perch for heavy cats", "suction free cat window perch", "cat hammock for window", "cat perch for narrow sill"),
+            faqs=(
+                ("Are suction cup cat window perches safe?", "They can be safe for average cats if installed perfectly, but cold glass, dirty windows, aging cups, and heavy jumpers increase failure risk."),
+                ("What is better than suction cups for heavy cats?", "A sill-mounted perch with metal hooks or a freestanding cat tree near the window is usually safer for large cats and aggressive jumpers."),
+                ("Will a window perch fit modern windows?", "Not always. Measure sill depth, track slot depth, blind clearance, and whether the window opens vertically or horizontally before buying."),
+            ),
+        ),
+        ("dogs", "air-dried"): SEOTopic(
+            title="Best Air-Dried Dog Food for Picky Eaters and Sensitive Stomachs",
+            description="Compare air-dried dog foods by protein, texture, transition risk, topper value, smell, and fit for picky or sensitive dogs.",
+            keywords=("air dried dog food", "air dried dog food for sensitive stomach", "air dried dog food topper", "dog food for picky eaters", "limited ingredient dog food"),
+            faqs=(
+                ("Is air-dried dog food good for sensitive stomachs?", "It can be, but the high protein density means slow transition matters. Start with a small topper amount and watch stool quality before increasing."),
+                ("Can air-dried food replace kibble?", "Some products are complete diets, while others work better as toppers or treats. Check feeding guidelines and cost per day before switching fully."),
+                ("Why do some dogs refuse air-dried food?", "Texture, smell, protein source, and fat level vary widely. Picky dogs may love one recipe and reject another from the same category."),
+            ),
+        ),
+        ("dogs", "ball-launchers"): SEOTopic(
+            title="Best Dog Ball Launchers for Large Dogs, Small Dogs, and Tired Arms",
+            description="Compare manual and automatic dog ball launchers by ball size, throw distance, training needs, durability, and dog size.",
+            keywords=("dog ball launcher", "automatic dog ball launcher", "ball launcher for large dogs", "small dog ball launcher", "Chuckit launcher"),
+            faqs=(
+                ("Are automatic ball launchers worth it?", "They help when a dog can learn to reload and play safely, but they are not a substitute for supervision, training, or matching ball size to the dog."),
+                ("What ball size is safe for large dogs?", "Large dogs need balls too large to swallow. Do not use small-dog or mini launcher balls with big breeds, even if the machine accepts them."),
+                ("Is a manual launcher better than an automatic one?", "Manual launchers are cheaper, quieter, and more reliable outdoors. Automatic launchers are more about owner convenience and indoor repetition."),
+            ),
+        ),
+        ("dogs", "bully-sticks"): SEOTopic(
+            title="Best Bully Sticks for Aggressive Chewers, Puppies, and Odor Control",
+            description="Compare bully sticks by thickness, odor, digestibility, supervision needs, puppy fit, calories, and aggressive-chewer value.",
+            keywords=("bully sticks for dogs", "odor free bully sticks", "bully sticks for aggressive chewers", "puppy bully sticks", "digestible dog chews"),
+            faqs=(
+                ("Are bully sticks safe for aggressive chewers?", "They can be, but only with supervision and the right thickness. Use a holder if your dog tries to swallow short end pieces."),
+                ("Do odor-free bully sticks really have no smell?", "They usually smell less, not zero. Low-odor processing can make them more household-friendly, but dogs may prefer stronger-smelling sticks."),
+                ("How often can dogs have bully sticks?", "Treat them as calorie-dense chews, not free snacks. Dogs with pancreatitis risk, weight issues, or sensitive stomachs need extra caution."),
+            ),
+        ),
+        ("dogs", "cameras-monitors"): SEOTopic(
+            title="Best Dog Cameras and Monitors for Separation Anxiety and Treat Tossing",
+            description="Compare dog cameras by video quality, app reliability, barking alerts, treat tossing, subscriptions, and anxiety-monitoring fit.",
+            keywords=("dog camera", "dog camera for separation anxiety", "pet camera with treat dispenser", "dog monitor no subscription", "barking alert camera"),
+            faqs=(
+                ("Can a dog camera help separation anxiety?", "It can help you observe patterns, but it does not treat anxiety by itself. Treat tossing can even become a problem for dogs with diet restrictions."),
+                ("Do dog cameras need subscriptions?", "Some useful features, like cloud recording or smart alerts, may require paid plans. Check what works without a subscription before buying."),
+                ("What matters more than video resolution?", "App stability, night vision, alert accuracy, privacy controls, and whether the treat mechanism jams matter more in daily use than headline resolution."),
+            ),
+        ),
+        ("dogs", "crate-covers"): SEOTopic(
+            title="Best Dog Crate Covers for Anxiety, Airflow, and Blackout Sleep",
+            description="Compare dog crate covers by breathable fabric, blackout level, chew risk, zipper quality, crate fit, and overheating concerns.",
+            keywords=("dog crate cover", "breathable dog crate cover", "blackout crate cover", "crate cover for anxious dogs", "chew proof crate cover"),
+            faqs=(
+                ("Do crate covers help anxious dogs?", "They can reduce visual triggers for crate-trained dogs, but they will not fix severe separation anxiety or destructive chewing by themselves."),
+                ("Can a crate cover cause overheating?", "Yes. Thick blackout fabric and PVC coatings can trap heat. Leave airflow panels open and avoid fully sealing the crate in warm rooms."),
+                ("How do I choose the right crate cover size?", "Measure your exact crate, including brand-specific door placement. Universal sizing often causes tight zippers or loose fabric that dogs can pull inside."),
+            ),
+        ),
+        ("dogs", "dna-tests"): SEOTopic(
+            title="Best Dog DNA Tests for Breed ID, Health Screening, and Rescue Dogs",
+            description="Compare dog DNA tests for breed mix, health screening, age estimates, rescue dogs, trait reports, and vet-useful results.",
+            keywords=("dog DNA test", "best dog DNA test for mixed breed", "dog breed identification test", "dog health DNA test", "rescue dog DNA test"),
+            faqs=(
+                ("Are dog DNA tests accurate for mixed breeds?", "Accuracy depends on the reference database and how mixed the dog is. Results are often most useful as probability ranges, not absolute certainty."),
+                ("Should I choose breed ID or health screening?", "Breed ID answers curiosity and behavior context. Health screening is more useful if you want mutation, drug sensitivity, or inherited disease information to discuss with a vet."),
+                ("Are dog age tests precise?", "Age estimates can be helpful for rescue dogs, but they often come with a broad range. Do not expect a precise birthday."),
+            ),
+        ),
+        ("dogs", "enclosure-covers"): SEOTopic(
+            title="Best Dog Enclosure Covers for Outdoor Kennels, Shade, and Rain",
+            description="Compare dog kennel and enclosure covers by shade, airflow, rain resistance, wind security, grommet strength, and fit.",
+            keywords=("dog enclosure cover", "outdoor dog kennel cover", "dog kennel shade cover", "waterproof dog pen cover", "dog run cover"),
+            faqs=(
+                ("What is the best cover for an outdoor dog kennel?", "Look for UV shade, secure tie-downs, sloped rain runoff, and airflow. Flat covers that collect water can sag or tear."),
+                ("Can a kennel cover keep dogs warm in winter?", "It can reduce wind exposure, but it is not insulation or a substitute for safe indoor shelter during unsafe temperatures."),
+                ("How do I stop an enclosure cover from tearing?", "Match the cover to frame size, keep tension even, use all tie points, and avoid letting water pool on top during storms."),
+            ),
+        ),
+        ("dogs", "location-trackers"): SEOTopic(
+            title="Best Dog GPS Trackers for Escape Artists, Hiking, and No-Subscription Needs",
+            description="Compare dog GPS trackers by subscription cost, battery life, escape alerts, health metrics, rural coverage, and collar fit.",
+            keywords=("dog GPS tracker", "GPS tracker for dogs no subscription", "dog location tracker", "escape alert dog tracker", "dog tracker for hiking"),
+            faqs=(
+                ("Do dog GPS trackers work without a subscription?", "Some use Bluetooth or radio-style tracking, but most real-time GPS and cellular alerts require a paid plan. Check coverage in your area."),
+                ("What tracker is best for escape artists?", "Fast escape alerts, reliable geofencing, strong collar attachment, and battery life matter more than extra wellness metrics."),
+                ("Can a dog tracker replace a microchip?", "No. A tracker helps locate a dog while it is attached and charged. A microchip is still important for identification if the collar comes off."),
+            ),
+        ),
+        ("dogs", "prescription-medications"): SEOTopic(
+            title="Best Dog Prescription Medication Services and Vet-Approved Pet Med Options",
+            description="Compare dog prescription medication options by vet approval needs, pharmacy reliability, safety cautions, refills, and use cases.",
+            keywords=("dog prescription medication", "pet medication online", "vet approved dog meds", "dog prescription refill", "pet pharmacy for dogs"),
+            faqs=(
+                ("Can I buy dog prescription medication without a vet?", "Legitimate prescription medications require veterinary authorization. Avoid sellers that bypass prescriptions or make unsupported medical claims."),
+                ("What should I check before ordering pet meds online?", "Confirm pharmacy legitimacy, exact medication name and strength, expiration handling, shipping temperature needs, and whether your vet must approve the refill."),
+                ("Should I switch dog medications based on online reviews?", "No. Medication changes should go through your veterinarian, especially for heart, seizure, pain, allergy, or anxiety drugs."),
+            ),
+        ),
+        ("dogs", "styptic-gels-powders"): SEOTopic(
+            title="Best Styptic Powders and Gels for Dog Nail Bleeding and Grooming Kits",
+            description="Compare styptic powder, gel, and sticks for dog nail bleeding, quick-stop grooming kits, pain relief, and emergency use.",
+            keywords=("styptic powder for dogs", "dog nail bleeding powder", "quick stop dog nail bleeding", "styptic gel for dogs", "dog grooming first aid"),
+            faqs=(
+                ("What stops dog nail bleeding fastest?", "Styptic powder usually works quickly because it coats the nail quick. Have it open before trimming if your dog has dark nails or moves suddenly."),
+                ("Is styptic powder painful for dogs?", "It can sting, especially without a pain-relief ingredient. Apply firm pressure calmly and avoid rubbing the powder into surrounding skin."),
+                ("Can styptic products replace a vet visit?", "No. They are for minor nail quick bleeding. Deep cuts, torn nails, repeated bleeding, or signs of infection need veterinary care."),
+            ),
+        ),
+    }
+
+    @classmethod
+    def for_task(cls, task: CategoryTask) -> SEOTopic:
+        return cls.for_values(task.pet_type, task.category_name)
+
+    @classmethod
+    def for_article(cls, article: PublishedArticle) -> SEOTopic:
+        return cls.for_values(article.pet_type, article.category_name)
+
+    @classmethod
+    def for_values(cls, pet_type: str, category_name: str) -> SEOTopic:
+        key = (pet_type, slugify(category_name))
+        if key in cls.TOPICS:
+            return cls.TOPICS[key]
+        pet_label = "Dogs" if pet_type == "dogs" else "Cats"
+        category_label = category_name.strip().title()
+        lower_category = category_name.strip().lower()
+        return SEOTopic(
+            title=f"Best {category_label} for {pet_label}: Buyer Fit, Safety, and Regret Checks",
+            description=(
+                f"Compare {lower_category} for {pet_type} by buyer fit, safety cautions, durability, "
+                "common complaints, and practical use cases."
+            ),
+            keywords=(
+                f"best {lower_category} for {pet_type}",
+                f"{lower_category} buying guide",
+                f"{lower_category} reviews",
+                f"{pet_type} {lower_category}",
+            ),
+            faqs=(
+                (f"What should I check before buying {lower_category}?", "Start with fit, safety, durability, cleaning, and the most common complaint pattern instead of choosing only by rating."),
+                (f"Who should skip budget {lower_category}?", "Skip the cheapest option if the product needs to handle daily use, large pets, destructive behavior, or a medical or safety-sensitive situation."),
+                (f"How do I compare {lower_category} without exact prices?", "Compare the use case, failure risk, replacement cost, and whether the product solves the specific problem you are buying it for."),
+            ),
+        )
+
+
 class SEOResourceLinker:
     """Adds crawlable, contextual article links after LLM generation."""
 
     INTERNAL_LINK_LIMIT = 3
     RELATED_SECTION_RE = re.compile(
-        r"\n*### Related Resources\n.*?(?=\n#{2,3}\s+(?:Comparison Table|Deep Reviews|Final Summary)\b|\Z)",
+        r"\n*#{2,3}[ \t]+Related Resources[ \t]*\n.*?(?=\n#{2,3}[ \t]+(?:Comparison Table|Deep Reviews|Final Summary)\b|\Z)",
         re.DOTALL,
     )
     INSERT_TARGETS = (
@@ -408,7 +686,7 @@ class SEOResourceLinker:
         ),
     )
     RELATED_TOPIC_GROUPS = (
-        ("dogs", "dog feeding", frozenset(("air", "dried", "dry", "food", "nutrition", "diet", "treat", "bully", "stick"))),
+        ("dogs", "dog feeding", frozenset(("air", "dried", "dry", "food", "nutrition", "diet", "bully", "stick"))),
         ("dogs", "dog activity", frozenset(("toy", "ball", "launcher", "chew", "bully", "stick"))),
         ("dogs", "dog crates and covers", frozenset(("crate", "kennel", "enclosure", "cover", "pen", "house"))),
         ("dogs", "dog health", frozenset(("health", "dna", "prescription", "medication", "styptic", "grooming", "tracker", "location", "camera", "monitor"))),
@@ -453,6 +731,8 @@ class SEOResourceLinker:
     def collect_published_articles(cls, content_dir: Path = OUTPUT_DIR) -> list[PublishedArticle]:
         articles: list[PublishedArticle] = []
         for path in sorted(content_dir.rglob("*.md")):
+            if path.name == "_index.md":
+                continue
             document = path.read_text(encoding="utf-8")
             fields = cls._parse_frontmatter(document)
             if str(fields.get("draft", "")).lower() == "true":
@@ -515,7 +795,7 @@ class SEOResourceLinker:
         lines.append(
             f"- **Authority Reference:** [{authority.title}]({authority.url}) - {authority.note}"
         )
-        return "### Related Resources\n\n" + "\n".join(lines)
+        return "## Related Resources\n\n" + "\n".join(lines)
 
     @classmethod
     def _rank_related_articles(
@@ -641,6 +921,7 @@ class SEOResourceLinker:
             "review",
             "reviews",
             "supplies",
+            "treat",
             "the",
         }
         normalized_terms = set()
@@ -717,6 +998,122 @@ class SEOResourceLinker:
     @staticmethod
     def _collapse_blank_lines(value: str) -> str:
         return re.sub(r"\n{3,}", "\n\n", value).strip()
+
+
+class SEOArticleOptimizer:
+    LEADING_H1_RE = re.compile(r"\A\s*#\s+.+?\n+")
+    FAQ_SECTION_RE = re.compile(
+        r"\n*## Common Questions Before Buying\n.*?(?=\n#{2,3}\s+(?:Related Resources|Comparison Table|Deep Reviews|Final Summary)\b|\Z)",
+        re.DOTALL,
+    )
+    INSERT_TARGETS = (
+        re.compile(r"(?m)^#{2,3}\s+Related Resources\b"),
+        re.compile(r"(?m)^#{2,3}\s+Comparison Table\b"),
+        re.compile(r"(?m)^#{2,3}\s+Deep Reviews\b"),
+        re.compile(r"(?m)^#{2,3}\s+Final Summary\b"),
+    )
+
+    @classmethod
+    def enrich_body(cls, markdown_body: str, task: CategoryTask) -> str:
+        topic = SEOTopicCatalog.for_task(task)
+        return cls._insert_faq_section(markdown_body, topic)
+
+    @classmethod
+    def refresh_existing_content(cls, content_dir: Path = OUTPUT_DIR) -> int:
+        articles = SEOResourceLinker.collect_published_articles(content_dir)
+        changed_count = 0
+        for article in articles:
+            if not article.source_path:
+                continue
+            original = article.source_path.read_text(encoding="utf-8")
+            updated = cls.enrich_document(original, article)
+            if updated != original:
+                article.source_path.write_text(updated, encoding="utf-8")
+                changed_count += 1
+        return changed_count
+
+    @classmethod
+    def enrich_document(cls, document: str, article: PublishedArticle) -> str:
+        frontmatter, body = SEOResourceLinker._split_frontmatter(document)
+        if not frontmatter:
+            return document
+
+        topic = SEOTopicCatalog.for_article(article)
+        updated_frontmatter = cls._update_frontmatter(frontmatter, topic)
+        updated_body = cls._insert_faq_section(body, topic).strip()
+        if updated_frontmatter == frontmatter and updated_body == body.strip():
+            return document
+        updated_frontmatter = SEOResourceLinker._touch_lastmod(updated_frontmatter)
+        return f"{updated_frontmatter}\n\n{updated_body}\n"
+
+    @classmethod
+    def _insert_faq_section(cls, markdown_body: str, topic: SEOTopic) -> str:
+        body = cls._remove_leading_h1(markdown_body)
+        body = cls.FAQ_SECTION_RE.sub("\n\n", body).strip()
+        faq_section = cls._faq_section(topic)
+        for pattern in cls.INSERT_TARGETS:
+            match = pattern.search(body)
+            if match:
+                prefix = body[: match.start()].rstrip()
+                suffix = body[match.start() :].lstrip()
+                return f"{prefix}\n\n{faq_section}\n\n{suffix}".strip()
+        return f"{body}\n\n{faq_section}".strip()
+
+    @classmethod
+    def _remove_leading_h1(cls, markdown_body: str) -> str:
+        return cls.LEADING_H1_RE.sub("", markdown_body, count=1).strip()
+
+    @staticmethod
+    def _faq_section(topic: SEOTopic) -> str:
+        blocks = ["## Common Questions Before Buying"]
+        for question, answer in topic.faqs:
+            blocks.append(f"### {question}\n\n{answer}")
+        return "\n\n".join(blocks)
+
+    @classmethod
+    def _update_frontmatter(cls, frontmatter: str, topic: SEOTopic) -> str:
+        lines = frontmatter.splitlines()
+        lines = cls._remove_yaml_block(lines, "keywords")
+        lines = cls._set_scalar(lines, "title", topic.title)
+        lines = cls._set_scalar(lines, "description", topic.description)
+        insert_at = cls._line_index(lines, "description")
+        keyword_lines = ["keywords:", *[f"  - {MarkdownExporter._yaml_quote(keyword)}" for keyword in topic.keywords]]
+        if insert_at is None:
+            insert_at = 1
+        lines[insert_at + 1 : insert_at + 1] = keyword_lines
+        return "\n".join(lines)
+
+    @staticmethod
+    def _line_index(lines: list[str], key: str) -> int | None:
+        for index, line in enumerate(lines):
+            if re.match(rf"^{re.escape(key)}\s*:", line):
+                return index
+        return None
+
+    @classmethod
+    def _set_scalar(cls, lines: list[str], key: str, value: str) -> list[str]:
+        quoted_value = MarkdownExporter._yaml_quote(value)
+        index = cls._line_index(lines, key)
+        if index is None:
+            lines.insert(1, f"{key}: {quoted_value}")
+        else:
+            lines[index] = f"{key}: {quoted_value}"
+        return lines
+
+    @staticmethod
+    def _remove_yaml_block(lines: list[str], key: str) -> list[str]:
+        output: list[str] = []
+        index = 0
+        while index < len(lines):
+            line = lines[index]
+            if re.match(rf"^{re.escape(key)}\s*:", line):
+                index += 1
+                while index < len(lines) and (lines[index].startswith(" ") or not lines[index].strip()):
+                    index += 1
+                continue
+            output.append(line)
+            index += 1
+        return output
 
 
 class ScraperEngine:
@@ -948,6 +1345,7 @@ Link and compliance rules:
 - Never include exact prices. Use broad tiers like "Budget-friendly", "Mid-range", and "Premium price".
 - Use descriptive anchor text for internal links; avoid anchors like "click here".
 - Do not create a standalone "Related Resources" section; the publishing pipeline adds that section with contextual internal links and authority references after generation.
+- Do not create a standalone FAQ section; the publishing pipeline adds concise long-tail buyer questions after generation.
 
 Image rules:
 - For every individual product section, place the product image immediately under that product heading using Markdown:
@@ -1088,6 +1486,7 @@ Output Markdown body only. Do not output YAML frontmatter.
         body = self._sanitize_external_links(body)
         body = self._sanitize_exact_prices(body)
         body = self._sanitize_unsupported_vision_claims(body)
+        body = SEOArticleOptimizer.enrich_body(body, task)
         body = SEOResourceLinker.enrich(body, task, related_articles=related_articles)
         return self._sanitize_external_links(body)
 
@@ -1495,7 +1894,7 @@ class MarkdownExporter:
 
     @staticmethod
     def title_for(task: CategoryTask) -> str:
-        return f"Best {task.category_name} for {task.pet_type.title()}"
+        return SEOTopicCatalog.for_task(task).title
 
     @staticmethod
     def url_for(task: CategoryTask) -> str:
@@ -1503,10 +1902,8 @@ class MarkdownExporter:
 
     @staticmethod
     def _frontmatter(task: CategoryTask, title: str) -> str:
-        description = (
-            f"Compare popular {task.category_name.lower()} for {task.pet_type}, with buyer cautions, "
-            "best-fit scenarios, and practical tips before you buy."
-        )
+        topic = SEOTopicCatalog.for_task(task)
+        description = topic.description
         path_tags = [
             part.strip().lower()
             for part in task.category_path.split(">")
@@ -1514,10 +1911,13 @@ class MarkdownExporter:
         ]
         tags = list(dict.fromkeys([task.pet_type, task.category_name.lower(), *path_tags, "pet supplies"]))
         yaml_tags = "\n".join(f"  - {MarkdownExporter._yaml_quote(tag)}" for tag in tags)
+        yaml_keywords = "\n".join(f"  - {MarkdownExporter._yaml_quote(keyword)}" for keyword in topic.keywords)
         return (
             "---\n"
             f"title: {MarkdownExporter._yaml_quote(title)}\n"
             f"description: {MarkdownExporter._yaml_quote(description)}\n"
+            "keywords:\n"
+            f"{yaml_keywords}\n"
             f"slug: {MarkdownExporter._yaml_quote(f'best-{slugify(task.category_name)}')}\n"
             f'date: "{utc_now()}"\n'
             f'lastmod: "{utc_now()}"\n'
@@ -1542,6 +1942,15 @@ def run_pipeline(args: argparse.Namespace) -> int:
     if args.refresh_links_only:
         changed_count = SEOResourceLinker.refresh_existing_content(OUTPUT_DIR)
         LOGGER.info("Refreshed SEO resource links in %s article files", changed_count)
+        return 0
+    if args.refresh_seo_only:
+        seo_changed_count = SEOArticleOptimizer.refresh_existing_content(OUTPUT_DIR)
+        link_changed_count = SEOResourceLinker.refresh_existing_content(OUTPUT_DIR)
+        LOGGER.info(
+            "Refreshed SEO metadata/FAQ in %s article files and resource links in %s article files",
+            seo_changed_count,
+            link_changed_count,
+        )
         return 0
 
     task_manager = TaskManager(args.tracking_json)
@@ -1619,6 +2028,11 @@ def parse_args() -> argparse.Namespace:
         "--refresh-links-only",
         action="store_true",
         help="Rebuild SEO Related Resources sections for existing content and exit",
+    )
+    parser.add_argument(
+        "--refresh-seo-only",
+        action="store_true",
+        help="Refresh article titles, descriptions, keywords, FAQ sections, and SEO resource links, then exit",
     )
     return parser.parse_args()
 

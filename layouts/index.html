@@ -2,15 +2,22 @@
 
 {{- if and site.Params.homeInfoParams }}
 {{- partial "home_info.html" . }}
+{{- else }}
+<header class="page-header">
+  <h1>{{ site.Title }}</h1>
+  <div class="post-description">
+    Practical dog and cat product reviews built around buyer fit, safety cautions, durability patterns, and the problems pet owners notice after purchase.
+  </div>
+</header>
 {{- end }}
 
 {{- range $section := site.Params.mainSections }}
   <div class="home-section" style="margin-bottom: 40px;">
     <h2 class="home-section-title" style="margin-bottom: 20px; font-size: 28px; font-weight: 700; text-transform: capitalize;">{{ $section }}</h2>
-    
+
     {{- $pages := where site.RegularPages "Section" $section }}
     {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
-    
+
     {{- range first 5 $pages }}
     <article class="post-entry">
       {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
@@ -40,15 +47,15 @@
       <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
     </article>
     {{- end }}
-    
+
     <footer class="page-footer">
       <nav class="pagination">
         <a class="next" href="{{ absURL $section }}/">
-          View all {{ $section | title }}&nbsp;»
+          View all {{ $section | title }}&nbsp;-&gt;
         </a>
       </nav>
     </footer>
   </div>
 {{- end }}
 
-{{- end }}{{- /* end main */ -}}
+{{- end }}

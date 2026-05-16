@@ -1,9 +1,15 @@
 ---
-title: "Best Standard Litter Boxes for Cats"
-description: "Compare popular standard litter boxes for cats, with buyer cautions, best-fit scenarios, and practical tips before you buy."
+title: "Best Standard Litter Boxes for Large Cats, Seniors, and High Sprayers"
+description: "Compare open, hooded, high-sided, and stainless steel litter boxes for large cats, senior access, odor, and scatter control."
+keywords:
+  - "standard litter box"
+  - "litter box for large cats"
+  - "high sided litter box"
+  - "stainless steel cat litter box"
+  - "senior cat litter box"
 slug: "best-standard-litter-boxes"
 date: "2026-05-03T13:42:30+00:00"
-lastmod: "2026-05-13T14:25:16+00:00"
+lastmod: "2026-05-16T02:37:10+00:00"
 draft: false
 categories:
   - "cats"
@@ -17,8 +23,6 @@ pet_type: "cats"
 amazon_node_id: "17602462011"
 category_path: "Pet Supplies > Cats > Litter & Housebreaking > Litter Boxes > Standard Litter Boxes"
 ---
-
-# Best Standard Litter Boxes for Cats: What Actually Works (and What You'll Regret)
 
 You already know the box is non-negotiable. What you don't know yet is which one is going to leave you wiping cat pee off the baseboards at 11 p.m., fishing a broken scoop out of the corner, or watching your perfectly healthy cat refuse to use something that looked great in the photo. That's the conversation we're having here.
 
@@ -83,11 +87,25 @@ The general rule is one box per cat plus one extra. If you're buying one box for
 
 ---
 
-### Related Resources
+## Common Questions Before Buying
 
-- **Related Review:** [Best Disposable Litter Boxes for Cats](/cats/best-disposable-litter-boxes/) - Compare nearby litter boxes tradeoffs before you buy.
-- **Related Review:** [Best Self-Cleaning Litter Boxes for Cats](/cats/best-self-cleaning-litter-boxes/) - Compare nearby litter boxes tradeoffs before you buy.
-- **Related Review:** [Best Litter Waste Receptacle Refills for Cats](/cats/best-litter-waste-receptacle-refills/) - Compare nearby litter & housebreaking tradeoffs before you buy.
+### What size litter box is best for a large cat?
+
+A practical rule is at least 1.5 times the cat's body length from nose to tail base. Marketing labels like XL are less useful than actual dimensions.
+
+### Are stainless steel litter boxes better than plastic?
+
+Stainless steel resists odor absorption and scratching better than plastic, but it costs more and may still include plastic lids or shields that can crack.
+
+### Should senior cats use high-sided boxes?
+
+Senior cats often need a low front entry, even if the back and sides are high. Arthritis or mobility changes can make tall entry walls a problem.
+
+## Related Resources
+
+- **Related Review:** [Best Disposable Litter Boxes for Travel, Kittens, and Easy Cleanup](/cats/best-disposable-litter-boxes/) - Compare nearby litter boxes tradeoffs before you buy.
+- **Related Review:** [Best Self-Cleaning Litter Boxes for Large Cats and Multi-Cat Homes](/cats/best-self-cleaning-litter-boxes/) - Compare nearby litter boxes tradeoffs before you buy.
+- **Related Review:** [Best Cat Litter Box Replacement Filters for Odor Control](/cats/best-replacement-filters/) - Compare nearby litter & housebreaking tradeoffs before you buy.
 - **Authority Reference:** [VCA Hospitals litter box problems in cats](https://vcahospitals.com/know-your-pet/litter-box-problems-in-cats) - Veterinary context for litter box placement, avoidance, and health flags.
 
 ## Comparison Table

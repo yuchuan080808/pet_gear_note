@@ -2,8 +2,11 @@ baseURL = 'https://petgearnotes.com/'
 languageCode = 'en-us'
 title = 'Pet Gear Note'
 theme = 'PaperMod'
+enableRobotsTXT = true
+disableKinds = ['taxonomy', 'term']
 
 [params]
+env = 'production'
 description = 'Comprehensive reviews, buying guides, and expert recommendations for dog and cat supplies. Find the best pet gear and avoid buyer regret.'
 keywords = ['pet supplies', 'dog gear', 'cat accessories', 'pet product reviews', 'best pet products']
 author = 'Pet Gear Note'
