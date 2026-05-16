@@ -1,10 +1,14 @@
 {{- if .IsPage -}}
 {{- $raw := .RawContent -}}
-{{- $faqSection := findRE `(?s)## Common Questions Before Buying\n.*?(?=\n#{2,3}[ \t]+(?:Related Resources|Comparison Table|Deep Reviews|Final Summary)\b|\z)` $raw 1 -}}
-{{- if $faqSection -}}
-  {{- $faqContent := index $faqSection 0 -}}
-  {{- $questionHeadings := findRE `(?m)^### .+\?$` $faqContent -}}
-  {{- if $questionHeadings -}}
+{{- if in $raw "## Common Questions Before Buying" -}}
+  {{- $afterFaq := index (split $raw "## Common Questions Before Buying") 1 -}}
+  {{- $faqContent := $afterFaq -}}
+  {{- $stopMarkers := slice "\n## Related Resources" "\n### Related Resources" "\n## Comparison Table" "\n### Comparison Table" "\n## Deep Reviews" "\n### Deep Reviews" "\n## Final Summary" "\n### Final Summary" -}}
+  {{- range $stopMarkers -}}
+    {{- if in $faqContent . -}}
+      {{- $faqContent = index (split $faqContent .) 0 -}}
+    {{- end -}}
+  {{- end -}}
   {{- $parts := split $faqContent "\n### " -}}
   {{- if gt (len $parts) 1 -}}
 <script type="application/ld+json">
@@ -17,12 +21,11 @@
       {{- if ne $index 0 -}}
         {{- $lines := split $part "\n" -}}
         {{- $q := index $lines 0 | trim "\n\r " -}}
-        {{- if findRE `\?$` $q -}}
-        {{- $aRaw := delimit (after 1 $lines) "\n" -}}
-        {{- $aClean := replaceRE `(?s)\n#{2,3}[ \t]+.*$` "" $aRaw -}}
-        {{- $a := $aClean | markdownify | plainify | trim "\n\r " -}}
-        {{- if $a -}}
-          {{- if not $first -}},{{- end -}}
+        {{- if strings.HasSuffix $q "?" -}}
+          {{- $aRaw := delimit (after 1 $lines) "\n" -}}
+          {{- $a := $aRaw | markdownify | plainify | trim "\n\r " -}}
+          {{- if $a -}}
+            {{- if not $first -}},{{- end }}
     {
       "@type": "Question",
       "name": {{ $q | jsonify }},
@@ -31,15 +34,14 @@
         "text": {{ $a | jsonify }}
       }
     }
-          {{- $first = false -}}
-        {{- end -}}
+            {{- $first = false -}}
+          {{- end -}}
         {{- end -}}
       {{- end -}}
-    {{- end -}}
+    {{- end }}
   ]
 }
 </script>
   {{- end -}}
-{{- end -}}
 {{- end -}}
 {{- end -}}
