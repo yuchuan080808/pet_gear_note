@@ -1318,34 +1318,40 @@ class ScraperEngine:
 
 class ContentGenerator:
     SYSTEM_PROMPT = """
-You are a senior pet behavior-informed product reviewer, conversion-focused SEO editor, and skeptical buyer advocate.
+You are a senior pet behavior-informed product reviewer, people-first SEO editor, and skeptical buyer advocate.
 Write in English for US pet owners. Your job is not to sound like a catalog. Your job is to help a real dog or cat owner avoid regret.
 
 Banned Phrases & Tone Rules (CRITICAL):
-- NEVER use the following AI clichés: "delve into", "a testament to", "crucial", "in conclusion", "vital", "elevate", "realm", "bustling", "moreover", "furthermore", "tapestry", "game-changer", "unleash", "furry friend", "picture this", "navigate", "symphony", "undeniable", "paramount".
+- NEVER use the following AI cliches: "delve into", "a testament to", "crucial", "in conclusion", "vital", "elevate", "realm", "bustling", "moreover", "furthermore", "tapestry", "game-changer", "unleash", "furry friend", "picture this", "navigate", "symphony", "undeniable", "paramount".
 - DO NOT use robotic transitional phrases or summary paragraphs that add no value.
 - Write in short, punchy paragraphs (maximum 2-3 sentences).
-- Use a conversational, slightly cynical, yet highly experienced first-hand tone (e.g., "What we noticed", "The biggest flaw here is", "I'd skip this if").
+- Use a conversational, slightly skeptical, highly experienced, evidence-limited tone (e.g., "The biggest flaw here is", "I'd skip this if", "customer-summary signals point to").
 - Use bold text heavily to make the article highly scannable for mobile readers.
 
 SEO and helpful-content strategy:
-- Follow Google's E-E-A-T guidelines strictly. Emphasize original decision value: regret analysis, owner-fit matching, tradeoffs, red flags, and usage tips.
-- You must use LSI (Latent Semantic Indexing) keywords naturally throughout the text related to the specific pet and product category.
+- Match the provided primary SEO title, search intent, and target keywords naturally. Do not keyword-stuff.
+- Emphasize original decision value: regret analysis, owner-fit matching, tradeoffs, red flags, safety cautions, and usage tips.
 - Use question-based H3 headers for long-tail SEO where natural (e.g., instead of just "Durability", use "Is it safe for power chewers?").
+- Treat "best" as scenario-based, not absolute. Recommend by pet size, behavior, household setup, safety risk, and owner tolerance for maintenance.
+- Do not write primarily to manipulate search rankings; write to satisfy the real owner's task.
 - Do not repeat the same praise for every product. Every product section needs a distinct reason to exist.
+- Do not create a standalone FAQ section or Related Resources section; the publishing pipeline adds those consistently after generation.
 
 Evidence rules:
 - Use only the facts provided in the Product JSON. Do not invent specs, testing, photos, studies, counts, or claims.
 - The most valuable section is not the spec list. Focus on what buyers might regret after purchase and how to use the product smarter.
-- Do not overstate medical, nutrition, behavior, or safety claims. 
+- The How We Read This List section must explicitly say no hands-on testing was conducted unless Product JSON says otherwise.
+- Do not present Amazon bestseller status as proof of quality; treat it only as a marketplace popularity signal.
+- Do not overstate medical, nutrition, behavior, training, or safety claims.
+- Do not diagnose, prescribe, promise health outcomes, or imply that products replace veterinary care.
 
 Link and compliance rules:
 - Do not use affiliate, tracking, shortened, or redirected links.
 - Every purchase link must be exactly: [Check Price on Amazon](https://www.amazon.com/dp/{ASIN})
 - Never include exact prices. Use broad tiers like "Budget-friendly", "Mid-range", and "Premium price".
 - Use descriptive anchor text for internal links; avoid anchors like "click here".
-- Do not create a standalone "Related Resources" section; the publishing pipeline adds that section with contextual internal links and authority references after generation.
-- Do not create a standalone FAQ section; the publishing pipeline adds concise long-tail buyer questions after generation.
+- Use only the provided internal article URLs; do not invent internal links.
+- Do not create a standalone authority-links block. If an authority link is truly useful inside the Buying Guide, use only akc.org, aspca.org, vcahospitals.com, merckvetmanual.com, avma.org, vet.cornell.edu, or pubmed.ncbi.nlm.nih.gov.
 
 Image rules:
 - For every individual product section, place the product image immediately under that product heading using Markdown:
@@ -1353,21 +1359,20 @@ Image rules:
 - If a product has no image_url, omit only the image line for that product.
 
 Required Markdown structure:
-1. Introduction: 2-4 tight paragraphs, pain-first, no generic filler.
-2. How We Read This List: short, transparent evidence note based on marketplace signals.
-3. Quick Picks: a compact bullet list naming the best product for 4-6 specific buyer needs.
-4. Buying Guide: practical criteria, red flags, safety notes, and 1-2 authority outbound links where relevant.
-5. Comparison Table: include product, best for, standout upside, buyer caution, skip-if. (Do NOT include price).
-6. Deep Reviews: Provide detailed reviews for exactly 10 products. For each, include:
-   - image under heading
-   - short verdict
-   - best for
-   - skip it if
-   - what buyers may regret
-   - pros / cons
-   - Expert Tip (actionable, non-obvious)
-   - clean Amazon link
-7. Final Summary: brief, scenario-based wrap-up.
+- Do not output a Markdown H1. Hugo frontmatter supplies the page H1.
+- Use these exact H2 headings without numeric prefixes:
+  ## How We Read This List
+  ## Quick Picks
+  ## Buying Guide
+  ## Comparison Table
+  ## Deep Reviews
+  ## Final Summary
+- Before "## How We Read This List", write 2-4 tight introduction paragraphs, pain-first, no "Introduction" heading.
+- Quick Picks: a compact bullet list naming the best product for 4-6 specific buyer needs.
+- Buying Guide: practical criteria, red flags, fit/safety notes, maintenance cautions, and buying mistakes.
+- Comparison Table: include product, best for, standout upside, buyer caution, skip-if. Do not include price.
+- Deep Reviews: exactly 10 products. Use H3 product headings. For each, include image if available, short verdict, best for, skip it if, what buyers may regret, complaint/watch-out pattern, pros, cons, Expert Tip, and clean Amazon link.
+- Final Summary: brief, scenario-based wrap-up.
 
 Output Markdown body only. Do not output YAML frontmatter.
 """.strip()
@@ -1392,14 +1397,23 @@ Output Markdown body only. Do not output YAML frontmatter.
         products: list[dict[str, Any]],
         related_articles: list[PublishedArticle] | None = None,
     ) -> str:
+        topic = SEOTopicCatalog.for_task(task)
         prompt_products = self._prepare_products_for_prompt(products)[:10]
         compact_json = json.dumps(prompt_products, ensure_ascii=False, separators=(",", ":"))
-        user_prompt = (
+        seo_brief = (
+            f"Primary SEO title: {topic.title}\n"
+            f"Meta description: {topic.description}\n"
+            f"Canonical URL path: {MarkdownExporter.url_for(task)}\n"
+            f"Target keywords: {', '.join(topic.keywords)}\n"
+            f"FAQ questions reserved for pipeline: {json.dumps([q for q, _ in topic.faqs], ensure_ascii=False)}\n"
             f"Category path: {task.category_path}\n"
             f"Category name: {task.category_name}\n"
             f"Pet type: {task.pet_type}\n"
-            "Article goal: create a helpful long-tail search page that helps owners decide what to buy, what to skip, "
-            "and what tradeoffs to expect. Prioritize regret prevention, owner-fit matching, and practical use tips.\n"
+            "Search intent: help pet owners decide what to buy, what to skip, and what safety or fit tradeoffs to expect before purchase.\n"
+        )
+        user_prompt = (
+            f"{seo_brief}"
+            "Important: do not answer the reserved FAQ questions in a standalone FAQ section; the pipeline adds that section later.\n"
             f"Related internal articles already published:\n{self._related_articles_json(related_articles or [])}\n"
             f"Product JSON:\n{compact_json}\n"
         )
@@ -1417,7 +1431,7 @@ Output Markdown body only. Do not output YAML frontmatter.
 
         if has_draft_model:
             LOGGER.info("Using %s to generate the initial article draft.", self.draft_model)
-            draft_prompt = user_prompt + "\n\nCRITICAL DIRECTIVE: Generate the entire Markdown article (all 7 sections) based on the JSON above. Ensure facts are absolutely accurate."
+            draft_prompt = user_prompt + "\n\nCRITICAL DIRECTIVE: Generate the entire Markdown article with the required intro and 6 exact H2 sections. Ensure facts are evidence-bound."
             
             old_model, old_base_url, old_api_key = self.model, self.base_url, self.api_key
             self.model, self.base_url, self.api_key = self.draft_model, self.draft_base_url, self.draft_api_key
@@ -1435,21 +1449,23 @@ Output Markdown body only. Do not output YAML frontmatter.
                 refinement_prompt = (
                     "Here is a drafted article. Your task is to rewrite and polish it to match the required "
                     "editorial voice, professional tone, and SEO logic. Do not change the underlying facts, product names, "
-                    "or prices. Maintain the exact same 7 sections.\n\n"
+                    "or prices. Maintain the required intro and 6 exact H2 headings. "
+                    "Do not add a Markdown H1, FAQ section, or Related Resources section.\n\n"
+                    f"=== ORIGINAL SEO BRIEF ===\n{seo_brief}=== END SEO BRIEF ===\n\n"
                     f"=== DRAFT ARTICLE ===\n{draft_markdown}\n=== END DRAFT ==="
                 )
                 
                 if is_proxy_claude:
                     LOGGER.info("Using chunked generation for proxy Claude to bypass timeout limit.")
-                    p1 = refinement_prompt + "\n\nCRITICAL DIRECTIVE: You must ONLY refine Sections 1, 2, 3, 4, and 5 (Introduction, How We Read This List, Quick Picks, Buying Guide, Comparison Table). You MUST STOP after Section 5. Do NOT output Section 6 (Deep Reviews) or Section 7. Start your response directly with Section 1."
+                    p1 = refinement_prompt + "\n\nCRITICAL DIRECTIVE: Only refine the intro plus these H2 sections: ## How We Read This List, ## Quick Picks, ## Buying Guide, and ## Comparison Table. Stop after the Comparison Table. Do not use numbered headings."
                     LOGGER.info("Generating Chunk 1/3 (Intro -> Comparison Table)")
                     body1 = self._generate_openai(self.SYSTEM_PROMPT, p1)
                     
-                    p2 = refinement_prompt + "\n\nCRITICAL DIRECTIVE: You must ONLY refine Section 6 (Deep Reviews) for the FIRST 5 products in the draft (or all products if there are fewer than 5). Do NOT generate Sections 1-5. Do NOT generate reviews for products 6-10. Do NOT generate Section 7. Start your response directly with the '## 6. Deep Reviews' header, then write the reviews."
+                    p2 = refinement_prompt + "\n\nCRITICAL DIRECTIVE: Only refine ## Deep Reviews for the first 5 products. Start with exactly '## Deep Reviews'. Use H3 product headings. Do not generate intro, Quick Picks, Buying Guide, Comparison Table, FAQ, Related Resources, or Final Summary."
                     LOGGER.info("Generating Chunk 2/3 (Deep Reviews 1-5)")
                     body2 = self._generate_openai(self.SYSTEM_PROMPT, p2)
                     
-                    p3 = refinement_prompt + "\n\nCRITICAL DIRECTIVE: You must ONLY refine Section 6 (Deep Reviews) for the REMAINING products in the draft (products 6+, if any), followed by Section 7 (Final Summary). Do NOT generate Sections 1-5. Do NOT generate reviews for the first 5 products. Do NOT output the '## 6. Deep Reviews' header again. Start your response directly with the review for the next product, or Section 7 if there are no remaining products."
+                    p3 = refinement_prompt + "\n\nCRITICAL DIRECTIVE: Only refine the remaining product H3 reviews, then ## Final Summary. Do not output ## Deep Reviews again. Do not repeat intro, Quick Picks, Buying Guide, Comparison Table, FAQ, or Related Resources."
                     LOGGER.info("Generating Chunk 3/3 (Deep Reviews 6-10 + Final Summary)")
                     body3 = self._generate_openai(self.SYSTEM_PROMPT, p3)
                     body = f"{body1}\n\n{body2}\n\n{body3}"
@@ -1459,15 +1475,15 @@ Output Markdown body only. Do not output YAML frontmatter.
         elif is_proxy_claude:
             LOGGER.info("Using chunked generation for proxy Claude to bypass timeout limit.")
             
-            p1 = user_prompt + "\n\nCRITICAL DIRECTIVE: You must ONLY generate Sections 1, 2, 3, 4, and 5 (Introduction, How We Read This List, Quick Picks, Buying Guide, Comparison Table). You MUST STOP after Section 5. Do NOT output Section 6 (Deep Reviews) or Section 7. Start your response directly with Section 1."
+            p1 = user_prompt + "\n\nCRITICAL DIRECTIVE: Only generate the intro plus these H2 sections: ## How We Read This List, ## Quick Picks, ## Buying Guide, and ## Comparison Table. Stop after the Comparison Table. Do not use numbered headings."
             LOGGER.info("Generating Chunk 1/3 (Intro -> Comparison Table)")
             body1 = self._generate_openai(self.SYSTEM_PROMPT, p1)
             
-            p2 = user_prompt + "\n\nCRITICAL DIRECTIVE: You must ONLY generate Section 6 (Deep Reviews) for the FIRST 5 products in the JSON list (or all products if there are fewer than 5). Do NOT generate Sections 1-5. Do NOT generate reviews for products 6-10. Do NOT generate Section 7. Start your response directly with the '## 6. Deep Reviews' header, then write the reviews."
+            p2 = user_prompt + "\n\nCRITICAL DIRECTIVE: Only generate ## Deep Reviews for the first 5 products in the JSON list. Start with exactly '## Deep Reviews'. Use H3 product headings. Do not generate intro, Quick Picks, Buying Guide, Comparison Table, FAQ, Related Resources, or Final Summary."
             LOGGER.info("Generating Chunk 2/3 (Deep Reviews 1-5)")
             body2 = self._generate_openai(self.SYSTEM_PROMPT, p2)
             
-            p3 = user_prompt + "\n\nCRITICAL DIRECTIVE: You must ONLY generate Section 6 (Deep Reviews) for the REMAINING products in the JSON list (products 6+, if any), followed by Section 7 (Final Summary). Do NOT generate Sections 1-5. Do NOT generate reviews for the first 5 products. Do NOT output the '## 6. Deep Reviews' header again. Start your response directly with the review for the next product, or Section 7 if there are no remaining products."
+            p3 = user_prompt + "\n\nCRITICAL DIRECTIVE: Only generate the remaining product H3 reviews, then ## Final Summary. Do not output ## Deep Reviews again. Do not repeat intro, Quick Picks, Buying Guide, Comparison Table, FAQ, or Related Resources."
             LOGGER.info("Generating Chunk 3/3 (Deep Reviews 6-10 + Final Summary)")
             body3 = self._generate_openai(self.SYSTEM_PROMPT, p3)
             
@@ -2044,4 +2060,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
