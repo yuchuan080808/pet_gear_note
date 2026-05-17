@@ -3,7 +3,6 @@ languageCode = 'en-us'
 title = 'Pet Gear Note'
 theme = 'PaperMod'
 enableRobotsTXT = true
-disableKinds = ['taxonomy', 'term']
 
 [params]
 env = 'production'
