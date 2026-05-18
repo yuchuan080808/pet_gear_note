@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-05-16T06:26:48+00:00",
+  "last_synced": "2026-05-18T13:43:18+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -332,8 +332,8 @@
       "category_name": "Automatic Feeders",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975260011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-05-18T13:41:44+00:00"
     },
     {
       "node_id": "2975261011",
@@ -342,7 +342,7 @@
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975261011",
       "pet_type": "cats",
       "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "last_updated": "2026-05-18T13:43:18+00:00"
     },
     {
       "node_id": "17592595011",
@@ -386,8 +386,8 @@
       "category_name": "Food Storage",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975262011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-05-18T13:43:37+00:00"
     },
     {
       "node_id": "2975263011",
@@ -395,8 +395,11 @@
       "category_name": "Fountains",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975263011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-18T13:51:11+00:00",
+      "article_path": "content\\cats\\best-fountains.md",
+      "article_url": "/cats/best-fountains/",
+      "article_title": "Best Fountains for Cats: Buyer Fit, Safety, and Regret Checks"
     },
     {
       "node_id": "215542951011",
