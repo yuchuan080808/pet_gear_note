@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-05-18T13:43:18+00:00",
+  "last_synced": "2026-05-19T14:15:57+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -416,8 +416,11 @@
       "category_name": "Nursing Supplies",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975264011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-19T14:23:44+00:00",
+      "article_path": "content\\cats\\best-nursing-supplies.md",
+      "article_url": "/cats/best-nursing-supplies/",
+      "article_title": "Best Nursing Supplies for Cats: Buyer Fit, Safety, and Regret Checks"
     },
     {
       "node_id": "2975282011",
@@ -704,8 +707,11 @@
       "category_name": "Shedding Tools",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975269011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-19T14:31:39+00:00",
+      "article_path": "content\\cats\\best-shedding-tools.md",
+      "article_url": "/cats/best-shedding-tools/",
+      "article_title": "Best Shedding Tools for Cats: Buyer Fit, Safety, and Regret Checks"
     },
     {
       "node_id": "2975277011",
