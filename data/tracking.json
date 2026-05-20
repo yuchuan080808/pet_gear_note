@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-05-19T14:15:57+00:00",
+  "last_synced": "2026-05-20T23:41:57+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -600,7 +600,7 @@
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975270011",
       "pet_type": "cats",
       "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "last_updated": "2026-05-20T23:41:57+00:00"
     },
     {
       "node_id": "2975271011",
@@ -609,7 +609,7 @@
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975271011",
       "pet_type": "cats",
       "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "last_updated": "2026-05-20T23:41:57+00:00"
     },
     {
       "node_id": "2975272011",
@@ -617,8 +617,8 @@
       "category_name": "Combs",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975272011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-05-20T23:42:26+00:00"
     },
     {
       "node_id": "2975273011",
@@ -626,8 +626,11 @@
       "category_name": "Dander Remover Sprays",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975273011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-20T23:46:19+00:00",
+      "article_path": "content\\cats\\best-dander-remover-sprays.md",
+      "article_url": "/cats/best-dander-remover-sprays/",
+      "article_title": "Best Dander Remover Sprays for Cats: Buyer Fit, Safety, and Regret Checks"
     },
     {
       "node_id": "23711854011",
