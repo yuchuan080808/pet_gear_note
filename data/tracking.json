@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-05-20T23:41:57+00:00",
+  "last_synced": "2026-05-21T23:49:18+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -722,8 +722,11 @@
       "category_name": "Dental Care",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975277011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-21T23:53:27+00:00",
+      "article_path": "content\\cats\\best-dental-care.md",
+      "article_url": "/cats/best-dental-care/",
+      "article_title": "Best Dental Care for Cats: Buyer Fit, Safety, and Regret Checks"
     },
     {
       "node_id": "2975278011",
@@ -731,8 +734,11 @@
       "category_name": "Digestive Remedies",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975278011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-21T23:57:27+00:00",
+      "article_path": "content\\cats\\best-digestive-remedies.md",
+      "article_url": "/cats/best-digestive-remedies/",
+      "article_title": "Best Digestive Remedies for Cats: Buyer Fit, Safety, and Regret Checks"
     },
     {
       "node_id": "2975279011",
