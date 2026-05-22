@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-05-21T23:49:18+00:00",
+  "last_synced": "2026-05-22T13:04:14+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -263,8 +263,11 @@
       "category_name": "Flea Collars",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975281011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-22T13:13:07+00:00",
+      "article_path": "content\\cats\\best-flea-collars.md",
+      "article_url": "/cats/best-flea-collars/",
+      "article_title": "Best Flea Collars for Cats: Buyer Fit, Safety, and Regret Checks"
     },
     {
       "node_id": "2975254011",
@@ -746,8 +749,11 @@
       "category_name": "Ear Care",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975279011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-05-22T13:09:03+00:00",
+      "article_path": "content\\cats\\best-ear-care.md",
+      "article_url": "/cats/best-ear-care/",
+      "article_title": "Best Ear Care for Cats: Buyer Fit, Safety, and Regret Checks"
     },
     {
       "node_id": "3024155011",
