@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-05-30T12:27:55+00:00",
+  "last_synced": "2026-06-05T13:04:15+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -818,8 +818,11 @@
       "category_name": "Recovery Collars & Cones",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975292011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-06-05T13:11:30+00:00",
+      "article_path": "content\\cats\\best-recovery-collars-cones.md",
+      "article_url": "/cats/best-recovery-collars-cones/",
+      "article_title": "Best Recovery Collars & Cones for Cats: Buyer Fit, Safety, and Regret Checks"
     },
     {
       "node_id": "2975293011",
@@ -827,8 +830,11 @@
       "category_name": "Relaxants",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975293011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-06-05T13:18:03+00:00",
+      "article_path": "content\\cats\\best-relaxants.md",
+      "article_url": "/cats/best-relaxants/",
+      "article_title": "Best Relaxants for Cats: Buyer Fit, Safety, and Regret Checks"
     },
     {
       "node_id": "3024162011",
