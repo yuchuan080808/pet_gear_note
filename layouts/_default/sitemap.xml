@@ -4,8 +4,8 @@
   {{- $mainSections := site.Params.mainSections | default (slice "cats" "dogs") -}}
   {{- range where site.Pages "Kind" "in" (slice "home" "section" "page") -}}
     {{- $isMainSection := and .IsSection (in $mainSections .Section) -}}
-    {{- $isMainPage := and .IsPage (in $mainSections .Section) -}}
-    {{- if and (or .IsHome $isMainSection $isMainPage) (ne .Params.robotsNoIndex true) (ne .Params.sitemap.disable true) -}}
+    {{- $isIndexablePage := .IsPage -}}
+    {{- if and (or .IsHome $isMainSection $isIndexablePage) (ne .Params.robotsNoIndex true) (ne .Params.sitemap.disable true) -}}
   <url>
     <loc>{{ .Permalink }}</loc>
     {{- if not .Lastmod.IsZero }}

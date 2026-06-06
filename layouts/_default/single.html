@@ -42,6 +42,13 @@
   </div>
   {{- end }}
 
+  {{- $mainSections := site.Params.mainSections | default (slice "cats" "dogs") }}
+  {{- if and .IsPage (in $mainSections .Section) }}
+  <div class="post-content md-content">
+    <p><strong>Editorial note:</strong> Pet Gear Note reviews focus on buyer fit, safety cautions, durability patterns, owner complaint themes, and product details that affect daily use. Read more about our <a href="/editorial-standards/">editorial standards</a>.</p>
+  </div>
+  {{- end }}
+
   <footer class="post-footer">
     {{- if (.Param "ShowPostNavLinks") }}
     {{- partial "post_nav_links.html" . }}

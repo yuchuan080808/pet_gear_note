@@ -600,7 +600,7 @@ class SEOTopicCatalog:
 class SEOResourceLinker:
     """Adds crawlable, contextual article links after LLM generation."""
 
-    INTERNAL_LINK_LIMIT = 3
+    INTERNAL_LINK_LIMIT = 4
     RELATED_SECTION_RE = re.compile(
         r"\n*#{2,3}[ \t]+Related Resources[ \t]*\n.*?(?=\n#{2,3}[ \t]+(?:Comparison Table|Deep Reviews|Final Summary)\b|\Z)",
         re.DOTALL,
@@ -685,6 +685,34 @@ class SEOResourceLinker:
             keywords=("bed", "blanket", "furniture", "scratch", "tree", "sofa", "perch"),
         ),
         AuthorityResource(
+            title="Cornell Feline Health Center on feline dental disease",
+            url="https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/feline-dental-disease",
+            note="Veterinary context for dental pain, prevention, and when home care is not enough.",
+            pet_type="cats",
+            keywords=("dental", "teeth", "tooth", "oral", "gum"),
+        ),
+        AuthorityResource(
+            title="Cornell Feline Health Center on fleas in cats",
+            url="https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/fleas-source-torment-your-cat",
+            note="Veterinary background on flea risks, treatment expectations, and home control.",
+            pet_type="cats",
+            keywords=("flea", "tick", "parasite"),
+        ),
+        AuthorityResource(
+            title="VCA Hospitals on Elizabethan collars in cats",
+            url="https://vcahospitals.com/chancellor/know-your-pet/elizabethan-collars-in-cats",
+            note="Veterinary guidance on cone fit, recovery use, and collar alternatives.",
+            pet_type="cats",
+            keywords=("recovery", "cone", "elizabethan", "e-collar"),
+        ),
+        AuthorityResource(
+            title="ASPCA general cat care",
+            url="https://www.aspca.org/pet-care/cat-care/general-cat-care",
+            note="General cat-care guidance covering identification, safety collars, grooming, and litter basics.",
+            pet_type="cats",
+            keywords=("tag", "tags", "id", "identification", "leash", "harness", "collar", "grooming", "shedding", "dander"),
+        ),
+        AuthorityResource(
             title="ASPCA Halloween safety tips for pets",
             url="https://www.aspca.org/pet-care/general-pet-care/halloween-safety-tips",
             note="Safety context for costumes, props, and supervised wear.",
@@ -715,6 +743,10 @@ class SEOResourceLinker:
         ("cats", "cat containment", frozenset(("enclosure", "playpen", "door", "net", "pen", "carrier", "stroller"))),
         ("cats", "cat comfort", frozenset(("bed", "blanket", "furniture", "bedding", "apparel", "clothing", "costume"))),
         ("cats", "cat scratching and enrichment", frozenset(("scratch", "scratcher", "tree", "perch", "hammock", "sofa"))),
+        ("cats", "cat collars and identification", frozenset(("collar", "harness", "leash", "tag", "tags", "identification", "breakaway", "flea"))),
+        ("cats", "cat health supplies", frozenset(("health", "dental", "digestive", "ear", "mites", "recovery", "cone", "relaxant", "calming"))),
+        ("cats", "cat grooming and coat care", frozenset(("grooming", "shedding", "dander", "spray", "brush", "coat", "flea"))),
+        ("cats", "cat feeding and hydration", frozenset(("food", "milk", "replacer", "nursing", "feeding", "water", "fountain", "bottle", "syringe"))),
     )
 
     @classmethod
@@ -1006,7 +1038,7 @@ class SEOResourceLinker:
             shared_groups = sorted(task_groups & article_groups)
             if shared_groups:
                 shared_context = shared_groups[0]
-        return f"Compare nearby {shared_context} tradeoffs before you buy."
+        return f"Useful when you are comparing {shared_context} fit, upkeep, safety, and long-term cost."
 
     @staticmethod
     def _shared_context(left: str, right: str) -> str:
@@ -1567,7 +1599,8 @@ Banned Phrases & Tone Rules (CRITICAL):
 - NEVER use the following AI cliches: "delve into", "a testament to", "crucial", "in conclusion", "vital", "elevate", "realm", "bustling", "moreover", "furthermore", "tapestry", "game-changer", "unleash", "furry friend", "picture this", "navigate", "symphony", "undeniable", "paramount".
 - DO NOT use robotic transitional phrases or summary paragraphs that add no value.
 - Write in short, punchy paragraphs (maximum 2-3 sentences).
-- Use a conversational, slightly skeptical, highly experienced, evidence-limited tone (e.g., "The biggest flaw here is", "I'd skip this if", "customer-summary signals point to").
+- Use a calm, field-guide tone: specific, skeptical, and practical without sounding theatrical.
+- Avoid repeating phrases like "customer-summary signals", "marketplace signals", "no hands-on testing", or "AI vision report" throughout the article. If evidence is limited, say it once in plain editorial language.
 - Use bold text heavily to make the article highly scannable for mobile readers.
 
 SEO and helpful-content strategy:
@@ -1582,7 +1615,8 @@ SEO and helpful-content strategy:
 Evidence rules:
 - Use only the facts provided in the Product JSON. Do not invent specs, testing, photos, studies, counts, or claims.
 - The most valuable section is not the spec list. Focus on what buyers might regret after purchase and how to use the product smarter.
-- The How We Read This List section must explicitly say no hands-on testing was conducted unless Product JSON says otherwise.
+- The How We Read This List section must be concise and professional. Do not lead with a legalistic disclaimer. If Product JSON does not include hands-on testing, say the guide is based on product specifications, buyer feedback patterns, and listing evidence.
+- Never mention AI, AI vision, or internal pipeline details in published article copy.
 - Do not present Amazon bestseller status as proof of quality; treat it only as a marketplace popularity signal.
 - Do not overstate medical, nutrition, behavior, training, or safety claims.
 - Do not diagnose, prescribe, promise health outcomes, or imply that products replace veterinary care.
@@ -1674,14 +1708,14 @@ Output Markdown body only. Do not output YAML frontmatter.
         if has_draft_model:
             LOGGER.info("Using %s to generate the initial article draft.", self.draft_model)
             draft_prompt = user_prompt + "\n\nCRITICAL DIRECTIVE: Generate the entire Markdown article with the required intro and 6 exact H2 sections. Ensure facts are evidence-bound."
-            
+
             old_model, old_base_url, old_api_key = self.model, self.base_url, self.api_key
             self.model, self.base_url, self.api_key = self.draft_model, self.draft_base_url, self.draft_api_key
             try:
                 draft_markdown = self._generate_openai(self.SYSTEM_PROMPT, draft_prompt)
             finally:
                 self.model, self.base_url, self.api_key = old_model, old_base_url, old_api_key
-                
+
             skip_refinement = os.environ.get("SKIP_CLAUDE_REFINEMENT", "").lower() == "true"
             if skip_refinement:
                 LOGGER.info("SKIP_CLAUDE_REFINEMENT is true. Bypassing Claude refinement and using Gemini draft directly.")
@@ -1696,17 +1730,17 @@ Output Markdown body only. Do not output YAML frontmatter.
                     f"=== ORIGINAL SEO BRIEF ===\n{seo_brief}=== END SEO BRIEF ===\n\n"
                     f"=== DRAFT ARTICLE ===\n{draft_markdown}\n=== END DRAFT ==="
                 )
-                
+
                 if is_proxy_claude:
                     LOGGER.info("Using chunked generation for proxy Claude to bypass timeout limit.")
                     p1 = refinement_prompt + "\n\nCRITICAL DIRECTIVE: Only refine the intro plus these H2 sections: ## How We Read This List, ## Quick Picks, ## Buying Guide, and ## Comparison Table. Stop after the Comparison Table. Do not use numbered headings."
                     LOGGER.info("Generating Chunk 1/3 (Intro -> Comparison Table)")
                     body1 = self._generate_openai(self.SYSTEM_PROMPT, p1)
-                    
+
                     p2 = refinement_prompt + "\n\nCRITICAL DIRECTIVE: Only refine ## Deep Reviews for the first 5 products. Start with exactly '## Deep Reviews'. Use H3 product headings. Do not generate intro, Quick Picks, Buying Guide, Comparison Table, FAQ, Related Resources, or Final Summary."
                     LOGGER.info("Generating Chunk 2/3 (Deep Reviews 1-5)")
                     body2 = self._generate_openai(self.SYSTEM_PROMPT, p2)
-                    
+
                     p3 = refinement_prompt + "\n\nCRITICAL DIRECTIVE: Only refine the remaining product H3 reviews, then ## Final Summary. Do not output ## Deep Reviews again. Do not repeat intro, Quick Picks, Buying Guide, Comparison Table, FAQ, or Related Resources."
                     LOGGER.info("Generating Chunk 3/3 (Deep Reviews 6-10 + Final Summary)")
                     body3 = self._generate_openai(self.SYSTEM_PROMPT, p3)
@@ -1716,19 +1750,19 @@ Output Markdown body only. Do not output YAML frontmatter.
 
         elif is_proxy_claude:
             LOGGER.info("Using chunked generation for proxy Claude to bypass timeout limit.")
-            
+
             p1 = user_prompt + "\n\nCRITICAL DIRECTIVE: Only generate the intro plus these H2 sections: ## How We Read This List, ## Quick Picks, ## Buying Guide, and ## Comparison Table. Stop after the Comparison Table. Do not use numbered headings."
             LOGGER.info("Generating Chunk 1/3 (Intro -> Comparison Table)")
             body1 = self._generate_openai(self.SYSTEM_PROMPT, p1)
-            
+
             p2 = user_prompt + "\n\nCRITICAL DIRECTIVE: Only generate ## Deep Reviews for the first 5 products in the JSON list. Start with exactly '## Deep Reviews'. Use H3 product headings. Do not generate intro, Quick Picks, Buying Guide, Comparison Table, FAQ, Related Resources, or Final Summary."
             LOGGER.info("Generating Chunk 2/3 (Deep Reviews 1-5)")
             body2 = self._generate_openai(self.SYSTEM_PROMPT, p2)
-            
+
             p3 = user_prompt + "\n\nCRITICAL DIRECTIVE: Only generate the remaining product H3 reviews, then ## Final Summary. Do not output ## Deep Reviews again. Do not repeat intro, Quick Picks, Buying Guide, Comparison Table, FAQ, or Related Resources."
             LOGGER.info("Generating Chunk 3/3 (Deep Reviews 6-10 + Final Summary)")
             body3 = self._generate_openai(self.SYSTEM_PROMPT, p3)
-            
+
             body = f"{body1}\n\n{body2}\n\n{body3}"
 
         elif is_native_anthropic:
@@ -2117,7 +2151,7 @@ Output Markdown body only. Do not output YAML frontmatter.
         markdown = re.sub(
             r"(?i)\b(?:we|our team|our ai(?: visual)? scanner)\s+(?:scanned|analyzed|reviewed)\s+"
             r"(?:over\s+|more than\s+)?\d[\d,]*\s+(?:customer\s+)?(?:photos|images|pictures|reviews)\b",
-            "we reviewed the available customer-summary signals",
+            "we reviewed the available buyer feedback patterns",
             markdown,
         )
         markdown = re.sub(
@@ -2128,7 +2162,7 @@ Output Markdown body only. Do not output YAML frontmatter.
         markdown = re.sub(
             r"(?i)\b(?:scanned|analyzed|reviewed)\s+(?:over\s+|more than\s+)?\d[\d,]*\s+"
             r"(?:raw\s+|customer\s+|original\s+)?reviews\b",
-            "reviewed the available customer-summary signals",
+            "reviewed the available buyer feedback patterns",
             markdown,
         )
         return markdown

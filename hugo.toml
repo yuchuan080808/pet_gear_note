@@ -12,3 +12,22 @@ author = 'Pet Gear Note'
 defaultTheme = "auto"
 mainSections = ["cats", "dogs"]
 disableSpecial1stPost = true
+
+[menu]
+[[menu.main]]
+identifier = 'cats'
+name = 'Cats'
+url = '/cats/'
+weight = 10
+
+[[menu.main]]
+identifier = 'dogs'
+name = 'Dogs'
+url = '/dogs/'
+weight = 20
+
+[[menu.main]]
+identifier = 'editorial-standards'
+name = 'Editorial Standards'
+url = '/editorial-standards/'
+weight = 30
