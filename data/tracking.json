@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-06-05T13:04:15+00:00",
+  "last_synced": "2026-06-07T13:20:06+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -896,8 +896,11 @@
       "category_name": "Wormers",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975295011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-06-07T13:25:40+00:00",
+      "article_path": "content\\cats\\best-wormers.md",
+      "article_url": "/cats/best-wormers/",
+      "article_title": "Best Wormers for Cats: Buyer Fit, Safety, and Regret Checks"
     },
     {
       "node_id": "2975298011",
@@ -905,8 +908,11 @@
       "category_name": "Litter",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975298011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-06-07T13:29:48+00:00",
+      "article_path": "content\\cats\\best-litter.md",
+      "article_url": "/cats/best-litter/",
+      "article_title": "Best Litter for Cats: Buyer Fit, Safety, and Regret Checks"
     },
     {
       "node_id": "17592597011",
