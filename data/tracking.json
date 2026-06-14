@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-06-12T13:04:15+00:00",
+  "last_synced": "2026-06-14T01:54:50+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -1091,8 +1091,8 @@
       "category_name": "Feather Toys",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975306011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-06-14T01:55:10+00:00"
     },
     {
       "node_id": "23690012011",
@@ -1109,8 +1109,11 @@
       "category_name": "Mice & Animal Toys",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975308011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-06-14T01:59:43+00:00",
+      "article_path": "content\\cats\\best-mice-animal-toys.md",
+      "article_url": "/cats/best-mice-animal-toys/",
+      "article_title": "Best Mice & Animal Toys for Cats: Buyer Fit, Safety, and Regret Checks"
     },
     {
       "node_id": "23690011011",
