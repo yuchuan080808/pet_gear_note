@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-06-14T01:54:50+00:00",
+  "last_synced": "2026-06-26T13:04:15+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -1139,8 +1139,8 @@
       "category_name": "Catnip",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975310011",
       "pet_type": "cats",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-06-19T13:04:35+00:00"
     },
     {
       "node_id": "116011808011",
@@ -1178,8 +1178,8 @@
       "category_name": "Backpacks",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975314011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-06-19T13:04:45+00:00"
     },
     {
       "node_id": "2975315011",
@@ -1187,8 +1187,8 @@
       "category_name": "Bandanas",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975315011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-06-26T13:04:40+00:00"
     },
     {
       "node_id": "3024169011",
@@ -1613,8 +1613,11 @@
       "category_name": "Collar Charms",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975317011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-06-26T13:11:14+00:00",
+      "article_path": "content\\dogs\\best-collar-charms.md",
+      "article_url": "/dogs/best-collar-charms/",
+      "article_title": "Best Collar Charms for Dogs: Buyer Fit, Safety, and Regret Checks"
     },
     {
       "node_id": "2975342011",
