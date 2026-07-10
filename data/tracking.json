@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-06-26T13:04:15+00:00",
+  "last_synced": "2026-07-10T13:04:16+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -1223,8 +1223,8 @@
       "category_name": "Costumes",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975318011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-07-03T13:04:41+00:00"
     },
     {
       "node_id": "2975319011",
@@ -1232,8 +1232,8 @@
       "category_name": "Dresses",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975319011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-07-03T13:11:21+00:00"
     },
     {
       "node_id": "2975320011",
@@ -1241,8 +1241,11 @@
       "category_name": "Hair Accessories",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975320011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-07-10T13:09:29+00:00",
+      "article_path": "content\\dogs\\best-hair-accessories.md",
+      "article_url": "/dogs/best-hair-accessories/",
+      "article_title": "Best Hair Accessories for Dogs: Buyer Fit, Safety, and Regret Checks"
     },
     {
       "node_id": "2975321011",
@@ -1250,8 +1253,11 @@
       "category_name": "Hats",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975321011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-07-10T13:13:43+00:00",
+      "article_path": "content\\dogs\\best-hats.md",
+      "article_url": "/dogs/best-hats/",
+      "article_title": "Best Hats for Dogs: Buyer Fit, Safety, and Regret Checks"
     },
     {
       "node_id": "3024172011",
