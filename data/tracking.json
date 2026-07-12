@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-07-10T13:04:16+00:00",
+  "last_synced": "2026-07-12T11:45:34+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -1283,8 +1283,11 @@
       "category_name": "Necklaces & Pendants",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975322011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-07-12T11:49:41+00:00",
+      "article_path": "content\\dogs\\best-necklaces-pendants.md",
+      "article_url": "/dogs/best-necklaces-pendants/",
+      "article_title": "Best Necklaces & Pendants for Dogs: Buyer Fit, Safety, and Regret Checks"
     },
     {
       "node_id": "3024174011",
@@ -1310,8 +1313,11 @@
       "category_name": "Sunglasses",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975325011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-07-12T11:53:29+00:00",
+      "article_path": "content\\dogs\\best-sunglasses.md",
+      "article_url": "/dogs/best-sunglasses/",
+      "article_title": "Best Sunglasses for Dogs: Buyer Fit, Safety, and Regret Checks"
     },
     {
       "node_id": "3024176011",
