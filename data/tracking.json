@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-07-12T11:45:34+00:00",
+  "last_synced": "2026-07-14T00:38:26+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -1343,8 +1343,11 @@
       "category_name": "Bed Covers",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975327011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-07-14T00:43:43+00:00",
+      "article_path": "content\\dogs\\best-bed-covers.md",
+      "article_url": "/dogs/best-bed-covers/",
+      "article_title": "Best Bed Covers for Dogs: Buyer Fit, Safety, and Regret Checks"
     },
     {
       "node_id": "2975328011",
@@ -1352,8 +1355,11 @@
       "category_name": "Bed Liners",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975328011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-07-14T00:48:37+00:00",
+      "article_path": "content\\dogs\\best-bed-liners.md",
+      "article_url": "/dogs/best-bed-liners/",
+      "article_title": "Best Bed Liners for Dogs: Buyer Fit, Safety, and Regret Checks"
     },
     {
       "node_id": "3024178011",
