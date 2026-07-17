@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_synced": "2026-07-14T00:38:26+00:00",
+  "last_synced": "2026-07-17T13:04:16+00:00",
   "categories": [
     {
       "node_id": "2975242011",
@@ -1376,8 +1376,8 @@
       "category_name": "Bed Pillows",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975329011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "failed",
+      "last_updated": "2026-07-17T13:04:39+00:00"
     },
     {
       "node_id": "2975330011",
@@ -1385,8 +1385,11 @@
       "category_name": "Beds",
       "bsr_url": "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/2975330011",
       "pet_type": "dogs",
-      "status": "pending",
-      "last_updated": "2026-04-30T04:21:35+00:00"
+      "status": "completed",
+      "last_updated": "2026-07-17T13:10:03+00:00",
+      "article_path": "content\\dogs\\best-beds.md",
+      "article_url": "/dogs/best-beds/",
+      "article_title": "Best Beds for Dogs: Buyer Fit, Safety, and Regret Checks"
     },
     {
       "node_id": "17602453011",
